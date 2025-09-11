@@ -8,21 +8,67 @@
 
 body {
   min-height: 100dvh;
-  background: #f2f2f2;
+  background: var(--bodyBackground);
   touch-action: manipulation;
   padding: 15px;
 }
 
 button {
   outline: none;
-  border: 1px solid rgb(180, 180, 180);
+  border: 1px solid var(--buttonInitBorderColor);
   padding: 5px 10px;
   border-radius: 5px;
-  background: white;
+  background: var(--buttonInitBgColor);
 }
 
 button:disabled {
-  border-color: rgb(190, 190, 190);
-  color: rgb(138, 138, 138);
-  background-color: rgb(221, 221, 221);
+  border-color: var(--buttonDisabledBorderColor);
+  color: var(--buttonDisabledColor);
+  background: var(--buttonDisabledBgColor);
+}
+
+.colors_default {
+  --bodyBackground: #f2f2f2;
+
+  --buttonInitBgColor: white;
+  --buttonInitBorderColor: rgb(180, 180, 180);
+  --buttonDisabledBorderColor: rgb(190, 190, 190);
+  --buttonDisabledColor: rgb(138, 138, 138);
+  --buttonDisabledBgColor: rgb(221, 221, 221);
+
+  --headerBg: white;
+  --headerBorderColor: rgb(221, 221, 221);
+  --headerBetaBgColor: rgb(13, 172, 172);
+  --headerBetaColor: white;
+
+  --completeLessonsBg: rgb(219, 219, 219);
+  --completeLessonsListBg: rgb(219, 219, 219);
+
+  --weekendBg: rgb(184, 245, 184);
+  --weekendColor: rgb(56, 105, 56);
+  --weekendBorderColor: rgb(66, 110, 66);
+
+  --beforeClassBg: rgb(245, 219, 184);
+  --beforeClassColor: rgb(105, 88, 56);
+  --beforeClassBorderColor: rgb(110, 87, 66);
+
+  --afterClassBg: rgb(184, 245, 184);
+  --afterClassColor: rgb(56, 105, 56);
+  --afterClassBorderColor: rgb(66, 110, 66);
+
+  --breakBg: rgb(142, 235, 142);
+  --breakBorderColor: rgb(97, 196, 105);
+  --breakColor: rgb(2, 51, 2);
+
+  --lessonBorderColor: rgb(194, 194, 194);
+  --lessonBg: white;
+
+  --lessonDetailsBorderColor: #0003;
+  --lessonDetailsTimeBorderColor: #0008;
+  --lessonTimerBorderColor: #0005;
+
+  --themeBg: white;
+  --themeBorderColor: rgb(172, 172, 172);
+  --themeButtonBg: white;
+  --themeBorderColor: #0003;
 }

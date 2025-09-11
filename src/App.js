@@ -8,7 +8,7 @@ import './app.css'
 
 function App() {
 	return (
-		<div>
+		<div className={`colors_default`}>
 			<Header />
 			<Lessons />
 			{/* <Theme /> */}

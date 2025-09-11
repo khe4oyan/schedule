@@ -9,9 +9,9 @@
   height: 200px;
   gap: 20px;
 
-  background-color: rgb(245, 219, 184);
-  color: rgb(105, 88, 56);
-  border: 2px solid rgb(110, 87, 66);
+  background: var(--beforeClassBg);
+  color: var(--beforeClassColor);
+  border: 2px solid var(--beforeClassBorderColor);
 }
 
 .title {

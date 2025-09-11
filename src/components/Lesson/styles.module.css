@@ -6,8 +6,8 @@
   gap: 5px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(194, 194, 194);
-  background-color: white;
+  border: 1px solid var(--lessonBorderColor);
+  background: var(--lessonBg);
 }
 
 .rootCurrent {
@@ -35,13 +35,13 @@
   gap: 2px;
   padding: 5px;
   border-radius: 3px;
-  border: 1px solid #0003;
+  border: 1px solid var(--lessonDetailsBorderColor);
   height: fit-content;
 
   & > p:nth-child(1),
   & > p:nth-child(2) {
     font-weight: bold;
-    border-bottom: 1px dashed #0008;
+    border-bottom: 1px dashed var(--lessonDetailsTimeBorderColor);
     padding-bottom: 5px;
   }
 
@@ -63,5 +63,5 @@
   padding: 15px 0 5px;
   margin-top: 5px;
   grid-area: bottom;
-  border-top: 1px dashed #0005;
+  border-top: 1px dashed var(--lessonTimerBorderColor);
 }

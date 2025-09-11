@@ -6,8 +6,8 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: white;
-  border-top: 2px solid rgb(172, 172, 172);
+  background: var(--themeBg);
+  border-top: 2px solid var(--themeBorderColor);
   align-items: center;
 }
 
@@ -21,6 +21,6 @@
   font-size: 2rem;
   padding: 10px;
   border-radius: 50%;
-  background-color: white;
-  border: 1px solid #0003;
+  background: var(--themeButtonBg);
+  border: 1px solid var(--themeBorderColor);
 }

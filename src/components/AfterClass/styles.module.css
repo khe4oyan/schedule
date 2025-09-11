@@ -1,9 +1,9 @@
 .root {}
 
 .message {
-  background-color: rgb(184, 245, 184);
-  color: rgb(56, 105, 56);
-  border: 2px solid rgb(66, 110, 66);
+  background: var(--afterClassBg);
+  color: var(--afterClassColor);
+  border: 2px solid var(--afterClassBorderColor);
   padding: 10px;
   display: flex;
   align-items: center;

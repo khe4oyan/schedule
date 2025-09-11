@@ -1,8 +1,8 @@
 .root {
-  width: calc(100% + 40px);
+  width: calc(100% + 35px);
   height: 70px;
-  background-color: white;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  background: var(--headerBg);
+  border-bottom: 1px solid var(--headerBorderColor);
   position: relative;
   bottom: 20px;
   right: 20px;
@@ -17,8 +17,8 @@
 
     span {
       font-size: 1rem;
-      background-color: rgb(13, 172, 172);
-      color: white;
+      background: var(--headerBetaBgColor);
+      color: var(--headerBetaColor);
       border-radius: 10px;
       padding: 3px 9px;
     }
