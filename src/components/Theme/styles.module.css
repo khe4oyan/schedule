@@ -1,0 +1,26 @@
+.root {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  border-top: 2px solid rgb(172, 172, 172);
+  align-items: center;
+}
+
+.themeButton {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #0003;
+}

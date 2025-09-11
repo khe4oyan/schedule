@@ -1,0 +1,37 @@
+.root, 
+.completedLessonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.root {
+  margin-bottom: 5rem;
+}
+
+/* .completedLessons {} */
+.completedLessons summary {
+  list-style-type: '';
+  background: rgb(219, 219, 219);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.completedLessons summary::before {
+  content: "Show ";
+}
+
+.completedLessons[open] summary {
+  /* margin-bottom: 5px; */
+  border-radius: 5px 5px 0 0;
+}
+.completedLessons[open] summary::before {
+  content: "Hide ";
+}
+
+.completedLessonsList {
+  padding: 5px;
+  background: rgb(219, 219, 219);
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+}

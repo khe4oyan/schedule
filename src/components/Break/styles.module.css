@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(142, 235, 142);
+  border: 1px solid rgb(97, 196, 105);
+  border-radius: 5px;
+  color: rgb(2, 51, 2);
+  justify-content: center;
+  flex-direction: column;
+  height: 150px;
+  gap: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}

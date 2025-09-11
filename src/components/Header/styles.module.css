@@ -1,0 +1,26 @@
+.root {
+  width: calc(100% + 40px);
+  height: 70px;
+  background-color: white;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-size: 1rem;
+      background-color: rgb(13, 172, 172);
+      color: white;
+      border-radius: 10px;
+      padding: 3px 9px;
+    }
+  }
+}
