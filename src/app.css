@@ -9,6 +9,7 @@
 body {
   min-height: 100dvh;
   background: var(--bodyBackground);
+  color: var(--primaryColor_4);
   touch-action: manipulation;
   padding: 15px;
 }
@@ -28,47 +29,83 @@ button:disabled {
 }
 
 .colors_default {
+  --primaryColor_1: white;
+  --primaryColor_2: #dddddd;
+  --primaryColor_3: #9b9b9b;
+  --primaryColor_4: black;
+
   --bodyBackground: #f2f2f2;
 
-  --buttonInitBgColor: white;
+  --buttonInitBgColor: var(--primaryColor_1);
   --buttonInitBorderColor: rgb(180, 180, 180);
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBgColor: var(--primaryColor_2);
+
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+  --headerBetaBgColor: #0dacac;
+  --headerBetaColor: var(--primaryColor_1);
+
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  --beforeClassBg: #f1d2a9;
+  --beforeClassColor: #382703;
+  --beforeClassBorderColor: #af7c4c;
+
+  --messageBg: #8eeb8e;
+  --messageColor: #023302;
+  --messageBorderColor: #61c469;
+
+  --weekendBg: var(--messageBg);
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--messageBorderColor);
+
+  --afterClassBg: var(--messageBg);
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--messageBorderColor);
+
+  --breakBg: var(--messageBg);
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--messageBorderColor);
+
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonDetailsBorderColor: var(--primaryColor_3);
+  --lessonDetailsTimeBorderColor: var(--primaryColor_3);
+  --lessonTimerBorderColor: var(--primaryColor_3);
+
+  --themeBg: var(--primaryColor_1);
+  --themeButtonBg: var(--primaryColor_1);
+  --themeMenuBg: #0002;
+  --themeBorderColor: var(--primaryColor_2);
+}
+
+.colors_dark {
+  --primaryColor_1: #27374D;
+  --primaryColor_2: #526D82;
+  --primaryColor_3: #9DB2BF;
+  --primaryColor_4: #DDE6ED;
+
+  --bodyBackground: #07101b;
+
+  --buttonInitBorderColor: rgb(180, 180, 180);
+
   --buttonDisabledBorderColor: rgb(190, 190, 190);
   --buttonDisabledColor: rgb(138, 138, 138);
-  --buttonDisabledBgColor: rgb(221, 221, 221);
 
-  --headerBg: white;
-  --headerBorderColor: rgb(221, 221, 221);
-  --headerBetaBgColor: rgb(13, 172, 172);
-  --headerBetaColor: white;
+  --headerBetaBgColor: rgb(170, 235, 235);
 
-  --completeLessonsBg: rgb(219, 219, 219);
-  --completeLessonsListBg: rgb(219, 219, 219);
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_2), 75%, var(--primaryColor_1));
+  --beforeClassColor: var(--primaryColor_4);
+  --beforeClassBorderColor: var(--primaryColor_3);
 
-  --weekendBg: rgb(184, 245, 184);
-  --weekendColor: rgb(56, 105, 56);
-  --weekendBorderColor: rgb(66, 110, 66);
+  --messageBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--primaryColor_2));
+  --messageColor: var(--primaryColor_4);
+  --messageBorderColor: var(--primaryColor_3);
 
-  --beforeClassBg: rgb(245, 219, 184);
-  --beforeClassColor: rgb(105, 88, 56);
-  --beforeClassBorderColor: rgb(110, 87, 66);
-
-  --afterClassBg: rgb(184, 245, 184);
-  --afterClassColor: rgb(56, 105, 56);
-  --afterClassBorderColor: rgb(66, 110, 66);
-
-  --breakBg: rgb(142, 235, 142);
-  --breakBorderColor: rgb(97, 196, 105);
-  --breakColor: rgb(2, 51, 2);
-
-  --lessonBorderColor: rgb(194, 194, 194);
-  --lessonBg: white;
-
-  --lessonDetailsBorderColor: #0003;
-  --lessonDetailsTimeBorderColor: #0008;
-  --lessonTimerBorderColor: #0005;
-
-  --themeBg: white;
-  --themeBorderColor: rgb(172, 172, 172);
-  --themeButtonBg: white;
-  --themeBorderColor: #0003;
+  --themeMenuBg: #fff2;
 }

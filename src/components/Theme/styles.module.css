@@ -24,3 +24,27 @@
   background: var(--themeButtonBg);
   border: 1px solid var(--themeBorderColor);
 }
+
+.menu {
+  position: fixed;
+  bottom: 6.1rem;
+  right: 24px;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  background: var(--themeMenuBg);
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 10px;
+  border: 1px solid var(--primaryColor_3);
+}
+
+.theme {
+  --size: 60px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 2px solid var(--primaryColor_1);
+  background: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+}

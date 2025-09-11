@@ -108,10 +108,28 @@ export default function Lessons() {
       {appStatus === scenarioStatuses.afterClass && <AfterClass />}
       {appStatus === scenarioStatuses.break && <Break filteredLessons={filteredLessons} />}
 
-      {/* <Weekend />
+			<button>ok</button>
+			<button disabled>ok</button>
+      <Weekend />
       <BeforeClass startedTime={"20:00"} />
       <AfterClass />
-      <Break filteredLessons={filteredLessons}/> */}
+      <Break filteredLessons={filteredLessons}/>
+      <Lesson data={{
+        title: "test lesson",
+        teacher: "G. Grigoryan",
+        room: 51000,
+        start: "10:10",
+        end: "20:20",
+        status: "default",
+      }}/>
+      <Lesson data={{
+        title: "test lesson",
+        teacher: "G. Grigoryan",
+        room: 51000,
+        start: "10:10",
+        end: "20:20",
+        status: "current",
+      }}/>
       
       {
         (
@@ -134,7 +152,7 @@ export default function Lessons() {
             <summary>completed lessons</summary>
             <div className={classes.completedLessonsList}>
               {
-                filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETEDD)
+                filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETED)
                   .map((lessonData, ind) =>
                     <Lesson
                       key={`${ind} ${JSON.stringify(lessonData)}`}
