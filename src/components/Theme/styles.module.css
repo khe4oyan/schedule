@@ -35,7 +35,8 @@
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 87%;
+  width: fit-content;
   gap: 10px;
   border: 1px solid var(--primaryColor_3);
 }

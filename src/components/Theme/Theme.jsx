@@ -10,6 +10,9 @@ export default function Theme({ newTheme }) {
   const buttons = [
     "colors_default",
     "colors_dark",
+    "colors_pink",
+    "colors_pastel",
+    "colors_space",
   ];
 
   const onClickTheme = (className) => {
