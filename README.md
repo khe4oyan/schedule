@@ -1,2 +1,0 @@
-# shedule
-Just shedule 
