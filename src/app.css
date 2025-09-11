@@ -51,7 +51,7 @@ button:disabled {
   --completeLessonsBg: var(--primaryColor_2);
   --completeLessonsListBg: var(--primaryColor_2);
 
-  --beforeClassBg: #f1d2a9;
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, #f1d2a9);
   --beforeClassColor: #382703;
   --beforeClassBorderColor: #af7c4c;
 
@@ -59,15 +59,15 @@ button:disabled {
   --messageColor: #023302;
   --messageBorderColor: #61c469;
 
-  --weekendBg: var(--messageBg);
+  --weekendBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
   --weekendColor: var(--messageColor);
   --weekendBorderColor: var(--messageBorderColor);
 
-  --afterClassBg: var(--messageBg);
+  --afterClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
   --afterClassColor: var(--messageColor);
   --afterClassBorderColor: var(--messageBorderColor);
 
-  --breakBg: var(--messageBg);
+  --breakBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
   --breakColor: var(--messageColor);
   --breakBorderColor: var(--messageBorderColor);
 
@@ -93,6 +93,10 @@ button:disabled {
   --bodyBackground: #07101b;
 
   --buttonInitBorderColor: rgb(180, 180, 180);
+
+  --weekendBg: var(--messageBg);
+  --afterClassBg: var(--messageBg);
+  --breakBg: var(--messageBg);
 
   --buttonDisabledBorderColor: rgb(190, 190, 190);
   --buttonDisabledColor: rgb(138, 138, 138);
