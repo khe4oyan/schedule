@@ -3,21 +3,15 @@ export default function timerFormat(inputSeconds) {
     return '0 sec.';
   }
 
-  let minutes = 0;
-  let seconds = 0;
+  let result = "";
 
-  minutes = Math.floor(inputSeconds / 60);
-  seconds = Math.floor(inputSeconds % 60);
+  const hours = Math.floor(inputSeconds / 3600);
+  const minutes = Math.floor((inputSeconds % 3600) / 60);
+  const seconds = inputSeconds % 60;
 
-  let result = '';
-
-  if (minutes > 0) {
-    result += `${minutes} min. `;
-  }
-
-  if (seconds > 0) {
-    result += `${seconds} sec.`;
-  }
+  if (hours > 0) result += `${hours}h. `;
+  if (minutes > 0) result += `${minutes}min. `;
+  if (seconds > 0) result += `${seconds}sec.`;
 
   return result;
 }
