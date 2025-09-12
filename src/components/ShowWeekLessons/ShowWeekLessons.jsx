@@ -11,7 +11,13 @@ import lessons from '../../constants/lessons';
 import classes from './styles.module.css';
 
 export default function ShowWeekLessons() {
-  const [daySheduleNum, setDaySheduleNum] = useState(0);
+  const [daySheduleNum, setDaySheduleNum] = useState(() => {
+    const dayNum = new Date().getDay() - 1;
+      
+    if (dayNum > 4) return 0;
+
+    return dayNum;
+  });
 
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
