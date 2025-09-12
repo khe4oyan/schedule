@@ -3,7 +3,7 @@
   height: 70px;
   background: var(--headerBg);
   /* border-bottom: 1px solid var(--headerBorderColor); */
-  border-bottom: 1px solid var(--headerBetaBgCo lor);
+  border-bottom: 1px solid var(--headerBetaBgColor);
   position: relative;
   bottom: 20px;
   right: 20px;
