@@ -121,7 +121,7 @@ export default function Lessons() {
         ) &&
         <>
           {
-            filteredLessons.filter((lessonData) => lessonData.status !== lessonStatuses.COMPLETEDD)
+            filteredLessons.filter((lessonData) => lessonData.status !== lessonStatuses.COMPLETED)
               .map((lessonData, ind) =>
                 <Lesson
                   key={`${ind} ${JSON.stringify(lessonData)}`}
