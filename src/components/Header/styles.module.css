@@ -2,25 +2,26 @@
   width: calc(100% + 35px);
   height: 70px;
   background: var(--headerBg);
-  border-bottom: 1px solid var(--headerBorderColor);
+  /* border-bottom: 1px solid var(--headerBorderColor); */
+  border-bottom: 1px solid var(--headerBetaBgCo lor);
   position: relative;
   bottom: 20px;
   right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  h1 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.headerText {
+  transform: translateY(3px);
+}
 
-    span {
-      font-size: 1rem;
-      background: var(--headerBetaBgColor);
-      color: var(--headerBetaColor);
-      border-radius: 10px;
-      padding: 3px 9px;
-    }
-  }
+.beta {
+  position: absolute;
+  bottom: -.55rem;
+  font-size: .8rem;
+  background: var(--headerBetaBgColor);
+  color: var(--headerBetaColor);
+  border-radius: 10px;
+  padding: 3px 9px;
 }
