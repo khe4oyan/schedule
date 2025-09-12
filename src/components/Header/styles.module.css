@@ -18,7 +18,7 @@
 
 .beta {
   position: absolute;
-  bottom: -.55rem;
+  bottom: -.67rem;
   font-size: .8rem;
   background: var(--headerBetaBgColor);
   color: var(--headerBetaColor);
