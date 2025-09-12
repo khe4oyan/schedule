@@ -29,7 +29,6 @@ class DoubleLess {
 
     const passedDays = Math.floor(passedTime / 1000 / 60 / 60 / 24);
     const passedWeeks = Math.floor(passedDays / 7);
-    console.log(passedWeeks);
     
     if (passedWeeks % 2 === 0) {
       return less_odd;
