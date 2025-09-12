@@ -60,7 +60,7 @@ export default function Lessons() {
           break;
         } else {
           // check last lesson
-          lesson.status = lessonStatuses.COMPLETEDD;
+          lesson.status = lessonStatuses.COMPLETED;
           if (i === (result.length - 1)) {
             setAppStatus(scenarioStatuses.afterClass);
           } else {
@@ -105,32 +105,14 @@ export default function Lessons() {
     <div className={classes.root}>
       {appStatus === scenarioStatuses.weekend && <Weekend />}
       {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0].start} />}
-      {appStatus === scenarioStatuses.afterClass && <AfterClass />}
+      {appStatus === scenarioStatuses.afterClass &&
+        <>
+          <AfterClass />
+          <CompletedLessons filteredLessons={filteredLessons} />
+        </>
+      }
       {appStatus === scenarioStatuses.break && <Break filteredLessons={filteredLessons} />}
 
-			<button>ok</button>
-			<button disabled>ok</button>
-      <Weekend />
-      <BeforeClass startedTime={"20:00"} />
-      <AfterClass />
-      <Break filteredLessons={filteredLessons}/>
-      <Lesson data={{
-        title: "test lesson",
-        teacher: "G. Grigoryan",
-        room: 51000,
-        start: "10:10",
-        end: "20:20",
-        status: "default",
-      }}/>
-      <Lesson data={{
-        title: "test lesson",
-        teacher: "G. Grigoryan",
-        room: 51000,
-        start: "10:10",
-        end: "20:20",
-        status: "current",
-      }}/>
-      
       {
         (
           appStatus === scenarioStatuses.lesson ||
@@ -148,22 +130,28 @@ export default function Lessons() {
               )
           }
 
-          <details className={classes.completedLessons}>
-            <summary>completed lessons</summary>
-            <div className={classes.completedLessonsList}>
-              {
-                filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETED)
-                  .map((lessonData, ind) =>
-                    <Lesson
-                      key={`${ind} ${JSON.stringify(lessonData)}`}
-                      data={lessonData}
-                    />
-                  )
-              }
-            </div>
-          </details>
+          <CompletedLessons filteredLessons={filteredLessons} />
         </>
       }
     </div>
   )
+}
+
+function CompletedLessons({ filteredLessons }) {
+  return (
+    <details className={classes.completedLessons}>
+      <summary>completed lessons</summary>
+      <div className={classes.completedLessonsList}>
+        {
+          filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETED)
+            .map((lessonData, ind) =>
+              <Lesson
+                key={`${ind} ${JSON.stringify(lessonData)}`}
+                data={lessonData}
+              />
+            )
+        }
+      </div>
+    </details>
+  );
 }
