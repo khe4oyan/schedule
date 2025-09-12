@@ -58,11 +58,14 @@ export default function Lesson({ data }) {
     <div className={`${classes.root} ${status === statuses.CURRENT && classes.rootCurrent} ${status === statuses.COMPLETED && classes.rootCompleted}`}>
       <div className={classes.mainInfo}>
         <p className={classes.title}>{title}</p>
+      </div>
+
+      <div className={classes.details}>
         <p>{teacher}</p>
         <p>{room}</p>
       </div>
 
-      <div className={classes.details}>
+      <div className={classes.time}>
         <p>start</p>
         <p>end</p>
         <p>{start}</p>

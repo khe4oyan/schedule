@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: 
+    "top top"
     "left right";
   gap: 5px;
   padding: 10px;
@@ -12,6 +13,7 @@
 
 .rootCurrent {
   grid-template-areas: 
+    "top top"
     "left right"
     "bottom bottom";
 }
@@ -19,15 +21,23 @@
 /* .rootCompleted {} */
 
 .mainInfo {
-  grid-area: left;
+  grid-area: top;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--lessonBorderColor);
+  padding-bottom: 5px;
+  /* text-wrap: balance; */
 }
 
 .title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .details {
+  grid-area: left;
+}
+
+.time {
   grid-area: right;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
