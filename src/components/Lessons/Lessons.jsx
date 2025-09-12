@@ -7,6 +7,7 @@ import Weekend from '../Weekend';
 import BeforeClass from '../BeforeClass';
 import AfterClass from '../AfterClass';
 import Break from '../Break';
+import ShowWeekLessons from '../ShowWeekLessons/ShowWeekLessons';
 
 // utils
 import filterLessons from '../../utils/filterLessons';
@@ -133,6 +134,8 @@ export default function Lessons() {
           <CompletedLessons filteredLessons={filteredLessons} />
         </>
       }
+
+      <ShowWeekLessons />
     </div>
   )
 }
