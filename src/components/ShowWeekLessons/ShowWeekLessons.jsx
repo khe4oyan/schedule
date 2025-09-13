@@ -14,7 +14,7 @@ export default function ShowWeekLessons() {
   const [daySheduleNum, setDaySheduleNum] = useState(() => {
     const dayNum = new Date().getDay() - 1;
       
-    if (dayNum > 4) return 0;
+    if (dayNum > 4) return -1;
 
     return dayNum;
   });
@@ -35,7 +35,7 @@ export default function ShowWeekLessons() {
 
       <div className={classes.lessons}>
         {
-          lessons[daySheduleNum].map((lesson, ind) =>
+          lessons[daySheduleNum]?.map((lesson, ind) =>
             <Lesson
               data={lesson}
               key={ind}
