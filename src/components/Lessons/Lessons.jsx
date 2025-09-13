@@ -75,13 +75,14 @@ export default function Lessons() {
   }
 
   const initShedule = (inputLessons) => {
-    if (new Date().getDay() > 4) {
-      setAppStatus(scenarioStatuses.weekend);
-      return;
-    }
-
     const result = filterLessons(inputLessons);
-    calculateDayShedule(result);
+    console.log(result);
+    
+    if (result) {
+      calculateDayShedule(result);
+    } else {
+      setAppStatus(scenarioStatuses.weekend);
+    }
   }
 
   useEffect(() => {
