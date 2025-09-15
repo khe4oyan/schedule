@@ -66,8 +66,8 @@ export default function Lesson({ data }) {
       </div>
 
       <div className={classes.time}>
-        <p>start</p>
-        <p>end</p>
+        <p>Սկիզբ</p>
+        <p>Ավարտ</p>
         <p>{start}</p>
         <p>{end}</p>
       </div>

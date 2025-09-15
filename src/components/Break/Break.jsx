@@ -42,7 +42,7 @@ export default function Break({ filteredLessons }) {
 
   return (
     <div className={classes.root}>
-      <p className={classes.title}>Break</p>
+      <p className={classes.title}>Ընդմիջում</p>
       <p>{timerFormat(timer)}</p>
     </div>
   )

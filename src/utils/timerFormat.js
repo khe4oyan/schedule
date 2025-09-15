@@ -1,6 +1,6 @@
 export default function timerFormat(inputSeconds) {
   if (inputSeconds < 1) {
-    return '0 sec.';
+    return '0 վայրկյան.';
   }
 
   let result = "";
@@ -9,9 +9,9 @@ export default function timerFormat(inputSeconds) {
   const minutes = Math.floor((inputSeconds % 3600) / 60);
   const seconds = inputSeconds % 60;
 
-  if (hours > 0) result += `${hours}h. `;
-  if (minutes > 0) result += `${minutes}min. `;
-  if (seconds > 0) result += `${seconds}sec.`;
-
+  if (hours > 0) result += `${hours}ժամ, `;
+  if (minutes > 0) result += `${minutes} րոպե, `;
+  if (seconds > 0) result += `${seconds} վայրկյան`;
+   
   return result;
 }

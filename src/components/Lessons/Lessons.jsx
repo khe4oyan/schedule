@@ -32,7 +32,7 @@ export default function Lessons() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
 
-  const calculateDayShedule = (inputRes) => {
+  const calculateDayschedule = (inputRes) => {
     const result = [...inputRes];
     const currentDate = new Date();
     const currentTime = currentDate.getTime();
@@ -74,19 +74,19 @@ export default function Lessons() {
     setFilteredLessons(result);
   }
 
-  const initShedule = (inputLessons) => {
+  const initschedule = (inputLessons) => {
     const result = filterLessons(inputLessons);
     console.log(result);
     
     if (result) {
-      calculateDayShedule(result);
+      calculateDayschedule(result);
     } else {
       setAppStatus(scenarioStatuses.weekend);
     }
   }
 
   useEffect(() => {
-    initShedule(lessons);
+    initschedule(lessons);
   }, []);
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export default function Lessons() {
     const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
 
     const timeoutId = setTimeout(() => {
-      calculateDayShedule(filteredLessons);
+      calculateDayschedule(filteredLessons);
     }, msUntilNextMinute);
 
     // Чистим оба таймера при размонтировании
@@ -149,7 +149,7 @@ export default function Lessons() {
 function CompletedLessons({ filteredLessons }) {
   return (
     <details className={classes.completedLessons}>
-      <summary>completed lessons</summary>
+      <summary>ավարտված դասերը</summary>
       <div className={classes.completedLessonsList}>
         {
           filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETED)
