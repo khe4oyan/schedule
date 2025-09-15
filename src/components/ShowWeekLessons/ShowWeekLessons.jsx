@@ -37,7 +37,7 @@ export default function ShowWeekLessons() {
         {
           lessons[daySheduleNum]?.map((lesson, ind) =>
             <Lesson
-              data={lesson}
+              data={{...lesson, status: "default"}}
               key={ind}
             />
           )
