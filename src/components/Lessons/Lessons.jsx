@@ -76,7 +76,7 @@ export default function Lessons() {
 
   const initschedule = (inputLessons) => {
     const result = filterLessons(inputLessons);
-    
+
     if (result) {
       calculateDayschedule(result);
     } else {
@@ -86,6 +86,10 @@ export default function Lessons() {
 
   useEffect(() => {
     initschedule(lessons);
+
+    window.addEventListener("focus", () => {
+      initschedule(lessons);
+    });
   }, []);
 
   useEffect(() => {

@@ -39,18 +39,22 @@ export default function Lesson({ data }) {
   useEffect(() => {
     if (timer === null) { return; }
 
-    interval.current = setInterval(() => {
+    interval.current = setTimeout(() => {
       setTimer(prev => prev - 1)
     }, 1000);
 
     return () => {
-      clearInterval(interval.current);
+      clearTimeout(interval.current);
     }
   }, []);
 
   useEffect(() => {
     if (timer < 1) {
-      clearInterval(interval.current);
+      clearTimeout(interval.current);
+    } else {
+      interval.current = setTimeout(() => {
+        setTimer(prev => prev - 1)
+      }, 1000);
     }
   }, [timer]);
 
