@@ -56,28 +56,29 @@ export default function Lesson({ data }) {
 
   return (
     <div className={`${classes.root} ${status === statuses.CURRENT && classes.rootCurrent} ${status === statuses.COMPLETED && classes.rootCompleted}`}>
-      <div className={classes.mainInfo}>
+      <div className={`${classes.mainInfo} ${status === statuses.CURRENT && classes.mainInfoExtend}`}>
         <p className={classes.title}>{title}</p>
+        {
+          status === statuses.CURRENT &&
+          <p className={classes.timer}>
+            {timerFormat(timer)}
+          </p>
+        }
       </div>
 
-      <div className={classes.details}>
+      <div className={classes.teacher}>
         <p>{teacher}</p>
+      </div>
+
+      <div className={classes.room}>
         <p>{room}</p>
       </div>
 
       <div className={classes.time}>
-        <p>Սկիզբ</p>
-        <p>Ավարտ</p>
-        <p>{start}</p>
-        <p>{end}</p>
+        <p>{start} - {end}</p>
       </div>
 
-      {
-        status === statuses.CURRENT &&
-        <div className={classes.timer}>
-          {timerFormat(timer)}
-        </div>
-      }
+      <div className={classes.line}></div>
     </div>
   )
 }
