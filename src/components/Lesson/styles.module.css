@@ -15,7 +15,7 @@
 }
 
 .rootCurrent {
-  box-shadow: 10px 0 25px var(--lessonLineCurrentShadow);
+  /* box-shadow: 10px 0 25px var(--lessonLineCurrentShadow); */
 
   .line {
     background: var(--lessonLineBgCurrent);
