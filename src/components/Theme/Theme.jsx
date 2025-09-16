@@ -11,7 +11,6 @@ export default function Theme({ newTheme }) {
     "colors_default",
     "colors_dark",
     "colors_pink",
-    "colors_pastel",
     "colors_space",
   ];
 
