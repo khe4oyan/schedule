@@ -76,7 +76,6 @@ export default function Lessons() {
 
   const initschedule = (inputLessons) => {
     const result = filterLessons(inputLessons);
-    console.log(result);
     
     if (result) {
       calculateDayschedule(result);
