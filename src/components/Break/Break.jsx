@@ -19,11 +19,22 @@ export default function Break({ filteredLessons }) {
       if (filteredLessons[i].status === statuses.DEFAULT) {
         const startTime = getDateTime(filteredLessons[i].start);
         const currentTime = new Date().getTime();
-        
+
+        window.addEventListener("focus", () => {
+          const currentDate = new Date();
+          const currentTime = currentDate.getTime();
+          const endTime = getDateTime(filteredLessons[i].start);
+          const newTimer = Math.floor((endTime - currentTime) / 1000);
+
+          setTimer(newTimer);
+        });
+
         setTimer(Math.floor((startTime - currentTime) / 1000));
         break;
       }
     }
+
+
   }, []);
 
   useEffect(() => {
