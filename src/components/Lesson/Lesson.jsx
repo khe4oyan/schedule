@@ -43,6 +43,15 @@ export default function Lesson({ data }) {
       setTimer(prev => prev - 1)
     }, 1000);
 
+    window.addEventListener("visibilitychange", () => {
+      const currentDate = new Date();
+      const currentTime = currentDate.getTime();
+      const endTime = getDateTime(end);
+      const newTimer = Math.floor((endTime - currentTime) / 1000);
+      
+      setTimer(newTimer);
+    });
+
     return () => {
       clearTimeout(interval.current);
     }
@@ -55,6 +64,10 @@ export default function Lesson({ data }) {
       interval.current = setTimeout(() => {
         setTimer(prev => prev - 1)
       }, 1000);
+    }
+
+    return () => {
+      clearTimeout(interval.current);
     }
   }, [timer]);
 
