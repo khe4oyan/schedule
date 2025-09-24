@@ -1,4 +1,5 @@
 import { statuses } from '../components/Lesson/Lesson';
+import getAcademicWeekParity from '../utils/getAcademicWeekParity.js'
 
 class Lesson {
   constructor(title, room, teacher, start, end) {
@@ -22,20 +23,7 @@ class DoubleLess {
       return less_odd;
     }
 
-    // calculate weeknumber from September 1
-    const startTime = new Date(2025, 8, 1).getTime();
-    const nowDate = new Date();
-    const nowTime = nowDate.getTime();
-    const passedTime = nowTime - startTime;
-
-    const passedDays = Math.floor(passedTime / 1000 / 60 / 60 / 24);
-    let passedWeeks = Math.floor(passedDays / 7);
-
-    if (nowDate.getDay() > 4) {
-      ++passedWeeks;
-    }
-
-    if (passedWeeks % 2 === 0) {
+    if (getAcademicWeekParity() === 'odd') {
       return less_odd;
     } else {
       return less_even;
