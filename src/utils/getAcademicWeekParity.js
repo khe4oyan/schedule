@@ -13,8 +13,8 @@ export default function getAcademicWeekParity() {
   }
 
   if (passedWeeks % 2 === 0) {
-    return "odd";
-  } else {
     return "even";
+  } else {
+    return "odd";
   }
 }
