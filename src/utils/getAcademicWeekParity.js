@@ -8,13 +8,9 @@ export default function getAcademicWeekParity() {
   const passedDays = Math.floor(passedTime / 1000 / 60 / 60 / 24);
   let passedWeeks = Math.floor(passedDays / 7);
 
-  if (nowDate.getDay() > 4) {
-    ++passedWeeks;
-  }
-
   if (passedWeeks % 2 === 0) {
-    return "even";
-  } else {
     return "odd";
+  } else {
+    return "even";
   }
 }

@@ -1,8 +1,9 @@
 // libs
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 // components
 import Lesson from '../Lesson';
+import DoubleLessonChanger from '../DoubleLessonChanger/DoubleLessonChanger.jsx';
 
 // constants
 import lessons from '../../constants/lessons';
@@ -10,21 +11,23 @@ import lessons from '../../constants/lessons';
 // styles
 import classes from './styles.module.css';
 
-export default function ShowWeekLessons() {
-  const [dayscheduleNum, setDayscheduleNum] = useState(() => {
+export default function ShowWeekLessons({ isWeekToggled, setIsWeekToggled }) {
+  const initState = useCallback(() => {
     const dayNum = new Date().getDay() - 1;
-      
-    if ( dayNum < 0 || dayNum > 4) return -1;
+
+    if (dayNum < 0 || dayNum > 4) return -1;
 
     return dayNum;
   });
+
+  const [dayscheduleNum, setDayscheduleNum] = useState(initState);
 
   const days = ["Երկ", "Երեք", "Չորք", "Հինգ", "Ուրբ"];
 
   return (
     <div className={classes.root}>
       <h2>Ամբողջական գրաֆիկ</h2>
-      
+
       <div className={classes.buttons}>
         {
           days.map((day, ind) =>
@@ -33,11 +36,16 @@ export default function ShowWeekLessons() {
         }
       </div>
 
+      <DoubleLessonChanger 
+        setIsWeekToggled={setIsWeekToggled}
+        isWeekToggled={isWeekToggled}
+      />
+
       <div className={classes.lessons}>
         {
           lessons[dayscheduleNum]?.map((lesson, ind) =>
             <Lesson
-              data={{...lesson, status: "default"}}
+              data={{ ...lesson.getData(isWeekToggled), status: "default" }}
               key={ind}
             />
           )

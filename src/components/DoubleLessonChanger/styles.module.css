@@ -1,0 +1,35 @@
+.root {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 45px;
+  margin-bottom: 20px;
+  background: none;
+  border-color: var(--primaryColor_2);
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border: 1px solid var(--primaryColor_4);
+  width: 50%;
+  transition: .5s left;
+  border-radius: 10px;
+}
+
+.borderActive {
+  left: 0%;
+}
+
+.root > p:not(.inActiveP) {
+  /* font-weight: bold; */
+}
+
+.inActiveP {
+  opacity: .7;
+}
