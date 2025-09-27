@@ -1,5 +1,5 @@
 import { statuses } from '../components/Lesson/Lesson';
-import getAcademicWeekParity from '../utils/getAcademicWeekParity.js'
+import getAcademicWeekParity from '../utils/isAcademicTopLessonDay.js'
 
 class Lesson {
   getData() {
@@ -65,7 +65,7 @@ export default [
     new SingleLesson("Ֆիզկուլտուրա", null, "Ինյան", "12:50", "14:10"),
     new DoubleLess(
       new SingleLesson("Տեղեկատվ․ անվտանգություն․ Դաս", 5401, "Մինասյան Լ․", "14:20", "15:40"),
-      new SingleLesson("Դինամիկ վեբ կայքերի նախագծում դաս", 51009, "Պողոսյան Մ․", "14:20", "15:40")
+      new SingleLesson("Դինամիկ վեբ կայքերի նախագծում դաս", 51009, "Պողոսյան Մ․", "14:20", "15:40"),
     ),
   ],
 
@@ -94,15 +94,15 @@ export default [
     new SingleLesson("Ձեռներեցություն Դաս, գործ", 1309, "Մարկոսյան Մ․", "11:00", "12:20"),
     new SingleLesson("Կիրառ․ Հավելվ․ ստեղծ․ միջոց լաբ", "5108, 5108", "Թումանյան Ն․ Մարուխյան Ա․", "12:50", "14:10"),
     new DoubleLess(
-      new SingleLesson("Կազմակ. մարքեթ. գործ. Դաս.", 51305, "Վարդանյան Գ․", "14:20", "15:40"),
       null,
+      new SingleLesson("Կազմակ. մարքեթ. գործ. Դաս.", 51305, "Վարդանյան Գ․", "14:20", "15:40"),
     ),
   ],
 
   [ // Пятница
     new DoubleLess(
       new SingleLesson("Կիրառ․ Հավելվ․ ստեղծ․ միջոց լաբ 1", 5122, "Թումանյան Ն․", "09:30", "10:50"),
-      new SingleLesson("Դիսկրետ մաթ. հիմ. Գործ", 5702, "Հարությունյան Է․", "09:30", "10:50")
+      new SingleLesson("Դիսկրետ մաթ. հիմ. Գործ", 5702, "Հարությունյան Է․", "09:30", "10:50"),
     ),
     new SingleLesson("Դիսկրետ մաթ. հիմ. Դաս, գործ", 5601, "Հարությունյան Է․", "11:00", "12:20"),
     new SingleLesson("Ձեռներեցություն Դաս․ գործ", 5005, "Մարկոսյան Մ․", "12:50", "14:10"),

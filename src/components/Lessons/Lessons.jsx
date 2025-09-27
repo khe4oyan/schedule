@@ -18,7 +18,7 @@ import lessons from '../../constants/lessons';
 import { statuses as lessonStatuses } from "../Lesson/Lesson"
 
 // utils
-import getAcademicWeekParity from '../../utils/getAcademicWeekParity.js'
+import isAcademicTopLessonDay from '../../utils/isAcademicTopLessonDay.js'
 
 // styles 
 import classes from './styles.module.css';
@@ -34,7 +34,7 @@ const scenarioStatuses = {
 export default function Lessons() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
-  const [isWeekToggled, setIsWeekToggled] = useState((getAcademicWeekParity() === "even"));
+  const [isTopLesson, setIsTopLesson] = useState(isAcademicTopLessonDay());
   
   const calculateDayschedule = (inputRes) => {
     const result = [...inputRes];
@@ -42,13 +42,12 @@ export default function Lessons() {
     const currentTime = currentDate.getTime();
 
     for (let i = 0; i < result.length; ++i) {
-      const lesson = result[i].getData(isWeekToggled);
+      const lesson = result[i].getData(isTopLesson);
       const startTime = getDateTime(lesson.start);
       const endTime = getDateTime(lesson.end);
 
       // check before class start
       if (currentTime < startTime) {
-
         // check firts lesson
         if (i === 0) {
           setAppStatus(scenarioStatuses.beforeClass);
@@ -117,7 +116,7 @@ export default function Lessons() {
   return (
     <div className={classes.root}>
       {appStatus === scenarioStatuses.weekend && <Weekend />}
-      {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0]?.getData(isWeekToggled)?.start} />}
+      {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0]?.getData(isTopLesson)?.start} />}
       {appStatus === scenarioStatuses.afterClass &&
         <>
           <AfterClass />
@@ -134,31 +133,31 @@ export default function Lessons() {
         ) &&
         <>
           {
-            filteredLessons.filter((lessonData) => lessonData.getData(isWeekToggled).status !== lessonStatuses.COMPLETED)
+            filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status !== lessonStatuses.COMPLETED)
               .map((lessonData, ind) =>
                 <Lesson
                   key={`${ind} ${JSON.stringify(lessonData)}`}
-                  data={lessonData.getData(isWeekToggled)}
+                  data={lessonData.getData(isTopLesson)}
                 />
               )
           }
 
           <CompletedLessons 
             filteredLessons={filteredLessons} 
-            isWeekToggled={isWeekToggled}
+            isTopLesson={isTopLesson}
           />
         </>
       }
 
       <ShowWeekLessons 
-        isWeekToggled={isWeekToggled} 
-        setIsWeekToggled={setIsWeekToggled}
+        isTopLesson={isTopLesson} 
+        setIsTopLesson={setIsTopLesson}
       />
     </div>
   )
 }
 
-function CompletedLessons({ filteredLessons, isWeekToggled }) {
+function CompletedLessons({ filteredLessons, isTopLesson }) {
   return (
     <details className={classes.completedLessons}>
       <summary>ավարտված դասերը</summary>
@@ -168,7 +167,7 @@ function CompletedLessons({ filteredLessons, isWeekToggled }) {
             .map((lessonData, ind) =>
               <Lesson
                 key={`${ind} ${JSON.stringify(lessonData)}`}
-                data={lessonData.getData(isWeekToggled)}
+                data={lessonData.getData(isTopLesson)}
               />
             )
         }

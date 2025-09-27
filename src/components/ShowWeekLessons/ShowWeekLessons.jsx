@@ -11,7 +11,7 @@ import lessons from '../../constants/lessons';
 // styles
 import classes from './styles.module.css';
 
-export default function ShowWeekLessons({ isWeekToggled, setIsWeekToggled }) {
+export default function ShowWeekLessons({ isTopLesson, setIsTopLesson }) {
   const initState = useCallback(() => {
     const dayNum = new Date().getDay() - 1;
 
@@ -37,15 +37,15 @@ export default function ShowWeekLessons({ isWeekToggled, setIsWeekToggled }) {
       </div>
 
       <DoubleLessonChanger 
-        setIsWeekToggled={setIsWeekToggled}
-        isWeekToggled={isWeekToggled}
+        setIsTopLesson={setIsTopLesson}
+        isTopLesson={isTopLesson}
       />
 
       <div className={classes.lessons}>
         {
           lessons[dayscheduleNum]?.map((lesson, ind) =>
             <Lesson
-              data={{ ...lesson.getData(isWeekToggled), status: "default" }}
+              data={{ ...lesson.getData(isTopLesson), status: "default" }}
               key={ind}
             />
           )

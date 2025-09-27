@@ -1,4 +1,4 @@
-export default function getAcademicWeekParity() {
+export default function isAcademicTopLessonDay() {
   // calculate weeknumber from September 1
   const startTime = new Date(2025, 8, 1).getTime();
   const nowDate = new Date();
@@ -8,9 +8,5 @@ export default function getAcademicWeekParity() {
   const passedDays = Math.floor(passedTime / 1000 / 60 / 60 / 24);
   let passedWeeks = Math.floor(passedDays / 7);
 
-  if (passedWeeks % 2 === 0) {
-    return "odd";
-  } else {
-    return "even";
-  }
+  return passedWeeks % 2 === 0;
 }
