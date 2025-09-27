@@ -1,4 +1,5 @@
 // libs
+import React from 'react';
 import { useCallback, useState } from 'react';
 
 // components
@@ -36,18 +37,21 @@ export default function ShowWeekLessons({ isTopLesson, setIsTopLesson }) {
         }
       </div>
 
-      <DoubleLessonChanger 
+      <DoubleLessonChanger
         setIsTopLesson={setIsTopLesson}
         isTopLesson={isTopLesson}
       />
 
       <div className={classes.lessons}>
         {
-          lessons[dayscheduleNum]?.map((lesson, ind) =>
-            <Lesson
-              data={{ ...lesson.getData(isTopLesson), status: "default" }}
-              key={ind}
-            />
+          lessons[dayscheduleNum]?.map(
+            (lesson, ind) => {
+              return lesson?.getData(isTopLesson) ?
+                <Lesson
+                  data={{ ...lesson?.getData(isTopLesson), status: "default" }}
+                  key={`${lesson.title} ${ind}`}
+                /> : <React.Fragment key={ind}></React.Fragment>
+            }
           )
         }
       </div>

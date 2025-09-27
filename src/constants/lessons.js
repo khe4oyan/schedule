@@ -1,5 +1,5 @@
 import { statuses } from '../components/Lesson/Lesson';
-import getAcademicWeekParity from '../utils/isAcademicTopLessonDay.js'
+import isAcademicTopLessonDay from '../utils/isAcademicTopLessonDay.js'
 
 class Lesson {
   getData() {
@@ -33,24 +33,16 @@ class DoubleLess extends Lesson {
   }
 
   getData(isToggled) {
-    if (!this.less_odd && this.less_even) {
-      return this.less_even;
-    }
-
-    if (!this.less_even && this.less_odd) {
-      return this.less_odd;
-    }
-
-    let weekParity = getAcademicWeekParity();
+    let isTopLesson = isAcademicTopLessonDay();
     
     if (isToggled) {
-      weekParity = weekParity === "odd" ? "even": "odd";
+      isTopLesson = isTopLesson === "odd" ? "even": "odd";
     }
 
-    if (weekParity === 'odd') {
-      return this.less_odd.getData();
+    if (isTopLesson) {
+      return this.less_odd?.getData();
     } else {
-      return this.less_even.getData();
+      return this.less_even?.getData();
     }
   }
 }
@@ -94,8 +86,8 @@ export default [
     new SingleLesson("Ձեռներեցություն Դաս, գործ", 1309, "Մարկոսյան Մ․", "11:00", "12:20"),
     new SingleLesson("Կիրառ․ Հավելվ․ ստեղծ․ միջոց լաբ", "5108, 5108", "Թումանյան Ն․ Մարուխյան Ա․", "12:50", "14:10"),
     new DoubleLess(
-      null,
       new SingleLesson("Կազմակ. մարքեթ. գործ. Դաս.", 51305, "Վարդանյան Գ․", "14:20", "15:40"),
+      null,
     ),
   ],
 
