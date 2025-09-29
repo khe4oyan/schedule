@@ -8,5 +8,5 @@ export default function isAcademicTopLessonDay() {
   const passedDays = Math.floor(passedTime / 1000 / 60 / 60 / 24);
   let passedWeeks = Math.floor(passedDays / 7);
 
-  return passedWeeks % 2 === 0;
+  return passedWeeks % 2 !== 0;
 }

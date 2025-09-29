@@ -36,7 +36,7 @@ class DoubleLess extends Lesson {
     let isTopLesson = isAcademicTopLessonDay();
     
     if (isToggled) {
-      isTopLesson = isTopLesson === "odd" ? "even": "odd";
+      isTopLesson = !isTopLesson;
     }
 
     if (isTopLesson) {

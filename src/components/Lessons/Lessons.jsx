@@ -163,7 +163,7 @@ function CompletedLessons({ filteredLessons, isTopLesson }) {
       <summary>ավարտված դասերը</summary>
       <div className={classes.completedLessonsList}>
         {
-          filteredLessons.filter((lessonData) => lessonData.status === lessonStatuses.COMPLETED)
+          filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status === lessonStatuses.COMPLETED)
             .map((lessonData, ind) =>
               <Lesson
                 key={`${ind} ${JSON.stringify(lessonData)}`}
