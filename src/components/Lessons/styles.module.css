@@ -1,5 +1,4 @@
-.root, 
-.completedLessonsList {
+.root {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -9,31 +8,4 @@
   max-width: 700px;
   margin: auto;
   margin-bottom: 6.3rem;
-}
-
-/* .completedLessons {} */
-.completedLessons summary {
-  list-style-type: '';
-  background: var(--completeLessonsBg);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.completedLessons summary::before {
-  content: "Ցույց տալ ";
-}
-
-.completedLessons[open] summary {
-  /* margin-bottom: 5px; */
-  border-radius: 10px 10px 0 0;
-}
-.completedLessons[open] summary::before {
-  content: "Թաքցնել ";
-}
-
-.completedLessonsList {
-  padding: 8px;
-  background: var(--completeLessonsListBg);
-  border-top: 0;
-  border-radius: 0 0 10px 10px;
 }

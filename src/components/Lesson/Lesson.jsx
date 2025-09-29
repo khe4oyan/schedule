@@ -48,7 +48,7 @@ export default function Lesson({ data }) {
       const currentTime = currentDate.getTime();
       const endTime = getDateTime(end);
       const newTimer = Math.floor((endTime - currentTime) / 1000);
-      
+
       setTimer(newTimer);
     });
 

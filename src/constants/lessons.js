@@ -1,5 +1,4 @@
 import { statuses } from '../components/Lesson/Lesson';
-import isAcademicTopLessonDay from '../utils/isAcademicTopLessonDay.js'
 
 class Lesson {
   getData() {
@@ -32,13 +31,7 @@ class DoubleLess extends Lesson {
     this.less_even = less_even;
   }
 
-  getData(isToggled) {
-    let isTopLesson = isAcademicTopLessonDay();
-    
-    if (isToggled) {
-      isTopLesson = !isTopLesson;
-    }
-
+  getData(isTopLesson) {
     if (isTopLesson) {
       return this.less_odd?.getData();
     } else {

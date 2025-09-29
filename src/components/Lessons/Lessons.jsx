@@ -35,7 +35,7 @@ export default function Lessons() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
   const [isTopLesson, setIsTopLesson] = useState(isAcademicTopLessonDay());
-  
+
   const calculateDayschedule = (inputRes) => {
     const result = [...inputRes];
     const currentDate = new Date();
@@ -117,12 +117,7 @@ export default function Lessons() {
     <div className={classes.root}>
       {appStatus === scenarioStatuses.weekend && <Weekend />}
       {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0]?.getData(isTopLesson)?.start} />}
-      {appStatus === scenarioStatuses.afterClass &&
-        <>
-          <AfterClass />
-          <CompletedLessons filteredLessons={filteredLessons} />
-        </>
-      }
+      {appStatus === scenarioStatuses.afterClass && <AfterClass />}
       {appStatus === scenarioStatuses.break && <Break filteredLessons={filteredLessons} />}
 
       {
@@ -131,47 +126,19 @@ export default function Lessons() {
           appStatus === scenarioStatuses.beforeClass ||
           appStatus === scenarioStatuses.break
         ) &&
-        <>
-          {
-            filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status !== lessonStatuses.COMPLETED)
-              .map((lessonData, ind) =>
-                <Lesson
-                  key={`${ind} ${JSON.stringify(lessonData)}`}
-                  data={lessonData.getData(isTopLesson)}
-                />
-              )
-          }
-
-          <CompletedLessons 
-            filteredLessons={filteredLessons} 
-            isTopLesson={isTopLesson}
-          />
-        </>
+        filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status !== lessonStatuses.COMPLETED)
+          .map((lessonData, ind) =>
+            <Lesson
+              key={`${ind} ${JSON.stringify(lessonData)}`}
+              data={lessonData.getData(isTopLesson)}
+            />
+          )
       }
 
-      <ShowWeekLessons 
-        isTopLesson={isTopLesson} 
+      <ShowWeekLessons
+        isTopLesson={isTopLesson}
         setIsTopLesson={setIsTopLesson}
       />
     </div>
   )
-}
-
-function CompletedLessons({ filteredLessons, isTopLesson }) {
-  return (
-    <details className={classes.completedLessons}>
-      <summary>ավարտված դասերը</summary>
-      <div className={classes.completedLessonsList}>
-        {
-          filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status === lessonStatuses.COMPLETED)
-            .map((lessonData, ind) =>
-              <Lesson
-                key={`${ind} ${JSON.stringify(lessonData)}`}
-                data={lessonData.getData(isTopLesson)}
-              />
-            )
-        }
-      </div>
-    </details>
-  );
 }
