@@ -14,7 +14,7 @@
 .border {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0%;
   height: 100%;
   border: 1px solid var(--primaryColor_4);
   width: 50%;
@@ -23,7 +23,7 @@
 }
 
 .borderActive {
-  left: 0%;
+  left: 50%;
 }
 
 .root > p:not(.inActiveP) {
