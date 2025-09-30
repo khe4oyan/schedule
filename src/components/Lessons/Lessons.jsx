@@ -126,7 +126,7 @@ export default function Lessons() {
           appStatus === scenarioStatuses.beforeClass ||
           appStatus === scenarioStatuses.break
         ) &&
-        filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson).status !== lessonStatuses.COMPLETED)
+        filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson)?.status !== lessonStatuses.COMPLETED && lessonData.getData(isTopLesson))
           .map((lessonData, ind) =>
             <Lesson
               key={`${ind} ${JSON.stringify(lessonData)}`}
