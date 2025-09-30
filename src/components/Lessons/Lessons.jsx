@@ -34,10 +34,10 @@ const scenarioStatuses = {
 export default function Lessons() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
-  const [isTopLesson, setIsTopLesson] = useState(isAcademicTopLessonDay());
+  const isTopLesson = isAcademicTopLessonDay();
 
   const calculateDayschedule = (inputRes) => {
-    const result = [...inputRes];
+    const result = [...inputRes].filter(item => item.getData(isTopLesson) !== undefined);
     const currentDate = new Date();
     const currentTime = currentDate.getTime();
 
