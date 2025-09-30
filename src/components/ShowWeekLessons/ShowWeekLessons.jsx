@@ -9,10 +9,15 @@ import DoubleLessonChanger from '../DoubleLessonChanger/DoubleLessonChanger.jsx'
 // constants
 import lessons from '../../constants/lessons';
 
+// utils
+import isAcademicTopLessonDay from '../../utils/isAcademicTopLessonDay.js'
+
 // styles
 import classes from './styles.module.css';
 
-export default function ShowWeekLessons({ isTopLesson, setIsTopLesson }) {
+export default function ShowWeekLessons() {
+  const [isTopLesson, setIsTopLesson] = React.useState(isAcademicTopLessonDay());
+
   const initState = useCallback(() => {
     const dayNum = new Date().getDay() - 1;
 

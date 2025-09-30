@@ -135,10 +135,7 @@ export default function Lessons() {
           )
       }
 
-      <ShowWeekLessons
-        isTopLesson={isTopLesson}
-        setIsTopLesson={setIsTopLesson}
-      />
+      <ShowWeekLessons />
     </div>
   )
 }
