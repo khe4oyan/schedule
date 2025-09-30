@@ -33,8 +33,6 @@ export default function Break({ filteredLessons }) {
         break;
       }
     }
-
-
   }, []);
 
   useEffect(() => {
