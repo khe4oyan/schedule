@@ -10,7 +10,7 @@ export default function timerFormat(inputSeconds) {
   const seconds = inputSeconds % 60;
 
   if (hours > 0) result += `${hours}:`;
-  if (minutes > 0) result += `${minutes < 10 ? `0${minutes}` : minutes}:`;
+  result += `${minutes < 10 ? `0${minutes}` : minutes}:`;
   result += `${seconds < 10 ? `0${seconds}` : seconds}`;
 
   return result;
