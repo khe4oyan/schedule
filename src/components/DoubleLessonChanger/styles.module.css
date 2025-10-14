@@ -9,6 +9,7 @@
   margin-bottom: 20px;
   background: none;
   border-color: var(--primaryColor_2);
+  backdrop-filter: var(--bgEffect);
 }
 
 .border {

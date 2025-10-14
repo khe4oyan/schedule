@@ -38,10 +38,10 @@ function App() {
 
 	return (
 		<div>
-			{/* <Header /> */}
-			{/* <Lessons /> */}
+			<Header />
+			<Lessons />
 			<Theme newTheme={newTheme} />
-			<AllComponentsPreview />
+			{/* <AllComponentsPreview /> */}
 		</div>
 	);
 }

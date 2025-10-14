@@ -1,4 +1,6 @@
-.root {}
+.root {
+  backdrop-filter: var(--bgEffect);
+}
 
 .message {
   background: var(--afterClassBg);

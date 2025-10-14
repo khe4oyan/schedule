@@ -12,6 +12,7 @@
   padding: 15px 0;
   margin: 10px 0;
   border-color: var(--primaryColor_2);
+  backdrop-filter: var(--bgEffect);
 }
 
 .buttonActive {

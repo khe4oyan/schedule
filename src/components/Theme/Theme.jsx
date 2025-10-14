@@ -12,6 +12,7 @@ export default function Theme({ newTheme }) {
     "colors_dark",
     "colors_pink",
     "colors_space",
+    "colors_glass",
   ];
 
   const onClickTheme = (className) => {

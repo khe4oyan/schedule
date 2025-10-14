@@ -11,6 +11,8 @@
   background: var(--breakBg);
   border: 1px solid var(--breakBorderColor);
   color: var(--breakColor);
+  backdrop-filter: var(--bgEffect);
+
 }
 
 .title {

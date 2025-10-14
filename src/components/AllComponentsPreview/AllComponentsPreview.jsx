@@ -12,11 +12,11 @@ import classes from './styles.module.css';
 export default function AllComponentsPreview() {
   return (
     <div className={classes.root}>
-      <ShowWeekLessons />
       <BeforeClass startedTime={"21:00"} />
       <Weekend />
       <AfterClass />
       <Break filteredLessons={[{ status: "default", start: "20:00" }]} />
+      <div style={{marginTop: "15px", width: "100%"}}></div>
       <Header />
 
       <Lesson data={{
@@ -36,6 +36,10 @@ export default function AllComponentsPreview() {
         end: "23:00",
         status: "current",
       }} />
+
+      <div style={{width: "100%"}}></div>
+      
+      <ShowWeekLessons />
     </div>
   )
 }
