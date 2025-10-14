@@ -11,7 +11,6 @@ import classes from './styles.module.css';
 export const statuses = {
   DEFAULT: "default",
   CURRENT: "current",
-  COMPLETED: "completed",
 };
 
 export default function Lesson({ data }) {

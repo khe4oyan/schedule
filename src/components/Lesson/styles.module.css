@@ -12,6 +12,7 @@
   background: var(--lessonBg);
   position: relative;
   overflow: hidden;
+  min-width: 250px;
 }
 
 .rootCurrent {
@@ -19,12 +20,6 @@
 
   .line {
     background: var(--lessonLineBgCurrent);
-  }
-}
-
-.rootCompleted {
-  .line {
-    background: var(--lessonLineBGCompleted);
   }
 }
 
