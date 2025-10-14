@@ -92,7 +92,6 @@ button:disabled {
   --lessonTimerBG: #ffdddd;
 
   --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-  --lessonLineBGCompleted: #9ca3af;
   --lessonLineBgCurrent: #10b981;
   --lessonLineCurrentShadow: #10b9814d;
 
@@ -126,7 +125,6 @@ button:disabled {
   --lessonTimerBG: var(--primaryColor_4);
 
   --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, var(--headerBetaBgColor));
-  --lessonLineBGCompleted: #9ca3af;
   --lessonLineBgCurrent: #dcffdb;
   --lessonLineCurrentShadow: #e5ffe54d;
 
@@ -194,7 +192,6 @@ button:disabled {
   --lessonTimerBG: var(--primaryColor_3);
 
   --lessonLineBgDefault: linear-gradient(to bottom, #fac0c0, #e46b6b);
-  --lessonLineBGCompleted: #8d717f;
    --lessonLineBgCurrent: #f398c5;
   --lessonLineCurrentShadow: #f5bbd8;
 

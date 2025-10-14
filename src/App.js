@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Lessons from './components/Lessons/Lessons';
 import Theme from './components/Theme';
+import AllComponentsPreview from "./components/AllComponentsPreview";
 
 // general styles
 import './app.css'
@@ -37,9 +38,10 @@ function App() {
 
 	return (
 		<div>
-			<Header />
-			<Lessons />
+			{/* <Header /> */}
+			{/* <Lessons /> */}
 			<Theme newTheme={newTheme} />
+			<AllComponentsPreview />
 		</div>
 	);
 }
