@@ -41,6 +41,7 @@ function App() {
 			<Header />
 			<Lessons />
 			<Theme newTheme={newTheme} />
+
 			{/* <AllComponentsPreview /> */}
 		</div>
 	);

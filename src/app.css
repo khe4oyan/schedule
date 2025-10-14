@@ -30,6 +30,32 @@ button:disabled {
   background: var(--buttonDisabledBgColor);
 }
 
+.notificationAbsolute {
+  position: absolute;
+}
+
+.notificationFixed {
+  position: fixed;
+}
+
+.notificationRelative {
+  position: relative;
+}
+
+.notificationAbsolute::after,
+.notificationFixed::after,
+.notificationRelative::after {
+  content: '';
+  --size: 20px;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  background: var(--notificationBG);
+}
+
 .colors_default {
   /* primary colors */
   --primaryColor_1: white;
@@ -41,6 +67,8 @@ button:disabled {
   --bodyBackgroundColor: var(--bodyBackground);
 
   --bgEffect: none;
+
+  --notificationBG: yellow;
 
   /* button */
   --buttonInitBgColor: var(--primaryColor_1);
@@ -279,12 +307,12 @@ button:disabled {
   --primaryColor_2: #cacaca4f;
   --primaryColor_3: #ffffff52;
   --primaryColor_4: #f5f5f5;
-  
+
   --bodyBackground: url("../public/3d_balls.jpg") center center / cover;
   --bodyBackgroundColor: #10251b;
 
   --bgEffect: blur(10px);
-  
+
   /* button */
   --buttonInitBgColor: var(--primaryColor_1);
   --buttonInitBorderColor: #b4b4b4;
@@ -307,7 +335,7 @@ button:disabled {
   --messageBg: #ffffff93;
   --messageColor: #ffffff;
   --messageBorderColor: #ffffff56;
- 
+
   /* weekendd */
   --weekendBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
   --weekendColor: var(--messageColor);
