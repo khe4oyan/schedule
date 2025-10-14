@@ -308,7 +308,7 @@ button:disabled {
   --primaryColor_3: #ffffff52;
   --primaryColor_4: #f5f5f5;
 
-  --bodyBackground: url("../public/3d_balls.jpg") center center / cover;
+  --bodyBackground: url("../public/3d_balls.png") center center / cover;
   --bodyBackgroundColor: #10251b;
 
   --bgEffect: blur(10px);
