@@ -376,5 +376,7 @@ button:disabled {
   --themeMenuBg: #0002;
   --themeBorderColor: var(--primaryColor_2);
   --themeIconBorderColor: #6CC99D;
-  --themeIconBG: linear-gradient(135deg, #ffffff 50%, #6CC99D 51%);
+  --themeWhite: #ffffff;
+  --themeSecond: #6CC99D;
+  --themeIconBG: linear-gradient(135deg, var(--themeWhite) 50%, var(--themeSecond) 51%);
 }

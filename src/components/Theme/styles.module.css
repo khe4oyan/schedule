@@ -50,3 +50,33 @@
   border: 2px solid var(--themeIconBorderColor);
   background: var(--themeIconBG);
 }
+
+/* custom icon styles */
+.themeOnlySize {
+  --size: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--themeIconBorderColor);
+  width: var(--size);
+  height: var(--size);
+}
+
+.customIcon {
+  position: relative;
+  background-color: var(--themeWhite);
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--size) / -2);
+    left: 40%;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(-45deg);
+    background-color: var(--themeSecond);
+  }
+}
+
+.colors_glass {
+  background: url("../../../public/3d_balls.png") center center / cover;
+}

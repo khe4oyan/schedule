@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 export default function useVersion(key, lastVersion) {
   const keyFormat = keyFormatTool(key);
   
