@@ -7,9 +7,8 @@
   left: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: var(--headerBg);
+  background: var(--themeSecond);
   border-top: 1px solid var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
   padding: 0 10px;
 }
 

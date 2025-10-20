@@ -70,6 +70,6 @@
   --themeMenuBg: #0002;
   --themeIconBorderColor: #6CC99D;
   --themeWhite: #ffffff;
-  --themeSecond: #6CC99D;
+  --themeSecond: #042516;
   --themeIconBG: linear-gradient(135deg, var(--themeWhite) 50%, var(--themeSecond) 51%);
 }
