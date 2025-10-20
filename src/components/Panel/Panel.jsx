@@ -1,3 +1,7 @@
+// libs
+import { BsList } from "react-icons/bs";
+import { PiCircleHalfTiltFill } from "react-icons/pi";
+
 // custom hooks
 import useVersion from '../../customHooks/useVersion';
 
@@ -25,8 +29,8 @@ export default function Panel({ tab, setTab }) {
 
   return (
     <div className={classes.root}>
-      <button onClick={scheduleClick} className={(tab === 0 && classes.active).toString()}>schedule</button>
-      <button onClick={themeClick} className={(tab === 1 && classes.active).toString()}>theme
+      <button onClick={scheduleClick} className={`${classes.button} ${(tab === 0 && classes.active).toString()}`}><BsList /></button>
+      <button onClick={themeClick} className={`${classes.button} ${(tab === 1 && classes.active).toString()}`}><PiCircleHalfTiltFill />
         {isShowNot && <NotificationCircle />}
       </button>
     </div>
