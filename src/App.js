@@ -13,7 +13,7 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
-	const [tab, setTab] = useState(1);
+	const [tab, setTab] = useState(0);
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
