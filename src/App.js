@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 // components
 import Header from './components/Header';
 import Lessons from './components/Lessons/Lessons';
+import Panel from './components/Panel';
 import Theme from './components/Theme';
 import AllComponentsPreview from "./components/AllComponentsPreview";
 
@@ -12,6 +13,7 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
+	const [tab, setTab] = useState(1);
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
@@ -39,9 +41,10 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<Lessons />
-			<Theme newTheme={newTheme} />
-
+			{tab === 0 && <Lessons />}
+			{tab === 1 && <Theme newTheme={newTheme} />}
+			
+			<Panel tab={tab} setTab={setTab} />
 			{/* <AllComponentsPreview /> */}
 		</div>
 	);

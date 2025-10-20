@@ -1,0 +1,41 @@
+.colors_dark {
+  --primaryColor_1: #27374D;
+  --primaryColor_2: #526D82;
+  --primaryColor_3: #9DB2BF;
+  --primaryColor_4: #DDE6ED;
+
+  --bodyBackground: #07101b;
+  --bodyBackgroundColor: var(--bodyBackground);
+
+  --buttonInitBorderColor: #b4b4b4;
+
+  --weekendBg: var(--messageBg);
+  --afterClassBg: var(--messageBg);
+  --breakBg: var(--messageBg);
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+
+  --headerBetaBgColor: #aaebeb;
+
+  --lessonTimerColor: var(--primaryColor_1);
+  --lessonTimerBG: var(--primaryColor_4);
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonLineBgDefault: linear-gradient(to right, #3b82f6, var(--headerBetaBgColor));
+  --lessonLineBgCurrent: #dcffdb;
+  --lessonLineCurrentShadow: #e5ffe54d;
+
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_2), 75%, var(--primaryColor_1));
+  --beforeClassColor: var(--primaryColor_4);
+  --beforeClassBorderColor: var(--primaryColor_3);
+
+  --messageBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--primaryColor_2));
+  --messageColor: var(--primaryColor_4);
+  --messageBorderColor: var(--primaryColor_3);
+
+  --themeMenuBg: #fff2;
+  --themeIconBorderColor: var(--primaryColor_3);
+  --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+}

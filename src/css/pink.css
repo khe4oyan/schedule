@@ -1,0 +1,61 @@
+.colors_pink {
+  --primaryColor_1: #fff0f6;
+  --primaryColor_2: #ffb6c1;
+  --primaryColor_3: #ff69b4;
+  --primaryColor_4: #4a0033;
+
+  --bodyBackground: #fff5fa;
+  --bodyBackgroundColor: var(--bodyBackground);
+
+  --buttonInitBgColor: var(--primaryColor_1);
+  --buttonInitBorderColor: #e89bb5;
+
+  --buttonDisabledBorderColor: #e3c6d4;
+  --buttonDisabledColor: #a66a85;
+  --buttonDisabledBgColor: var(--primaryColor_2);
+
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+  --headerBetaBgColor: #ff69b4;
+  --headerBetaColor: white;
+
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, #ffd6e7);
+  --beforeClassColor: #4a0033;
+  --beforeClassBorderColor: var(--primaryColor_3);
+
+  --messageBg: #ffdaf1;
+  --messageColor: #4a0033;
+  --messageBorderColor: #ff69b4;
+
+  --weekendBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--messageBorderColor);
+
+  --afterClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--messageBorderColor);
+
+  --breakBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--messageBorderColor);
+
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonDetailsBorderColor: var(--primaryColor_3);
+  --lessonDetailsTimeBorderColor: var(--primaryColor_3);
+
+  --lessonTimerColor: var(--primaryColor_1);
+  --lessonTimerBG: var(--primaryColor_3);
+
+  --lessonLineBgDefault: linear-gradient(to right, #fac0c0, #e46b6b);
+  --lessonLineBgCurrent: #f398c5;
+  --lessonLineCurrentShadow: #f5bbd8;
+
+  --themeMenuBg: #ff69b422;
+  --themeIconBorderColor: var(--primaryColor_3);
+  --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+}

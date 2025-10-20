@@ -1,0 +1,76 @@
+.colors_default {
+  /* primary colors */
+  --primaryColor_1: white;
+  --primaryColor_2: #dddddd;
+  --primaryColor_3: #9b9b9b;
+  --primaryColor_4: black;
+
+  --bodyBackground: #f2f2f2;
+  --bodyBackgroundColor: var(--bodyBackground);
+
+  --bgEffect: none;
+
+  --notificationBG: red;
+
+  /* button */
+  --buttonInitBgColor: var(--primaryColor_1);
+  --buttonInitBorderColor: #b4b4b4;
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBgColor: var(--primaryColor_2);
+
+  /* header */
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+  --headerBetaBgColor: #0dacac;
+  --headerBetaColor: var(--primaryColor_1);
+
+  /* complete lessons */
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  /* message */
+  --messageBg: #8eeb8e;
+  --messageColor: #073107;
+  --messageBorderColor: #61c469;
+
+  /* weekendd */
+  --weekendBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--messageBorderColor);
+
+  /* before class */
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, #f1d2a9);
+  --beforeClassColor: #b95711;
+  --beforeClassBorderColor: #f97316;
+
+  /* after class */
+  --afterClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--messageBorderColor);
+
+  /* break */
+  --breakBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--messageBorderColor);
+
+  /* lesson */
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonDetailsBorderColor: var(--primaryColor_3);
+  --lessonDetailsTimeBorderColor: var(--primaryColor_3);
+
+  --lessonTimerColor: #b12525;
+  --lessonTimerBG: #ffdddd;
+
+  --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  --lessonLineBgCurrent: #10b981;
+  --lessonLineCurrentShadow: #10b9814d;
+
+  /* theme */
+  --themeMenuBg: #0002;
+  --themeIconBorderColor: var(--primaryColor_3);
+  --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+}

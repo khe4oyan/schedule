@@ -1,82 +1,56 @@
 .root {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  max-width: 700px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: var(--themeBg);
-  border-top: 2px solid var(--themeBorderColor);
-  align-items: center;
-}
-
-.themeButton {
-  --size: 70px;
-  width: var(--size);
-  height: var(--size);
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 2rem;
-  padding: 10px;
-  border-radius: 50%;
-  background: var(--themeButtonBg);
-  border: 1px solid var(--themeBorderColor);
-  backdrop-filter: var(--bgEffect);
-}
-
-.menu {
-  position: fixed;
-  bottom: 6.1rem;
-  right: 24px;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  background: var(--themeMenuBg);
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 87%;
-  width: fit-content;
+  flex-direction: column;
   gap: 10px;
-  border: 1px solid var(--primaryColor_3);
+  padding-bottom: 4rem;
 }
 
-.theme {
-  --size: 60px;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  border: 2px solid var(--themeIconBorderColor);
-  background: var(--themeIconBG);
-}
-
-/* custom icon styles */
-.themeOnlySize {
-  --size: 60px;
-  border-radius: 50%;
-  border: 2px solid var(--themeIconBorderColor);
-  width: var(--size);
-  height: var(--size);
-}
-
-.customIcon {
+.button {
   position: relative;
-  background-color: var(--themeWhite);
-  overflow: hidden;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: calc(var(--size) / -2);
-    left: 40%;
-    width: var(--size);
-    height: var(--size);
-    transform: rotate(-45deg);
-    background-color: var(--themeSecond);
-  }
+  padding: 10px;
+  border: 2px solid var(--themeIconBorderColor);
+  background: var(--bodyBackground);
 }
 
-.colors_glass {
-  background: url("../../../public/3d_balls.png") center center / cover;
+
+.buttonHeaderText {
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
+
+.themePreviewCard {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  background: var(--lessonBg);
+  backdrop-filter: var(--bgEffect);
+  border: 1px solid var(--lessonBorderColor);
+}
+
+.box {
+  color: var(--primaryColor_4);
+  border-radius: 4px;
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.box_1 {
+  width: 85%;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.box_2 {
+  margin-top: 10px;
+}
+
+.containerBox {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+/* .box_3 {} */
+/* .box_4 {} */

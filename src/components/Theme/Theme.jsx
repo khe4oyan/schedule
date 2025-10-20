@@ -1,68 +1,65 @@
-// libs
-import { useState } from 'react';
-
 // custom hooks
 import useVersion from '../../customHooks/useVersion';
+
+// components
+import NotificationCircle from '../NotificationCircle';
 
 // styles
 import classes from './styles.module.css';
 
 export default function Theme({ newTheme }) {
-  const [isShowMenu, setIsShowMenu] = useState(false);
-  const [isShowNot, updateVersion] = useVersion("theme", 2);
-
   const buttons = [
-    { theme: "colors_default", version: 0 },
-    { theme: "colors_dark", version: 1 },
-    { theme: "colors_pink", version: 1 },
-    { theme: "colors_space", version: 1 },
-    { theme: "colors_glass", version: 2, customIcon: true},
+    { name: "Grass", theme: "colors_glass", version: 2, customIcon: true },
+    { name: "Space", theme: "colors_space", version: 1 },
+    { name: "Pink", theme: "colors_pink", version: 1 },
+    { name: "Night", theme: "colors_dark", version: 1 },
+    { name: "Light", theme: "colors_default", version: 0 },
   ];
 
   const onClickTheme = (className) => {
     newTheme(className);
-    setIsShowMenu(false);
-  }
-
-  const isShowMenuClick = () => {
-    setIsShowMenu(prev => !prev);
-    updateVersion();
   }
 
   return (
-    <>
-      <button className={`${classes.themeButton} ${isShowNot && "notificationFixed"}`} onClick={isShowMenuClick}>🎨</button>
+    <div className={classes.root}>
       {
-        isShowMenu &&
-        <div className={classes.menu}>
-          {
-            buttons.map(buttonClass =>
-              <ThemeButton
-                key={buttonClass.theme}
-                buttonClass={buttonClass}
-                onClickTheme={onClickTheme}
-              />
-            )
-          }
-        </div>
+        buttons.map(themeData =>
+          <ThemeButton
+            key={themeData.theme}
+            themeData={themeData}
+            onClickTheme={onClickTheme}
+          />
+        )
       }
-    </>
+    </div>
   )
 }
 
-function ThemeButton({ buttonClass, onClickTheme }) {
-  const [isShowNot, updateVersion] = useVersion(buttonClass.theme, buttonClass.version);
+function ThemeButton({ themeData, onClickTheme }) {
+  const [isShowNot, updateVersion] = useVersion(themeData.theme, themeData.version);
 
   const onClickHandler = () => {
-    onClickTheme(buttonClass.theme);
+    onClickTheme(themeData.theme);
     updateVersion();
   }
-  
+
   return (
     <button
-      key={buttonClass.theme}
-      className={`${buttonClass.theme} ${buttonClass?.customIcon ? `${classes.themeOnlySize} ${classes.customIcon} ${classes.colors_glass}` : classes.theme} ${isShowNot && "notificationRelative"}`}
+      key={themeData.theme}
+      className={`${themeData.theme} ${classes.button}`}
       onClick={onClickHandler}
-    ></button>
+    >
+      {isShowNot && <NotificationCircle />}
+
+      <h2 className={classes.buttonHeaderText}>{themeData.name}</h2>
+      <div className={classes.themePreviewCard}>
+        <div className={`${classes.box} ${classes.box_1}`}>Lesson name</div>
+        <div className={`${classes.box} ${classes.box_2}`}>Surname N.</div>
+        <div className={classes.containerBox}>
+          <div className={`${classes.box} ${classes.box_3}`}>0000</div>
+          <div className={`${classes.box} ${classes.box_4}`}>xx:yy - xx:yy</div>
+        </div>
+      </div>
+    </button>
   );
 }

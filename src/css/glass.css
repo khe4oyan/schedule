@@ -1,0 +1,75 @@
+.colors_glass {
+  --primaryColor_1: #0000002a;
+  --primaryColor_2: #cacaca4f;
+  --primaryColor_3: #ffffff52;
+  --primaryColor_4: #f5f5f5;
+
+  --bodyBackground: url("../../public/3d_balls.png") center center / cover;
+  --bodyBackgroundColor: #10251b;
+
+  --bgEffect: blur(10px);
+
+  /* button */
+  --buttonInitBgColor: var(--primaryColor_1);
+  --buttonInitBorderColor: #b4b4b4;
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBgColor: var(--primaryColor_2);
+
+  /* header */
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+  --headerBetaBgColor: #ffffff;
+  --headerBetaColor: black;
+
+  /* complete lessons */
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  /* message */
+  --messageBg: #ffffff93;
+  --messageColor: #ffffff;
+  --messageBorderColor: #ffffff56;
+
+  /* weekendd */
+  --weekendBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--messageBorderColor);
+
+  /* before class */
+  --beforeClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --beforeClassColor: var(--messageColor);
+  --beforeClassBorderColor: var(--messageBorderColor);
+
+  /* after class */
+  --afterClassBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--messageBorderColor);
+
+  /* break */
+  --breakBg: linear-gradient(135deg, var(--primaryColor_1), 75%, var(--messageBg));
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--messageBorderColor);
+
+  /* lesson */
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonDetailsBorderColor: var(--primaryColor_3);
+  --lessonDetailsTimeBorderColor: var(--primaryColor_3);
+
+  --lessonTimerColor: black;
+  --lessonTimerBG: white;
+
+  --lessonLineBgDefault: linear-gradient(to right, #d3d3d3, #646464);
+  --lessonLineBgCurrent: linear-gradient(to bottom, #ffffff, rgb(103, 131, 96));
+  --lessonLineCurrentShadow: #10b9814d;
+
+  /* theme */
+  --themeMenuBg: #0002;
+  --themeIconBorderColor: #6CC99D;
+  --themeWhite: #ffffff;
+  --themeSecond: #6CC99D;
+  --themeIconBG: linear-gradient(135deg, var(--themeWhite) 50%, var(--themeSecond) 51%);
+}
