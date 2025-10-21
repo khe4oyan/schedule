@@ -30,7 +30,6 @@ function App() {
 
 		document.body.classList = ["colors_default"];
 		document.body.classList.add(theme);
-
 	}, [theme]);
 
 	const newTheme = (themeName) => {
