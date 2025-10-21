@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function useVersion(key, lastVersion) {
-  const keyFormat = keyFormatTool(key);
+  const keyFormat = `${key}_version`;
   
 	const [userVersion, setUserVersion] = useState(+localStorage.getItem(keyFormat) ?? 0);
 
@@ -13,8 +13,4 @@ export default function useVersion(key, lastVersion) {
 	};
 
 	return [isShowUpdate, updateVersion, userVersion, lastVersion];
-}
-
-const keyFormatTool = (key) => {
-	return `${key}_version`;
 }
