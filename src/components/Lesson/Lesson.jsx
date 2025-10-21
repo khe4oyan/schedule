@@ -42,7 +42,7 @@ export default function Lesson({ data }) {
       setTimer(prev => prev - 1)
     }, 1000);
 
-    window.addEventListener("focus", () => {
+    window.addEventListener("visibilitychange", () => {
       const currentDate = new Date();
       const currentTime = currentDate.getTime();
       const endTime = getDateTime(end);

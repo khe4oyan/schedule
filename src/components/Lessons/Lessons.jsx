@@ -89,7 +89,7 @@ export default function Lessons() {
   useEffect(() => {
     initschedule(lessons);
 
-    window.addEventListener("focus", () => {
+    window.addEventListener("visibilitychange", () => {
       initschedule(lessons);
     });
   }, []);

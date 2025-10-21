@@ -20,7 +20,7 @@ export default function Break({ filteredLessons }) {
         const startTime = getDateTime(filteredLessons[i].start);
         const currentTime = new Date().getTime();
 
-        window.addEventListener("focus", () => {
+        window.addEventListener("visibilitychange", () => {
           const currentDate = new Date();
           const currentTime = currentDate.getTime();
           const endTime = getDateTime(filteredLessons[i].start);
