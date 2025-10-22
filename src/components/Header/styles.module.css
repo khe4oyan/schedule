@@ -1,9 +1,8 @@
 .root {
   width: calc(100% + 35px);
-  height: 70px;
+  padding: 13px;
   background: var(--headerBg);
-  /* border-bottom: 1px solid var(--headerBorderColor); */
-  border-bottom: 1px solid var(--headerBetaBgColor);
+  border-bottom: 1px solid var(--headerBorderColor);
   position: relative;
   bottom: 20px;
   right: 20px;
@@ -13,16 +12,4 @@
   backdrop-filter: var(--bgEffect);
 }
 
-.headerText {
-  transform: translateY(3px);
-}
-
-.beta {
-  position: absolute;
-  bottom: -.67rem;
-  font-size: .8rem;
-  background: var(--headerBetaBgColor);
-  color: var(--headerBetaColor);
-  border-radius: 10px;
-  padding: 3px 9px;
-}
+/* .headerText {} */
