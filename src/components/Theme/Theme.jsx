@@ -9,10 +9,10 @@ import classes from './styles.module.css';
 
 export default function Theme({ newTheme }) {
   const buttons = [
-    { name: "Grass", theme: "colors_glass", version: 2, customIcon: true },
+    { name: "Glass", theme: "colors_glass", version: 2, customIcon: true },
     { name: "Space", theme: "colors_space", version: 1 },
-    { name: "Pink", theme: "colors_pink", version: 1 },
     { name: "Night", theme: "colors_dark", version: 1 },
+    { name: "Pink", theme: "colors_pink", version: 1 },
     { name: "Light", theme: "colors_default", version: 0 },
   ];
 
