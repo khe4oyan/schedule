@@ -16,9 +16,15 @@ class SingleLesson extends Lesson {
     this.start = start;
     this.end = end;
     this.status = statuses.DEFAULT;
+    this.isVerigied = false;
   }
 
   getData() {
+    return this;
+  }
+
+  verified() {
+    this.isVerigied = true;
     return this;
   }
 }
@@ -75,7 +81,7 @@ export default [
   ],
 
   [ // Четверг
-    new SingleLesson("Կետային գրաֆիկա լաբ.", 5108, "Ռահանյան Գ. Նորեկյան Ա.", "09:30", "10:50"),
+    new SingleLesson("Կետային գրաֆիկա լաբ.", 5105, "Ռահանյան Գ. Նորեկյան Ա.", "09:30", "10:50").verified(),
     new SingleLesson("Ձեռներեցություն Դաս, գործ", 1401, "Մարկոսյան Մ․", "11:00", "12:20"),
     new SingleLesson("Կիրառ․ Հավելվ․ ստեղծ․ միջոց լաբ", "5120, 5121", "Թումանյան Ն․ Մարուխյան Ա․", "12:50", "14:10"),
     new DoubleLess(
