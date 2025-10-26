@@ -13,7 +13,7 @@ import classes from './styles.module.css';
 
 export default function Panel({ tab, setTab }) {
   const [isShowNot, updateVersion] = useVersion("theme", 2);
-  
+
   const onClick = (ind) => {
     setTab(ind);
   };
@@ -29,10 +29,16 @@ export default function Panel({ tab, setTab }) {
 
   return (
     <div className={classes.root}>
-      <button onClick={scheduleClick} className={`${classes.button} ${(tab === 0 && classes.active).toString()}`}><BsList /></button>
-      <button onClick={themeClick} className={`${classes.button} ${(tab === 1 && classes.active).toString()}`}><PiCircleHalfTiltFill />
-        {isShowNot && <NotificationCircle />}
-      </button>
+      {
+        tab === 1 &&
+        <button onClick={scheduleClick} className={`${classes.button} ${classes.active}`}><BsList /></button>
+      }
+      {
+        tab === 0 &&
+        <button onClick={themeClick} className={`${classes.button} ${classes.active}`}><PiCircleHalfTiltFill />
+          {isShowNot && <NotificationCircle />}
+        </button>
+      }
     </div>
   )
 }
