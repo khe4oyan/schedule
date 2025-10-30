@@ -12,6 +12,10 @@
 
   --notificationBG: red;
 
+  /* settings */
+  --reloadTitleMessageBg: rgb(241, 241, 154);
+  --reloadTitleMessageColor: rgb(97, 97, 7);
+
   /* button */
   --buttonInitBgColor: var(--primaryColor_1);
   --buttonInitBorderColor: #b4b4b4;

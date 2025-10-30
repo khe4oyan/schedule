@@ -19,7 +19,6 @@ body {
   color: var(--primaryColor_4);
   touch-action: manipulation;
   padding: 15px;
-  margin-bottom: 4.5rem;
 }
 
 button {

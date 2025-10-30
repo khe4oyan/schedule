@@ -9,6 +9,10 @@
 
   --bgEffect: blur(10px);
 
+  /* settings */
+  --reloadTitleMessageBg: #000000b7;
+  --reloadTitleMessageColor: yellow;
+
   /* button */
   --buttonInitBgColor: var(--primaryColor_1);
   --buttonInitBorderColor: #b4b4b4;

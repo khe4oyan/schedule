@@ -8,6 +8,10 @@
   --bodyBackground: #0d0d1a;
   --bodyBackgroundColor: var(--bodyBackground);
 
+   /* settings */
+  --reloadTitleMessageBg: var(--primaryColor_1);
+  --reloadTitleMessageColor: yellow;
+
   --buttonInitBgColor: var(--primaryColor_2);
   --buttonInitBorderColor: #6a5acd;
 

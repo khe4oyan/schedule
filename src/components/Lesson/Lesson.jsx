@@ -5,6 +5,9 @@ import { useEffect, useState, useRef } from 'react';
 import timerFormat from '../../utils/timerFormat';
 import getDateTime from '../../utils/getDateTime'
 
+// custom hooks
+import useSettingsOption from '../../customHooks/useSettingsOption';
+
 // styles
 import classes from './styles.module.css';
 
@@ -32,6 +35,8 @@ export default function Lesson({ data }) {
       return null;
     }
   });
+
+  const [isDisabledGradientLine] = useSettingsOption("lessonLineDisabled");
 
   const interval = useRef(null)
 
@@ -93,8 +98,10 @@ export default function Lesson({ data }) {
       <div className={classes.time}>
         <p>{start} - {end}</p>
       </div>
-
-      <div className={classes.line}></div>
+      {
+        !isDisabledGradientLine &&
+        <div className={classes.line}></div>
+      }
     </div>
   )
 }

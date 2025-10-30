@@ -7,6 +7,10 @@
   --bodyBackground: #07101b;
   --bodyBackgroundColor: var(--bodyBackground);
 
+  /* settings */
+  --reloadTitleMessageBg: rgb(241, 241, 154);
+  --reloadTitleMessageColor: rgb(97, 97, 7);
+
   --buttonInitBorderColor: #b4b4b4;
 
   --weekendBg: var(--messageBg);

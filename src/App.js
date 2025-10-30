@@ -6,14 +6,19 @@ import Header from './components/Header';
 import Lessons from './components/Lessons/Lessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
-import AllComponentsPreview from "./components/AllComponentsPreview";
+import Settings from './components/Settings';
+// import AllComponentsPreview from "./components/AllComponentsPreview";
+
+// custom hooks
+import useSettingsOption from './customHooks/useSettingsOption';
 
 // general styles
 import './app.css'
 
 function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
-	const [tab, setTab] = useState(0);
+	const [tab, setTab] = useState(1);
+	const [isShowHeader] = useSettingsOption("headerShow");
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
@@ -39,10 +44,15 @@ function App() {
 
 	return (
 		<div>
-			<Header />
-			{tab === 0 && <Lessons />}
-			{tab === 1 && <Theme newTheme={newTheme} />}
-			
+			{
+				isShowHeader &&
+				<Header />
+			}
+
+			{tab === 0 && <Theme newTheme={newTheme} />}
+			{tab === 1 && <Lessons />}
+			{tab === 2 && <Settings />}
+
 			<Panel tab={tab} setTab={setTab} />
 			{/* <AllComponentsPreview /> */}
 		</div>

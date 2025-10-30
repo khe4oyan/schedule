@@ -7,6 +7,12 @@
   --bodyBackground: #fff5fa;
   --bodyBackgroundColor: var(--bodyBackground);
 
+  /* settings */
+  /* --reloadTitleMessageBg: var(--primaryColor_4); */
+  /* --reloadTitleMessageColor: white; */
+  --reloadTitleMessageBg: #4a0033d0;
+  --reloadTitleMessageColor: yellow;
+
   --buttonInitBgColor: var(--primaryColor_1);
   --buttonInitBorderColor: #e89bb5;
 
