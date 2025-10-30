@@ -18,7 +18,7 @@ import './app.css'
 function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
 	const [tab, setTab] = useState(1);
-	const [isShowHeader] = useSettingsOption("headerShow");
+	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
