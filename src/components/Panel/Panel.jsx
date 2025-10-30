@@ -30,11 +30,11 @@ export default function Panel({ tab, setTab }) {
   return (
     <div className={classes.root}>
       {
-        tab === 1 &&
+        tab !== 0 &&
         <button onClick={scheduleClick} className={`${classes.button} ${classes.active}`}><BsList /></button>
       }
       {
-        tab === 0 &&
+        tab !== 1 &&
         <button onClick={themeClick} className={`${classes.button} ${classes.active}`}><PiCircleHalfTiltFill />
           {isShowNot && <NotificationCircle />}
         </button>
