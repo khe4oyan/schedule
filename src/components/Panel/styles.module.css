@@ -1,32 +1,5 @@
-.root {
-  position: fixed;
-  z-index: 10;
-  bottom: 10px;
-  left: 0;
-  max-width: 700px;
-  width: 100%;
-  right: 0;
-  margin: auto;
-  align-items: center;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.content {
-  border-radius: 50px;
-  grid-template-columns: 1fr;
-  background: var(--headerBg);
-  border-top: 1px solid var(--primaryColor_2);
-  border-left: 1px solid var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
-  padding: 5px 10px;
-  display: flex;
-}
-
 .button {
-  position: relative;
+  position: fixed;
   border: none;
   border-radius: 0;
   background: none;
@@ -35,4 +8,38 @@
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
+   background: var(--headerBg);
+  border-top: 1px solid var(--primaryColor_2);
+  border-left: 1px solid var(--primaryColor_2);
+  backdrop-filter: var(--bgEffect);
+  aspect-ratio: 1/1;
+  padding: 15px;
+  border-radius: 50px;
+  z-index: 10;
+
+  user-select: none;
+  -webkit-user-select: none; /* Safari, Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+.menuButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.settingsButton {
+  bottom: 10px;
+  right: 110px;
+}
+
+.themesButton {
+  bottom: 90px;
+  right: 90px;
+}
+
+.lessonsButton {
+  bottom: 110px;
+  right: 10px;
 }

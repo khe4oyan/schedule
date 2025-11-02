@@ -53,7 +53,7 @@ function App() {
 			{tab === 1 && <Lessons />}
 			{tab === 2 && <Settings />}
 
-			<Panel tab={tab} setTab={setTab} />
+			<Panel setTab={setTab} />
 			{/* <AllComponentsPreview /> */}
 		</div>
 	);
