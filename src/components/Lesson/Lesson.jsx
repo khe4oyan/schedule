@@ -23,6 +23,8 @@ export default function Lesson({ data }) {
   const start = data?.start;
   const end = data?.end;
   const status = data?.status;
+  const type = data?.type;
+  const group = data?.subGroup;
 
   const [timer, setTimer] = useState(() => {
     if (status === statuses.CURRENT) {
@@ -78,7 +80,12 @@ export default function Lesson({ data }) {
   return (
     <div className={`${classes.root} ${status === statuses.CURRENT && classes.rootCurrent} ${status === statuses.COMPLETED && classes.rootCompleted}`}>
       <div className={`${classes.mainInfo} ${status === statuses.CURRENT && classes.mainInfoExtend}`}>
-        <p className={classes.title}>{title}</p>
+        <p className={classes.title}>{title} {type && type } {group > 0 && group }</p>
+        {/* <p className={classes.tags}>
+          {type && <span className={classes.type}>{type}</span> }
+          {group > -1 && <span className={classes.subGroup}>{group} ենթախումբ</span> }
+        </p> */}
+
         {
           status === statuses.CURRENT &&
           <p className={classes.timer}>
