@@ -19,6 +19,8 @@ export default function Panel({ setTab }) {
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
   const [isPressed, setIsPressed] = useState(false);
 
+  const isNewMenu = isThemeUpdated || isSettingsUpdated;
+
   const onClick = (ind) => {
     window.scrollTo({ top: 0 });
     setTab(ind);
@@ -86,6 +88,7 @@ export default function Panel({ setTab }) {
         onTouchStart={showButtons}
       >
         <TbCirclesFilled />
+        {isNewMenu && <NotificationCircle />}
       </button>
 
       {
