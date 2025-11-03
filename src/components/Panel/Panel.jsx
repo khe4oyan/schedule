@@ -15,7 +15,7 @@ import NotificationCircle from '../NotificationCircle';
 import classes from './styles.module.css';
 
 export default function Panel({ setTab }) {
-  const [isThemeUpdated, updateTheme] = useVersion("theme", 2);
+  const [isThemeUpdated, updateTheme] = useVersion("theme", 3);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
   const [isPressed, setIsPressed] = useState(false);
 

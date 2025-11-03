@@ -9,7 +9,7 @@
   --bodyBackgroundColor: black;
 
   --bgEffect: blur(13px);
-  --notificationBG: rgb(22, 22, 22);
+  --notificationBG: red;
 
   /* settings */
   --reloadTitleMessageBg: linear-gradient(to right, rgb(14, 14, 14), rgb(37, 37, 37));
