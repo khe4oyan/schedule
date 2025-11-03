@@ -1,0 +1,74 @@
+.colors_gold_black {
+  /* primary colors */
+  --primaryColor_1: rgba(0, 0, 0, 0.5);
+  --primaryColor_2: gold;
+  --primaryColor_3: gold;
+  --primaryColor_4: white;
+
+  --bodyBackground: url("../../public/black_gold.png") center center / cover no-repeat fixed;
+  --bodyBackgroundColor: black;
+
+  --bgEffect: blur(13px);
+  --notificationBG: rgb(22, 22, 22);
+
+  /* settings */
+  --reloadTitleMessageBg: linear-gradient(to right, rgb(14, 14, 14), rgb(37, 37, 37));
+  --reloadTitleMessageColor: gold;
+
+  /* button */
+  --buttonInitBgColor: var(--primaryColor_1);
+  --buttonInitBorderColor: gold;
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBgColor: rgb(26, 26, 26);
+
+  /* header */
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+
+  /* complete lessons */
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  /* message */
+  --messageBg: linear-gradient(135deg, var(--primaryColor_1) 40%, 70%, rgb(248, 230, 131), rgb(250, 240, 186), rgb(248, 230, 131));
+  --messageColor: white;
+  --messageBorderColor: gold;
+
+  /* weekend */
+  --weekendBg: var(--messageBg);
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--messageBorderColor);
+
+  /* before class */
+  --beforeClassBg: var(--messageBg);
+  --beforeClassColor: var(--messageColor);
+  --beforeClassBorderColor: var(--messageBorderColor);
+
+  /* after class */
+  --afterClassBg: var(--messageBg);
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--messageBorderColor);
+
+  /* break */
+  --breakBg: var(--messageBg);
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--messageBorderColor);
+
+  /* lesson */
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonTimerColor: white;
+  --lessonTimerBG: linear-gradient(-45deg, #131313, rgb(105, 93, 23), #0f0f0f);
+
+  --lessonLineBgDefault: linear-gradient(135deg, gold 40%, 50%, rgb(248, 230, 131), rgb(250, 240, 186), rgb(248, 230, 131));
+  --lessonLineBgCurrent: linear-gradient(to bottom, rgb(248, 230, 131), gold);
+
+  /* theme */
+  --themeMenuBg: #0002;
+  --themeIconBorderColor: var(--primaryColor_3);
+  --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+  --themeSecond: var(--primaryColor_1);
+}

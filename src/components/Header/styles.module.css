@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   backdrop-filter: var(--bgEffect);
+  z-index: 10;
 }
 
 /* .headerText {} */

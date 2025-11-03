@@ -12,6 +12,10 @@ import classes from './styles.module.css';
 export default function AllComponentsPreview() {
   return (
     <div className={classes.root}>
+      <div>
+        <button>Button</button>
+        <button disabled>Button disabled</button>
+      </div>
       <BeforeClass startedTime={"21:00"} />
       <Weekend />
       <AfterClass />

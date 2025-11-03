@@ -28,9 +28,9 @@
 }
 
 .root > p:not(.inActiveP) {
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .inActiveP {
-  opacity: .7;
+  opacity: .5;
 }
