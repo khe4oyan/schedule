@@ -61,6 +61,8 @@ function ThemeButton({ themeData, onClickTheme }) {
           <div className={`${classes.box} ${classes.box_3}`}>0000</div>
           <div className={`${classes.box} ${classes.box_4}`}>xx:yy - xx:yy</div>
         </div>
+
+        <div className={classes.line}></div>
       </div>
     </button>
   );
