@@ -37,7 +37,13 @@
 
 .buttonHeaderText {
   font-size: 1.5rem;
-  margin: 10px 0;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: var(--primaryColor_1);
+  backdrop-filter: var(--bgEffect);
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px 20px;
 }
 
 .themePreviewCard {

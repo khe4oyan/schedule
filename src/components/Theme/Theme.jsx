@@ -53,6 +53,7 @@ function ThemeButton({ themeData, onClickTheme }) {
       {isShowNot && <NotificationCircle />}
 
       <h2 className={classes.buttonHeaderText}>{themeData.name}</h2>
+      
       <div className={classes.themePreviewCard}>
         <div className={`${classes.box} ${classes.box_1}`}>Lesson name</div>
         <div className={`${classes.box} ${classes.box_2}`}>Surname N.</div>

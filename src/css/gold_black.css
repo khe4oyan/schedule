@@ -5,16 +5,8 @@
   --primaryColor_3: gold;
   --primaryColor_4: white;
 
-  --bodyBackground: url("../../public/black_gold.png") center center / cover no-repeat fixed;
+  --bodyBackground: url("../../public/black_gold.png") center center / cover no-repeat;
   --bodyBackgroundColor: black;
-
-  &::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("../../public/black_gold.png") center center / cover no-repeat;
-    z-index: -1;
-  }
 
   --bgEffect: blur(13px);
   --notificationBG: red;
