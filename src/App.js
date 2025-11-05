@@ -7,16 +7,17 @@ import Lessons from './components/Lessons/Lessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
-import AllComponentsPreview from "./components/AllComponentsPreview";
+// import AllComponentsPreview from "./components/AllComponentsPreview";
 
 // custom hooks
 import useSettingsOption from './customHooks/useSettingsOption';
+import useTheme from './customHooks/useTheme';
 
 // general styles
 import './app.css'
 
 function App() {
-	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
+	const [theme, setTheme] = useTheme();
 	const [tab, setTab] = useState(1);
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 

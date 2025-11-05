@@ -38,9 +38,8 @@ export default function Lesson({ data }) {
     }
   });
 
+  const interval = useRef(null);
   const [isDisabledGradientLine] = useSettingsOption("lessonLineDisabled");
-
-  const interval = useRef(null)
 
   useEffect(() => {
     if (timer === null) { return; }
