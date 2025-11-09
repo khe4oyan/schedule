@@ -1,0 +1,83 @@
+.colors_matrix {
+  /* primary colors */
+  --primaryColor_1: #00000000;
+  --primaryColor_2: #01ff01;
+  --primaryColor_3: #9b9b9b;
+  --primaryColor_4: #01ff01;
+  --matrixColor: #008000;
+
+  --bodyBackground: url('../../public/matrix.gif') center center / contain;
+  --bodyBackgroundColor: #000000;
+
+  --bgEffect: blur(5px);
+  --notificationBG: #ff0000;
+
+  /* settings */
+  --reloadTitleMessageBg: linear-gradient(to right, #0e0e0e, #252525);
+  --reloadTitleMessageColor: var(--matrixColor);
+
+  /* button */
+  --buttonInitBgColor: var(--primaryColor_1);
+  --buttonInitBorderColor: var(--matrixColor);
+
+  --buttonDisabledBorderColor: #bebebe;
+  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBgColor: rgb(26, 26, 26);
+
+  /* header */
+  --headerBg: var(--primaryColor_1);
+  --headerBorderColor: var(--primaryColor_2);
+
+  /* complete lessons */
+  --completeLessonsBg: var(--primaryColor_2);
+  --completeLessonsListBg: var(--primaryColor_2);
+
+  /* message */
+  --messageBg: linear-gradient(135deg, var(--primaryColor_1) 40%, 70%, rgb(8, 88, 8), rgb(46, 219, 46));
+  --messageColor: #01ff01;
+  --messageBorderColor: var(--matrixColor);
+
+  /* weekend */
+  --weekendBg: var(--messageBg);
+  --weekendColor: var(--messageColor);
+  --weekendBorderColor: var(--matrixColor);
+
+  /* before class */
+  --beforeClassBg: var(--messageBg);
+  --beforeClassColor: var(--messageColor);
+  --beforeClassBorderColor: var(--matrixColor);
+
+  /* after class */
+  --afterClassBg: var(--messageBg);
+  --afterClassColor: var(--messageColor);
+  --afterClassBorderColor: var(--matrixColor);
+
+  /* break */
+  --breakBg: var(--messageBg);
+  --breakColor: var(--messageColor);
+  --breakBorderColor: var(--matrixColor);
+
+  /* lesson */
+  --lessonBorderColor: var(--primaryColor_2);
+  --lessonBg: var(--primaryColor_1);
+
+  --lessonTimerColor: var(--primaryColor_4);
+  --lessonTimerBG: linear-gradient(-45deg, rgb(9, 70, 9), rgb(2, 26, 2));
+
+  --lessonLineBgDefault: rgb(18, 235, 18);
+  --lessonLineBgCurrent: linear-gradient(to bottom, rgb(7, 61, 7), rgb(81, 214, 69));
+
+  /* theme */
+  --themeMenuBg: #0002;
+  --themeIconBorderColor: var(--primaryColor_3);
+  --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+  --themeSecond: var(--primaryColor_1);
+
+  & *::first-letter {
+    color: rgb(189, 255, 189);
+  }
+
+  & * {
+    border-radius: 4px;
+  }
+}

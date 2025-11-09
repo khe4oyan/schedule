@@ -7,7 +7,7 @@ import Lessons from './components/Lessons/Lessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
-// import AllComponentsPreview from "./components/AllComponentsPreview";
+import AllComponentsPreview from "./components/AllComponentsPreview";
 
 // custom hooks
 import useSettingsOption from './customHooks/useSettingsOption';
@@ -45,6 +45,8 @@ function App() {
 
 	return (
 		<div>
+			{/* <AllComponentsPreview /> */}
+
 			{ isShowHeader && <Header />}
 
 			{tab === 0 && <Theme newTheme={newTheme} />}
@@ -52,7 +54,6 @@ function App() {
 			{tab === 2 && <Settings />}
 
 			<Panel setTab={setTab} />
-			{/* <AllComponentsPreview /> */}
 		</div>
 	);
 }
