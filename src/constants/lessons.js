@@ -39,7 +39,7 @@ export default [
   ],
 
   [ // Среда
-    new SingleLesson(lessons.photoshop, "5104, 5119", "Ռահանյան Գ․ Նորեկյան Ա․", "09:30", "10:50").isLab(),
+    new SingleLesson(lessons.photoshop, 5104, "Ռահանյան Գ․ Նորեկյան Ա․", "09:30", "10:50").isLab(),
     new SingleLesson(lessons.infoSecurity, 5102, "Մինասյան Լ․ Մխիթարյան Լ․", "11:00", "12:20").isLab(),
     new SingleLesson(lessons.php, 51009, "Պողոսյան Մ․", "12:50", "14:10").isLesson(),
     new DoubleLesson(
