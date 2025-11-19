@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.root > * {
+  backdrop-filter: var(--bgEffect);
+  background-color: var(--headerBg);
+  padding: 10px;
+  border-radius: 5px;
+}

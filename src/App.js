@@ -7,6 +7,7 @@ import Lessons from './components/Lessons/Lessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
+import Events from './components/Events/Events';
 import AllComponentsPreview from "./components/AllComponentsPreview";
 
 // custom hooks
@@ -52,6 +53,7 @@ function App() {
 			{tab === 0 && <Theme newTheme={newTheme} />}
 			{tab === 1 && <Lessons />}
 			{tab === 2 && <Settings />}
+			{tab === 3 && <Events />}
 
 			<Panel setTab={setTab} />
 		</div>
