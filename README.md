@@ -1,1 +1,1 @@
-# [Open Demo](https://khe4oyan.github.io/schedule/)
+Schedule
