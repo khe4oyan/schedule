@@ -1,30 +1,11 @@
 // components
 import Event from '../Event';
 
+// constants
+import { eventTypes, events } from '../../constants/events.js';
+
 // styles
 import classes from './styles.module.css';
-
-const eventTypes = {
-  start: "start",
-  finish: "finish",
-  line: "line",
-  stugarq: "stugarq",
-};
-
-const events = [
-  { type: "start" },
-  { type: "line" },
-  {
-    type: eventTypes.stugarq,
-    date: "27.11.2025",
-    time: ["09:30" , "09:30"],
-    title: "Դինամիկ վեբ կայքերի նախագծում (PHP)",
-    lessons: ["51009", "51010"],
-    teachers: ["Պողոսյան Մ․", "Մխիթարյան Լ․"],
-  },
-  { type: "line" },
-  { type: "finish" },
-];
 
 export default function Events() {
   return (
@@ -45,6 +26,8 @@ export default function Events() {
               return <div className={classes.start} key={ind}></div>
             case eventTypes.finish:
               return <div className={classes.finish} key={ind}></div>
+            case eventTypes.date:
+              return <div className={classes.date} key={ind}>{event.title}</div>
           }
         })
       }

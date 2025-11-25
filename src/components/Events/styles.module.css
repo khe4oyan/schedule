@@ -21,7 +21,22 @@
 
 .line {
   width: 2px;
-  height: 30px;
+  height: 40px;
   background-color: var(--primaryColor_2);
   margin: auto;
+}
+
+.date {
+  margin: auto;
+  position: sticky;
+  top: 5px;
+  z-index: 100;
+  background-color: var(--bodyBackgroundColor);
+  border: 1px solid var(--primaryColor_2);
+  padding: 6px 18px;
+  border-radius: 5px;
+}
+
+.date + .line {
+  height: 23px;
 }
