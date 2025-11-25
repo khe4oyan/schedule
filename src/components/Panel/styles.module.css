@@ -6,7 +6,7 @@
   width: fit-content;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background: var(--headerBg);
   border: 1px solid var(--primaryColor_2);
   backdrop-filter: var(--bgEffect);

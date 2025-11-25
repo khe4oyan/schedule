@@ -2,7 +2,7 @@
   /* primary colors */
   --primaryColor_1: #00000000;
   --primaryColor_2: #417441;
-  --primaryColor_3: #9b9b9b;
+  --primaryColor_3: #01ff01;
   --primaryColor_4: #01ff01;
   --matrixColor: #008000;
 
@@ -72,10 +72,6 @@
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
   --themeSecond: var(--primaryColor_1);
-
-  & *::first-letter {
-    color: rgb(189, 255, 189);
-  }
 
   & * {
     border-radius: 4px;

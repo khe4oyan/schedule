@@ -49,10 +49,10 @@ export default function Panel({ setTab }) {
         {isSettingsUpdated && <NotificationCircle />}
       </button>
 
-      {/* <button onClick={onClickEvents} className={`${classes.button} ${classes.settingsButton}`}>
+      <button onClick={onClickEvents} className={`${classes.button} ${classes.settingsButton}`}>
         <RiCalendarScheduleLine />
         {isEventsUpdated && <NotificationCircle />}
-      </button> */}
+      </button>
 
       <button onClick={onClickLessons} className={`${classes.button} ${classes.lessonsButton}`}>
         <BsCalendar4Week />

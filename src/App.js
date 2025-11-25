@@ -9,6 +9,7 @@ import Theme from './components/Theme';
 import Settings from './components/Settings';
 import Events from './components/Events/Events';
 import AllComponentsPreview from "./components/AllComponentsPreview";
+import EmptyMessage from './components/EmptyMessage';
 
 // custom hooks
 import useSettingsOption from './customHooks/useSettingsOption';
@@ -19,7 +20,7 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	const [tab, setTab] = useState(1);
+	const [tab, setTab] = useState(3);
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
@@ -51,7 +52,8 @@ function App() {
 			{ isShowHeader && <Header />}
 
 			{tab === 0 && <Theme newTheme={newTheme} />}
-			{tab === 1 && <Lessons />}
+			{/* {tab === 1 && <Lessons />} */}
+			{tab === 1 && <EmptyMessage />}
 			{tab === 2 && <Settings />}
 			{tab === 3 && <Events />}
 
