@@ -20,7 +20,7 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	const [tab, setTab] = useState(3);
+	const [tab, setTab] = useState(parseInt(localStorage.getItem("tab") ?? 3));
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {

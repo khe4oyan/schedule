@@ -25,6 +25,7 @@ export default function Panel({ setTab }) {
 
   const onClickLessons = () => {
     onClick(1);
+    localStorage.setItem("tab", 1);
   };
 
   const onClickThemes = () => {
@@ -39,6 +40,7 @@ export default function Panel({ setTab }) {
 
   const onClickEvents = () => {
     onClick(3);
+    localStorage.setItem("tab", 3);
     updateEvents();
   };
 
