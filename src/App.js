@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 
 // components
 import Header from './components/Header';
-import Lessons from './components/Lessons/Lessons';
+// import Lessons from './components/Lessons/Lessons';
+import ShowWeekLessons from './components/ShowWeekLessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
-import Events from './components/Events/Events';
+import Practice from './components/Practice';
 import AllComponentsPreview from "./components/AllComponentsPreview";
 import EmptyMessage from './components/EmptyMessage';
 
@@ -54,10 +55,11 @@ function App() {
 			{tab === 0 && <Theme newTheme={newTheme} />}
 			{tab === 1 && <>
 				<EmptyMessage />
-				<Lessons />
+				<ShowWeekLessons />
+				<br /><br /><br /><br /><br /> 
 			</>}
 			{tab === 2 && <Settings />}
-			{tab === 3 && <Events />}
+			{tab === 3 && <Practice />}
 
 			<Panel setTab={setTab} />
 		</div>

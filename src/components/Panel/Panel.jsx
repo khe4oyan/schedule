@@ -1,8 +1,8 @@
 // libs
 import { PiCircleHalfTiltFill } from "react-icons/pi";
-import { IoSettingsSharp } from "react-icons/io5";
 import { BsCalendar4Week } from "react-icons/bs";
-import { RiCalendarScheduleLine } from "react-icons/ri";
+import { MdOutlineGroups2 } from "react-icons/md";
+import { IoSettingsOutline } from "react-icons/io5";
 
 // custom hooks
 import useVersion from '../../customHooks/useVersion';
@@ -16,7 +16,7 @@ import classes from './styles.module.css';
 export default function Panel({ setTab }) {
   const [isThemeUpdated, updateTheme] = useVersion("theme", 4);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
-  const [isEventsUpdated, updateEvents] = useVersion("events", 1);
+  const [isPracticesUpdated, updatePractices] = useVersion("practice", 2);
 
   const onClick = (ind) => {
     window.scrollTo({ top: 0 });
@@ -38,26 +38,26 @@ export default function Panel({ setTab }) {
     updateSettings();
   };
 
-  const onClickEvents = () => {
+  const onClickPractices = () => {
     onClick(3);
     localStorage.setItem("tab", 3);
-    updateEvents();
+    updatePractices();
   };
 
   return (
     <div className={classes.panel}>
       <button onClick={onClickSettings} className={`${classes.button} ${classes.settingsButton}`}>
-        <IoSettingsSharp />
+        <IoSettingsOutline />
         {isSettingsUpdated && <NotificationCircle />}
       </button>
 
-      <button onClick={onClickEvents} className={`${classes.button} ${classes.settingsButton}`}>
-        <RiCalendarScheduleLine />
-        {isEventsUpdated && <NotificationCircle />}
+      <button onClick={onClickPractices} className={`${classes.button} ${classes.settingsButton}`}>
+        <MdOutlineGroups2 />
+        {isPracticesUpdated && <NotificationCircle />}
       </button>
 
       <button onClick={onClickLessons} className={`${classes.button} ${classes.lessonsButton}`}>
-        <BsCalendar4Week />
+        <BsCalendar4Week size={36}/>
       </button>
 
       <button onClick={onClickThemes} className={`${classes.button} ${classes.themesButton}`}>
