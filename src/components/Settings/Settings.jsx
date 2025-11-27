@@ -8,14 +8,14 @@ export default function Settings() {
   return (
     <div className={classes.root}>
       <SettingsOption 
-        optionName="Show header"
+        optionName="Ցուցադրել վերնագիրը"
         optionKey="headerShow"
         defaultValue={true}
         isRequiredToReload={true}
       />
 
       <SettingsOption 
-        optionName="Disabled lesson gradient line"
+        optionName="Անջատել դասի գրադիենտը"
         optionKey="lessonLineDisabled"
       />
     </div>
