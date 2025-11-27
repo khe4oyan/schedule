@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  height: 30dvh;
+  padding: 40px 0;
   max-width: 700px;
   margin: auto;
   background: var(--headerBg);
