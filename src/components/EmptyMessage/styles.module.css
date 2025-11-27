@@ -5,8 +5,11 @@
   justify-content: center;
   border-radius: 10px;
   height: 30dvh;
+  max-width: 700px;
+  margin: auto;
   background: var(--headerBg);
   backdrop-filter: var(--bgEffect);
+  margin-bottom: 10px;
 
   h2 {
     text-wrap: balance;

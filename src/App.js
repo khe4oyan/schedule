@@ -49,11 +49,13 @@ function App() {
 		<div>
 			{/* <AllComponentsPreview /> */}
 
-			{ isShowHeader && <Header />}
+			{isShowHeader && <Header />}
 
 			{tab === 0 && <Theme newTheme={newTheme} />}
-			{/* {tab === 1 && <Lessons />} */}
-			{tab === 1 && <EmptyMessage />}
+			{tab === 1 && <>
+				<EmptyMessage />
+				<Lessons />
+			</>}
 			{tab === 2 && <Settings />}
 			{tab === 3 && <Events />}
 

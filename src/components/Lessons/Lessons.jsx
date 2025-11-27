@@ -115,7 +115,7 @@ export default function Lessons() {
 
   return (
     <div className={classes.root}>
-      {appStatus === scenarioStatuses.weekend && <Weekend />}
+      {/* {appStatus === scenarioStatuses.weekend && <Weekend />}
       {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0]?.getData(isTopLesson)?.start} />}
       {appStatus === scenarioStatuses.afterClass && <AfterClass />}
       {appStatus === scenarioStatuses.break && <Break filteredLessons={filteredLessons} />}
@@ -133,7 +133,7 @@ export default function Lessons() {
               data={lessonData.getData(isTopLesson)}
             />
           )
-      }
+      } */}
 
       <ShowWeekLessons />
     </div>
