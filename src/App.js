@@ -61,7 +61,7 @@ function App() {
 			{tab === 2 && <Settings />}
 			{tab === 3 && <Practice />}
 
-			<Panel setTab={setTab} />
+			<Panel tab={tab} setTab={setTab} />
 		</div>
 	);
 }

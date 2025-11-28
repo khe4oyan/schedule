@@ -13,7 +13,7 @@ import NotificationCircle from '../NotificationCircle';
 // styles
 import classes from './styles.module.css';
 
-export default function Panel({ setTab }) {
+export default function Panel({ tab, setTab }) {
   const [isThemeUpdated, updateTheme] = useVersion("theme", 4);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
   const [isPracticesUpdated, updatePractices] = useVersion("practice", 2);
@@ -46,21 +46,21 @@ export default function Panel({ setTab }) {
 
   return (
     <div className={classes.panel}>
-      <button onClick={onClickSettings} className={`${classes.button} ${classes.settingsButton}`}>
+      <button onClick={onClickSettings} className={`${classes.button} ${tab == 2 && classes.activeTab}`}>
         <IoSettingsOutline />
         {isSettingsUpdated && <NotificationCircle />}
       </button>
 
-      <button onClick={onClickPractices} className={`${classes.button} ${classes.settingsButton}`}>
+      <button onClick={onClickPractices} className={`${classes.button} ${tab == 3 && classes.activeTab}`}>
         <MdOutlineGroups2 />
         {isPracticesUpdated && <NotificationCircle />}
       </button>
 
-      <button onClick={onClickLessons} className={`${classes.button} ${classes.lessonsButton}`}>
+      <button onClick={onClickLessons} className={`${classes.button} ${tab == 1 && classes.activeTab}`}>
         <BsCalendar4Week size={36}/>
       </button>
 
-      <button onClick={onClickThemes} className={`${classes.button} ${classes.themesButton}`}>
+      <button onClick={onClickThemes} className={`${classes.button} ${tab == 0 && classes.activeTab}`}>
         <PiCircleHalfTiltFill />
         {isThemeUpdated && <NotificationCircle />}
       </button>
