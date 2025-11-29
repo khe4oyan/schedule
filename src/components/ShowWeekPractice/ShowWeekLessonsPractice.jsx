@@ -6,6 +6,9 @@ import { MdOutlineSensorDoor } from "react-icons/md";
 import { TbElevator } from "react-icons/tb";
 import { FaRegClock } from "react-icons/fa";
 
+// components
+import Weekend from '../Weekend';
+
 // constants
 import practice from '../../constants/practice.js';
 
@@ -17,7 +20,7 @@ export default function ShowWeekPractices() {
   const initState = useCallback(() => {
     const dayNum = new Date().getDay() - 1;
 
-    if (dayNum < 0 || dayNum > 4) return -1;
+    if (dayNum < 0 || dayNum > 4) return dayNum;
 
     return dayNum;
   });
@@ -39,7 +42,12 @@ export default function ShowWeekPractices() {
 
       <div className={classes.practices}>
         {
-          practice[dayscheduleNum].length === 0 ?
+          dayscheduleNum > 4 && 
+          <Weekend />
+        }
+        
+        {
+          practice[dayscheduleNum]?.length === 0 ?
             <p className={classes.noPracticeMsg}>Այս օրը պրակտիկա չկա</p>
             :
             practice[dayscheduleNum]?.map(
