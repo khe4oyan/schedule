@@ -78,15 +78,14 @@ function Practice({ data }) {
   return (
     <div className={classes.practice}>
       <p className={classes.teacherName}>{teacher}</p>
+      <div className={classes.time}>
+        <p className={classes.time_p}><FaRegClock />{start}</p>-
+        <p className={classes.time_p}><FaRegClock />{end}</p>
+      </div>
       <div className={classes.room}>
         <p><FaRegBuilding />{b}</p>
         <p><TbElevator />{f}</p>
         <p><MdOutlineSensorDoor />{r}</p>
-      </div>
-      <div className={classes.time}>
-        <p className={classes.time_p}><FaRegClock />{start}</p>
-        -
-        <p className={classes.time_p}><FaRegClock />{end}</p>
       </div>
     </div>
   )
