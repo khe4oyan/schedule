@@ -1,7 +1,8 @@
 .root {
   position: fixed;
-  left: 0;
   top: 0;
+  right: 0;
+  left: 0;
   max-width: 700px;
   margin: auto;
   display: flex;
