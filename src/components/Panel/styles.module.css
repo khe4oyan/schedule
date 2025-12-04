@@ -12,7 +12,6 @@
   backdrop-filter: var(--bgEffect);
   border-radius: 50px;
   z-index: 100;
-  overflow: hidden;
 }
 
 .button {
