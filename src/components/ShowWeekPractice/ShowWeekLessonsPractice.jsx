@@ -83,9 +83,9 @@ function Practice({ data }) {
         <p className={classes.time_p}><FaRegClock />{end}</p>
       </div>
       <div className={classes.room}>
-        <p><FaRegBuilding />{b}</p>
-        <p><TbElevator />{f}</p>
-        <p><MdOutlineSensorDoor />{r}</p>
+        <p className={classes.icon}><FaRegBuilding />{b}</p>
+        <p className={classes.icon}><TbElevator />{f}</p>
+        <p className={classes.icon}><MdOutlineSensorDoor />{r}</p>
       </div>
     </div>
   )
