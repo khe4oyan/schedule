@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // components
 import Header from './components/Header';
 // import Lessons from './components/Lessons/Lessons';
-import ShowWeekLessons from './components/ShowWeekLessons';
+// import ShowWeekLessons from './components/ShowWeekLessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
@@ -21,8 +21,7 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	// const [tab, setTab] = useState(parseInt(localStorage.getItem("tab") ?? 1));
-	const [tab, setTab] = useState(1);
+	const [tab, setTab] = useState(/*parseInt(localStorage.getItem("tab") ??*/ 1);
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
@@ -55,9 +54,9 @@ function App() {
 
 			{tab === 0 && <Theme newTheme={newTheme} />}
 			{tab === 1 && <>
+				<EmptyMessage text="Դասացուցակ չկա"/>
 				{/* <Lessons /> */}
-				<EmptyMessage />
-				<ShowWeekLessons />
+				{/* <ShowWeekLessons /> */}
 				<br /><br /><br /><br /><br /> 
 			</>}
 			{tab === 2 && <Settings />}
