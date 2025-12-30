@@ -6,7 +6,7 @@ import useVersion from '../../customHooks/useVersion';
 import classes from './styles.module.css';
 
 export default function Header() {
-  const [isDoTransformText, setTextUpdated] = useVersion("isPacticeText", 1);
+  const [isDoTransformText, setTextUpdated] = useVersion("isPacticeText", 2);
   const [isShowAnim, setIsShowAnim] = useState(false);
 
   useEffect(() => {
@@ -21,10 +21,10 @@ export default function Header() {
       {
         isDoTransformText ?
           <>
-            <h1 className={`${classes.headerText} ${classes.prev} ${isShowAnim && classes.prevAnim}`}>Դասացուցակ</h1>
-            <h1 className={`${classes.headerText} ${classes.new} ${isShowAnim && classes.newAnim}`}>Պրակտիկա</h1>
+            <h1 className={`${classes.headerText} ${classes.prev} ${isShowAnim && classes.prevAnim}`}>Պրակտիկա</h1>
+            <h1 className={`${classes.headerText} ${classes.new} ${isShowAnim && classes.newAnim}`}>Դասացուցակ</h1>
           </> :
-          <h1 className={classes.headerText}>Պրակտիկա</h1>
+          <h1 className={classes.headerText}>Դասացուցակ</h1>
       }
     </header>
   )
