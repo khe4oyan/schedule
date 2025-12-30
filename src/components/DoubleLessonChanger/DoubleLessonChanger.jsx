@@ -6,9 +6,14 @@ export default function DoubleLessonChanger({ setIsTopLesson, isTopLesson }) {
   
   return (
     <button className={classes.root} onClick={onClick}>
-      <p className={`${!isTopLesson && classes.inActiveP}`}>Համարիչ</p>
-      <div className={`${classes.border} ${!isTopLesson && classes.borderActive}`}></div>
-      <p className={`${isTopLesson && classes.inActiveP}`}>Հայտարար</p>
+      <div>
+        <p className={classes.statusText}>{isTopLesson ? "Համարիչ" : "Հայտարար"} </p>
+      </div>
+
+      <div className={classes.statusBox}>
+        <div className={`${classes.point} ${isTopLesson && classes.pointActive}`}></div>
+        <div className={`${classes.point} ${!isTopLesson && classes.pointActive}`}></div>
+      </div>
     </button>
   )
 }

@@ -8,8 +8,8 @@ import ShowWeekLessons from './components/ShowWeekLessons';
 import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
-import Practice from './components/Practice';
-import AllComponentsPreview from "./components/AllComponentsPreview";
+// import Practice from './components/Practice';
+// import AllComponentsPreview from "./components/AllComponentsPreview";
 import EmptyMessage from './components/EmptyMessage';
 
 // custom hooks
@@ -21,7 +21,8 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	const [tab, setTab] = useState(parseInt(localStorage.getItem("tab") ?? 3));
+	// const [tab, setTab] = useState(parseInt(localStorage.getItem("tab") ?? 1));
+	const [tab, setTab] = useState(1);
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
@@ -54,12 +55,13 @@ function App() {
 
 			{tab === 0 && <Theme newTheme={newTheme} />}
 			{tab === 1 && <>
+				{/* <Lessons /> */}
 				<EmptyMessage />
 				<ShowWeekLessons />
 				<br /><br /><br /><br /><br /> 
 			</>}
 			{tab === 2 && <Settings />}
-			{tab === 3 && <Practice />}
+			{/* {tab === 3 && <Practice />} */}
 
 			<Panel tab={tab} setTab={setTab} />
 		</div>

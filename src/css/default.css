@@ -78,4 +78,12 @@
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
   --themeSecond: var(--primaryColor_1);
+
+  /* panel */
+  --activeTabColor: #0059ff;
+  --activeTabFilter: none;
+
+  /* double lessons colors */
+  --activeWeekDayColor: #0059ff;
+  --inactiveWeekDayColor: #aaa;
 }

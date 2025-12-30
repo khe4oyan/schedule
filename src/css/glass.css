@@ -76,4 +76,12 @@
   --themeWhite: #ffffff;
   --themeSecond: #042516;
   --themeIconBG: linear-gradient(135deg, var(--themeWhite) 50%, var(--themeSecond) 51%);
+
+  /* panel */
+  --activeTabColor: #6effb6;
+  --activeTabFilter: drop-shadow(0px 0px 10px var(--activeTabColor));
+
+  /* double lessons colors */
+  --activeWeekDayColor: #ffffff;
+  --inactiveWeekDayColor: #ffffff7e;
 }

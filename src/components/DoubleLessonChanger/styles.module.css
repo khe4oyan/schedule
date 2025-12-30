@@ -1,36 +1,38 @@
 .root {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
-  text-align: center;
-  position: relative;
+  justify-content: center;
+  width: 100%;
   height: 45px;
   margin-bottom: 20px;
-  background: none;
+  /* background: none; */
   border-color: var(--primaryColor_2);
   backdrop-filter: var(--bgEffect);
+  position: relative;
 }
 
-.border {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  height: 100%;
-  border: 1px solid var(--primaryColor_4);
-  width: 50%;
-  transition: .5s left;
-  border-radius: 10px;
-}
-
-.borderActive {
-  left: 50%;
-}
-
-.root > p:not(.inActiveP) {
+.statusText{
   font-weight: bold;
 }
 
-.inActiveP {
-  opacity: .5;
+.statusBox {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  height: 100%;
+}
+
+.point {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--inactiveWeekDayColor);
+}
+
+.pointActive {
+  background-color: var(--activeWeekDayColor);
 }

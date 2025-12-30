@@ -1,7 +1,7 @@
 // libs
 import { PiCircleHalfTiltFill } from "react-icons/pi";
 import { BsCalendar4Week } from "react-icons/bs";
-import { MdOutlineGroups2 } from "react-icons/md";
+// import { MdOutlineGroups2 } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 
 // custom hooks
@@ -16,7 +16,7 @@ import classes from './styles.module.css';
 export default function Panel({ tab, setTab }) {
   const [isThemeUpdated, updateTheme] = useVersion("theme", 4);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
-  const [isPracticesUpdated, updatePractices] = useVersion("practice", 2);
+  // const [isPracticesUpdated, updatePractices] = useVersion("practice", 2);
 
   const onClick = (ind) => {
     window.scrollTo({ top: 0 });
@@ -38,11 +38,11 @@ export default function Panel({ tab, setTab }) {
     updateSettings();
   };
 
-  const onClickPractices = () => {
-    onClick(3);
-    localStorage.setItem("tab", 3);
-    updatePractices();
-  };
+  // const onClickPractices = () => {
+  //   onClick(3);
+  //   localStorage.setItem("tab", 3);
+  //   updatePractices();
+  // };
 
   return (
     <div className={classes.panel}>
@@ -50,11 +50,11 @@ export default function Panel({ tab, setTab }) {
         <IoSettingsOutline />
         {isSettingsUpdated && <NotificationCircle />}
       </button>
-
+{/* 
       <button onClick={onClickPractices} className={`${classes.button} ${tab == 3 && classes.activeTab}`}>
         <MdOutlineGroups2 />
         {isPracticesUpdated && <NotificationCircle />}
-      </button>
+      </button> */}
 
       <button onClick={onClickLessons} className={`${classes.button} ${tab == 1 && classes.activeTab}`}>
         <BsCalendar4Week size={36}/>

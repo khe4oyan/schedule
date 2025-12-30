@@ -8,7 +8,7 @@
   --bodyBackgroundColor: var(--bodyBackground);
 
   /* settings */
-  --reloadTitleMessageBg: rgb(241, 241, 154);
+  --reloadTitleMessageBg: #f1f19a;
   --reloadTitleMessageColor: rgb(97, 97, 7);
 
   --buttonInitBorderColor: #b4b4b4;
@@ -42,4 +42,12 @@
   --themeMenuBg: #fff2;
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+
+  /* panel */
+  --activeTabColor: #aaebeb;
+  --activeTabFilter: drop-shadow(0px 0px 10px var(--activeTabColor));
+
+  /* double lessons colors */
+  --activeWeekDayColor: #b4d2e9;
+  --inactiveWeekDayColor: #5e646d;
 }
