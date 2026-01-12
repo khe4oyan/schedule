@@ -9,7 +9,6 @@ import Panel from './components/Panel';
 import Theme from './components/Theme';
 import Settings from './components/Settings';
 // import Practice from './components/Practice';
-// import AllComponentsPreview from "./components/AllComponentsPreview";
 import EmptyMessage from './components/EmptyMessage';
 
 // custom hooks
@@ -48,8 +47,6 @@ function App() {
 
 	return (
 		<div>
-			{/* <AllComponentsPreview /> */}
-
 			{isShowHeader && <Header />}
 
 			{tab === 0 && <Theme newTheme={newTheme} />}

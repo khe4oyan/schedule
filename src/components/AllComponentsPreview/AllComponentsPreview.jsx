@@ -7,12 +7,27 @@ import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
 
+import themesData from '../../constants/themes';
+
 // styles
 import classes from './styles.module.css';
 
 export default function AllComponentsPreview() {
   return (
     <div className={classes.root}>
+      {themesData.map(theme => 
+        <AllVersions 
+          theme={theme.theme} 
+          key={theme.theme} 
+        />
+      )}
+    </div>
+  )
+}
+
+function AllVersions({ theme }) { 
+  return (
+    <div className={`colors_default ${theme} ${classes.version}`}>
       <div>
         <button>Button</button>
         <button disabled>Button disabled</button>
@@ -50,5 +65,5 @@ export default function AllComponentsPreview() {
 
       <ShowWeekLessons />
     </div>
-  )
+  );
 }
