@@ -19,7 +19,7 @@
 
   --buttonDisabledBorderColor: #bebebe;
   --buttonDisabledColor: #8a8a8a;
-  --buttonDisabledBgColor: var(--primaryColor_2);
+  --buttonDisabledBgColor: var(--primaryColor_1);
 
   /* header */
   --headerBg: var(--primaryColor_1);

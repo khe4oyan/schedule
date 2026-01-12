@@ -17,8 +17,9 @@
   --afterClassBg: var(--messageBg);
   --breakBg: var(--messageBg);
 
-  --buttonDisabledBorderColor: #bebebe;
-  --buttonDisabledColor: #8a8a8a;
+  --buttonDisabledBorderColor: var(--primaryColor_2);
+  --buttonDisabledColor: var(--primaryColor_2);
+  --buttonDisabledBgColor: var(--primaryColor_1);
 
   --headerBetaBgColor: #aaebeb;
 

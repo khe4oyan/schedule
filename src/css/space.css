@@ -54,12 +54,13 @@
   --lessonDetailsBorderColor: var(--primaryColor_3);
   --lessonDetailsTimeBorderColor: var(--primaryColor_3);
 
-  /* --lessonTimerColor: var(--primaryColor_1); */
-  /* --lessonTimerBG: var(--primaryColor_4); */
+  --lessonTimerColor: var(--primaryColor_1);
+  --lessonTimerBG: var(--primaryColor_4);
 
   --themeMenuBg: #6a5acd44;
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
+  --themeSecond: var(--primaryColor_1);
 
   /* panel */
   --activeTabColor: #eae6ff;

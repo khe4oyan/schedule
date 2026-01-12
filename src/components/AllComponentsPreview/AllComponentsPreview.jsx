@@ -29,7 +29,8 @@ export default function AllComponentsPreview() {
 function AllVersions({ theme }) { 
   return (
     <div className={`colors_default ${theme} ${classes.version}`}>
-      <div>
+      <h2 className={classes.themeText}>{theme}</h2>
+      <div className={classes.buttons}>
         <button>Button</button>
         <button disabled>Button disabled</button>
       </div>
