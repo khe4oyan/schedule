@@ -47,18 +47,18 @@ function AllVersions({ theme }) {
         title: "Title",
         room: 40404,
         teacher: "Galoyan S",
-        start: "09:00",
-        end: "09:30",
-        status: "default",
+        start: "06:00",
+        end: "23:00",
+        status: "current",
       }} />
 
       <Lesson data={{
         title: "Title",
         room: 40404,
         teacher: "Galoyan S",
-        start: "06:00",
-        end: "23:00",
-        status: "current",
+        start: "09:00",
+        end: "09:30",
+        status: "default",
       }} />
 
       <div style={{ width: "100%" }}></div>
