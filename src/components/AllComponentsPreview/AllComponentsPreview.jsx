@@ -6,6 +6,7 @@ import Header from '../Header';
 import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
+import Panel from '../Panel';
 
 import themesData from '../../constants/themes';
 
@@ -64,6 +65,10 @@ function AllVersions({ theme }) {
       <div style={{ width: "100%" }}></div>
 
       <ShowWeekLessons />
+
+      <div className={classes.panel}>
+        <Panel tab={1}/>
+      </div>
     </div>
   );
 }

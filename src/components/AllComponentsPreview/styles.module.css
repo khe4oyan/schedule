@@ -8,8 +8,6 @@
 }
 
 .version {
-  width: 100%;
-  max-width: 700px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -18,4 +16,9 @@
   background: var(--bodyBackground);
   background-color: var(--bodyBackgroundColor);
   color: var(--primaryColor_4);
+}
+
+.panel * {
+  position: static;
+  pointer-events: none;
 }
