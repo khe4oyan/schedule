@@ -23,8 +23,9 @@
 
   --headerBetaBgColor: #aaebeb;
 
-  --lessonTimerColor: var(--primaryColor_1);
-  --lessonTimerBG: var(--primaryColor_4);
+  --lessonTimerColor: var(--primaryColor_4);
+  --lessonTimerBG: #00000031;
+
   --lessonBorderColor: var(--primaryColor_2);
   --lessonBg: var(--primaryColor_1);
 

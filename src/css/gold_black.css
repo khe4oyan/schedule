@@ -61,7 +61,7 @@
   --lessonBg: var(--primaryColor_1);
 
   --lessonTimerColor: white;
-  --lessonTimerBG: linear-gradient(-45deg, #131313, rgb(105, 93, 23), #0f0f0f);
+  --lessonTimerBG: #ffffff13;
 
   --lessonLineBgDefault: linear-gradient(135deg, gold 40%, 50%, rgb(248, 230, 131), rgb(250, 240, 186), rgb(248, 230, 131));
   --lessonLineBgCurrent: linear-gradient(to bottom, rgb(248, 230, 131), gold);

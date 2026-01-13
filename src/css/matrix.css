@@ -63,11 +63,12 @@
 
   --lessonTimerColor: var(--primaryColor_4);
   --lessonTimerBG: linear-gradient(-45deg, rgb(9, 70, 9), rgb(2, 26, 2));
+  --lessonTimerBG: rgba(0, 255, 0, 0.082);
 
   --lessonLineBgDefault: rgb(18, 235, 18);
   --lessonLineBgCurrent: linear-gradient(to bottom, rgb(7, 61, 7), rgb(81, 214, 69));
 
-  --lessonSecondAccentColor: #5ab94e;
+  --lessonSecondAccentColor: #00a500;
 
   /* theme */
   --themeMenuBg: #0002;

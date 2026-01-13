@@ -54,8 +54,10 @@
   --lessonDetailsBorderColor: var(--primaryColor_3);
   --lessonDetailsTimeBorderColor: var(--primaryColor_3);
 
-  --lessonTimerColor: var(--primaryColor_1);
+  --lessonTimerColor: var(--primaryColor_4);
   --lessonTimerBG: var(--primaryColor_3);
+  --lessonTimerBG: #ffb6c14f;
+
 
   --lessonLineBgDefault: linear-gradient(to right, #fac0c0, #e46b6b);
   --lessonLineBgCurrent: #f398c5;

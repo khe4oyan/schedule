@@ -54,8 +54,8 @@
   --lessonDetailsBorderColor: var(--primaryColor_3);
   --lessonDetailsTimeBorderColor: var(--primaryColor_3);
 
-  --lessonTimerColor: var(--primaryColor_1);
-  --lessonTimerBG: var(--primaryColor_4);
+  --lessonTimerColor: var(--primaryColor_4);
+  --lessonTimerBG: #ffffff13;
 
   --lessonSecondAccentColor: #aaaaaa;
 
