@@ -60,8 +60,8 @@
 
 
   --lessonLineBgDefault: linear-gradient(to right, #fac0c0, #e46b6b);
-  --lessonLineBgCurrent: #f398c5;
-  --lessonLineCurrentShadow: #f5bbd8;
+  --lessonLineBgCurrent: #ff6565;
+  --lessonLineCurrentShadow: #ff656575;
 
   --lessonSecondAccentColor: #7c666f;
 

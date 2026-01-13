@@ -66,9 +66,9 @@
   --lessonTimerColor: var(--primaryColor_4);
   --lessonTimerBG: #00000031;
 
-  --lessonLineBgDefault: linear-gradient(to right, #d3d3d3, #646464);
-  --lessonLineBgCurrent: linear-gradient(to bottom, #ffffff, rgb(103, 131, 96));
-  --lessonLineCurrentShadow: #10b9814d;
+  --lessonLineBgDefault: linear-gradient(to right, #d3d3d3, #b1b1b1);
+  --lessonLineBgCurrent: #f5f5f5;
+  --lessonLineCurrentShadow: rgba(255, 255, 255, 0.5);
 
   --lessonSecondAccentColor: #dadada;
 

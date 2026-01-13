@@ -73,8 +73,8 @@
   --lessonTimerBG: #0000000d;
 
   --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-  --lessonLineBgCurrent: #10b981;
-  --lessonLineCurrentShadow: #10b9814d;
+  --lessonLineBgCurrent: #1ad61a;
+  --lessonLineCurrentShadow: #1ad61a80;
 
   --lessonSecondAccentColor: #777777;
 

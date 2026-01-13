@@ -65,6 +65,7 @@
 
   --lessonLineBgDefault: linear-gradient(135deg, gold 40%, 50%, rgb(248, 230, 131), rgb(250, 240, 186), rgb(248, 230, 131));
   --lessonLineBgCurrent: linear-gradient(to bottom, rgb(248, 230, 131), gold);
+  --lessonLineCurrentShadow: rgba(255, 217, 0, 0.5);
 
   --lessonSecondAccentColor: #a3a3a3;
 

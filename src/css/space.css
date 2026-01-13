@@ -48,6 +48,9 @@
   --breakBorderColor: var(--messageBorderColor);
 
   --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  --lessonLineBgCurrent: #4aff4a;
+  --lessonLineCurrentShadow: #4aff4a88;
+
   --lessonBorderColor: var(--primaryColor_2);
   --lessonBg: #141429;
 
