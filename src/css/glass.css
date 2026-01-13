@@ -25,7 +25,7 @@
   --headerBg: var(--primaryColor_1);
   --headerBorderColor: var(--primaryColor_2);
   --headerBetaBgColor: #ffffff;
-  --headerBetaColor: black;
+  --headerBetaColor: #1A1A1A;
 
   /* complete lessons */
   --completeLessonsBg: var(--primaryColor_2);
@@ -63,7 +63,7 @@
   --lessonDetailsBorderColor: var(--primaryColor_3);
   --lessonDetailsTimeBorderColor: var(--primaryColor_3);
 
-  --lessonTimerColor: black;
+  --lessonTimerColor: #1A1A1A;
   --lessonTimerBG: white;
 
   --lessonLineBgDefault: linear-gradient(to right, #d3d3d3, #646464);

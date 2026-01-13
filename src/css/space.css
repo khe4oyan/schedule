@@ -22,7 +22,7 @@
   --headerBg: var(--primaryColor_1);
   --headerBorderColor: #3c3c55;
   --headerBetaBgColor: #ffcc00;
-  --headerBetaColor: black;
+  --headerBetaColor: #1A1A1A;
 
   --completeLessonsBg: var(--primaryColor_2);
   --completeLessonsListBg: var(--primaryColor_2);

@@ -6,7 +6,7 @@
   --primaryColor_1: white;
   --primaryColor_2: #dddddd;
   --primaryColor_3: #9b9b9b;
-  --primaryColor_4: black;
+  --primaryColor_4: #1A1A1A;
 
   --bodyBackground: #f2f2f2;
   --bodyBackgroundColor: var(--bodyBackground);
@@ -69,8 +69,8 @@
   --lessonDetailsBorderColor: var(--primaryColor_3);
   --lessonDetailsTimeBorderColor: var(--primaryColor_3);
 
-  --lessonTimerColor: #f8f8f8;
-  --lessonTimerBG: #1d1d1d;
+  --lessonTimerColor: #1A1A1A;
+  --lessonTimerBG: #0000000d;
 
   --lessonLineBgDefault: linear-gradient(to bottom, #3b82f6, #8b5cf6);
   --lessonLineBgCurrent: #10b981;
