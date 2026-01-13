@@ -32,6 +32,8 @@
   --lessonLineBgCurrent: #dcffdb;
   --lessonLineCurrentShadow: #e5ffe54d;
 
+  --lessonSecondAccentColor: #b8c4ce;
+
   --beforeClassBg: linear-gradient(135deg, var(--primaryColor_2), 75%, var(--primaryColor_1));
   --beforeClassColor: var(--primaryColor_4);
   --beforeClassBorderColor: var(--primaryColor_3);

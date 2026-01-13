@@ -57,6 +57,8 @@
   --lessonTimerColor: var(--primaryColor_1);
   --lessonTimerBG: var(--primaryColor_4);
 
+  --lessonSecondAccentColor: #aaaaaa;
+
   --themeMenuBg: #6a5acd44;
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);

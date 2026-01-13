@@ -1,5 +1,7 @@
 // libs
 import { useEffect, useState, useRef } from 'react';
+import { CiClock2 } from "react-icons/ci";
+import { IoTimerOutline } from "react-icons/io5";
 
 // utils
 import timerFormat from '../../utils/timerFormat';
@@ -78,31 +80,29 @@ export default function Lesson({ data }) {
 
   return (
     <div className={`${classes.root} ${status === statuses.CURRENT && classes.rootCurrent} ${status === statuses.COMPLETED && classes.rootCompleted}`}>
-      <div className={`${classes.mainInfo} ${status === statuses.CURRENT && classes.mainInfoExtend}`}>
+      <div className={classes.titleBox}>
         <p className={classes.title}>{title} {type && type } {group > 0 && group }</p>
-        {/* <p className={classes.tags}>
-          {type && <span className={classes.type}>{type}</span> }
-          {group > -1 && <span className={classes.subGroup}>{group} ենթախումբ</span> }
-        </p> */}
-
-        {
-          status === statuses.CURRENT &&
-          <p className={classes.timer}>
-            {timerFormat(timer)}
-          </p>
-        }
       </div>
 
-      <div className={classes.teacher}>
-        <p>{teacher}</p>
+      <div className={classes.teacherBox}>
+        <p className={classes.teacher}>{teacher}</p>
       </div>
 
       <div className={classes.room}>
         <p>{room}</p>
       </div>
 
-      <div className={classes.time}>
-        <p>{start} - {end}</p>
+      <div className={classes.footer}>
+        <div className={classes.timeBox}> 
+          <CiClock2 size={17} />
+          <p className={classes.time}>{start} - {end}</p>
+        </div>
+        {
+          status === statuses.CURRENT &&
+          <p className={classes.timer}>
+            <IoTimerOutline size={17} /> {timerFormat(timer)}
+          </p>
+        }
       </div>
       {
         !isDisabledGradientLine &&

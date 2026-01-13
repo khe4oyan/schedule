@@ -1,88 +1,80 @@
 .root {
-  display: grid;
+  display: block;
   grid-template-areas:
     "header header"
     "teacher teacher"
     "room time";
   gap: 5px;
-  padding: 1rem;
+  padding: 1rem 1.7rem 1rem 1rem;
   border-radius: 10px;
   border: 1px solid var(--lessonBorderColor);
   background: var(--lessonBg);
   position: relative;
-  overflow: hidden;
+  width: max-content;
   min-width: 250px;
+  width: 100%;
   backdrop-filter: var(--bgEffect);
 }
 
 .rootCurrent {
-  /* box-shadow: 10px 0 25px var(--lessonLineCurrentShadow); */
-
   .line {
     background: var(--lessonLineBgCurrent);
+    box-shadow: 0px 0 25px 7px var(--lessonLineCurrentShadow);
   }
 }
 
-.mainInfo {
-  grid-area: header;
-  padding-bottom: 5px;
+.titleBox {
   text-wrap: balance;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-
-.mainInfoExtend {
-  display: flex;
-  gap: 5px;
-  justify-content: space-between;
-}
-
 .title {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 
-.tags {
+.teacherBox {
+  margin-bottom: 8px;
+}
+.teacher {
+  color: var(--lessonSecondAccentColor);
+}
+
+.room {
+  color: var(--lessonSecondAccentColor);
+}
+
+.footer {
   display: flex;
-  gap: 7px;
-  align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--lessonBorderColor);
+  border-radius: 0;
 }
 
-.type, .subGroup {
-  border: 1px solid var(--primaryColor_2);
-  border-radius: 5px;
-  padding: 2px 12px;
+.timeBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
+/* .time {} */
 
 .timer {
-  width: fit-content;
-  height: fit-content;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
   color: var(--lessonTimerColor);
   background: var(--lessonTimerBG);
 }
 
-.teacher {
-  grid-area: teacher;
-  margin-bottom: 15px;
-}
-
-.room {
-  grid-area: room;
-}
-
-.time {
-  grid-area: time;
-  text-align: right;
-}
-
 .line {
   height: 100%;
-  width: 8px;
+  width: 10px;
   position: absolute;
-  right: 0;
+  right: 0px;
   top: 0;
+  border-radius: 0px 100px 100px 0px;
   background: var(--lessonLineBgDefault);
 }

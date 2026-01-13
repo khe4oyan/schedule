@@ -76,6 +76,8 @@
   --lessonLineBgCurrent: #10b981;
   --lessonLineCurrentShadow: #10b9814d;
 
+  --lessonSecondAccentColor: #777777;
+
   /* theme */
   --themeMenuBg: #0002;
   --themeIconBorderColor: var(--primaryColor_3);

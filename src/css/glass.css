@@ -7,7 +7,7 @@
   --bodyBackground: url("../../public/3d_balls.png") center center / cover no-repeat;
 
   --bodyBackgroundColor: #10251b;
-  --bgEffect: blur(10px);
+  --bgEffect: blur(15px);
 
   /* settings */
   --reloadTitleMessageBg: #000000b7;
@@ -69,6 +69,8 @@
   --lessonLineBgDefault: linear-gradient(to right, #d3d3d3, #646464);
   --lessonLineBgCurrent: linear-gradient(to bottom, #ffffff, rgb(103, 131, 96));
   --lessonLineCurrentShadow: #10b9814d;
+
+  --lessonSecondAccentColor: #dadada;
 
   /* theme */
   --themeMenuBg: #0002;

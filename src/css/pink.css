@@ -61,6 +61,8 @@
   --lessonLineBgCurrent: #f398c5;
   --lessonLineCurrentShadow: #f5bbd8;
 
+  --lessonSecondAccentColor: #7c666f;
+
   --themeMenuBg: #ff69b422;
   --themeIconBorderColor: var(--primaryColor_3);
   --themeIconBG: linear-gradient(135deg, var(--primaryColor_2) 50%, var(--primaryColor_3) 51%);
