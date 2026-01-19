@@ -30,7 +30,7 @@
   /* header */
   --headerBg: var(--primaryColor_1);
   --headerBorderColor: var(--primaryColor_2);
-  --headerBetaBgColor: #0dacac;
+  --headerBetaBgColor: #00ffff;
   --headerBetaColor: var(--primaryColor_1);
 
   /* complete lessons */

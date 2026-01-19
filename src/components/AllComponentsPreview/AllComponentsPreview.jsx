@@ -7,6 +7,7 @@ import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
 import Panel from '../Panel';
+import Telegram from '../Telegram';
 
 import themesData from '../../constants/themes';
 
@@ -30,6 +31,7 @@ function AllVersions({ theme }) {
   return (
     <div className={`colors_default ${theme} ${classes.version}`}>
       <h2 className={classes.themeText}>{theme}</h2>
+
       <div className={classes.buttons}>
         <button>Button</button>
         <button disabled>Button disabled</button>
@@ -62,6 +64,8 @@ function AllVersions({ theme }) {
         end: "09:30",
         status: "default",
       }} />
+
+      <Telegram />
 
       <div style={{ width: "100%" }}></div>
 
