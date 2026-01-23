@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 
 // components
 import Lesson from '../Lesson';
-import DoubleLessonChanger from '../DoubleLessonChanger/DoubleLessonChanger.jsx';
+// import DoubleLessonChanger from '../DoubleLessonChanger/DoubleLessonChanger.jsx';
 
 // constants
 import lessons from '../../constants/lessons';
@@ -42,10 +42,10 @@ export default function ShowWeekLessons() {
         }
       </div>
 
-      <DoubleLessonChanger
+      {/* <DoubleLessonChanger
         setIsTopLesson={setIsTopLesson}
         isTopLesson={isTopLesson}
-      />
+      /> */}
 
       <div className={classes.lessons}>
         {

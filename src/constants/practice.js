@@ -1,7 +1,7 @@
 // classes
 import Practice from '../classes/Practice.class.js'
 
-export default [
+const practice = [
   [ /*  Понедельник */],
 
   [ /*  Вторник */],
@@ -24,3 +24,5 @@ export default [
     new Practice(5, 7, 6, "Մանուկյան Վ", "14:20", "15:40"),
   ],
 ];
+
+export default practice;

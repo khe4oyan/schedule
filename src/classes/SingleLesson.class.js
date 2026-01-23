@@ -3,17 +3,17 @@ import { statuses } from "../components/Lesson/Lesson";
 import Lesson from "./Lesson.class.js";
 
 export default class SingleLesson extends Lesson {
-  constructor(title, room, teacher, start, end) {
+  constructor(title, room, teacher) {
     super();
 
     this.title = title;
     this.room = room;
     this.teacher = teacher;
-    this.start = start;
-    this.end = end;
     this.status = statuses.DEFAULT;
     this.type = "";
     this.subGroup = -1;
+    this.start = "";
+    this.end = "";
   }
 
   getData() {
@@ -21,7 +21,7 @@ export default class SingleLesson extends Lesson {
   }
 
   isLesson() {
-    this.type += "Դաս ";
+    this.type += "Դաս. ";
     return this;
   }
   isLab() {
@@ -29,7 +29,7 @@ export default class SingleLesson extends Lesson {
     return this;
   }
   isPractice() {
-    this.type += "գործ ";
+    this.type += "Գործ. ";
     return this;
   }
 
@@ -39,6 +39,36 @@ export default class SingleLesson extends Lesson {
   }
   group_2() {
     this.subGroup = 2;
+    return this;
+  }
+
+  time(time) {
+    switch (time) {
+      case 1:
+        this.start = "09:30";
+        this.end = "10:50";
+        break;
+
+      case 2:
+        this.start = "11:00";
+        this.end = "12:20";
+        break;
+
+      case 3:
+        this.start = "12:50";
+        this.end = "14:10";
+        break;
+
+      case 4:
+        this.start = "14:20";
+        this.end = "15:40";
+        break;
+
+      default:
+        console.error(`undefined time`);
+        break;
+    }
+
     return this;
   }
 }
