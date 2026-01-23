@@ -1,6 +1,5 @@
 // copmonents
 import SettingsOption from '../SettingsOption/SettingsOption';
-import Telegram from '../Telegram/Telegram';
 
 // styles
 import classes from './styles.module.css';
@@ -19,8 +18,6 @@ export default function Settings() {
         optionName="Անջատել դասի գրադիենտը"
         optionKey="lessonLineDisabled"
       />
-
-      <Telegram />
     </div>
   )
 }

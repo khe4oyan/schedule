@@ -10,7 +10,6 @@ import Theme from './components/Theme';
 import Settings from './components/Settings';
 // import Practice from './components/Practice';
 import EmptyMessage from './components/EmptyMessage';
-import Telegram from './components/Telegram';
 
 // custom hooks
 import useSettingsOption from './customHooks/useSettingsOption';
@@ -53,7 +52,6 @@ function App() {
 			{tab === 0 && <Theme newTheme={newTheme} />}
 			{tab === 1 && <>
 				<EmptyMessage text="Դասացուցակ չկա"/>
-				<Telegram /> 
 				{/* <Lessons /> */}
 				{/* <ShowWeekLessons /> */}
 				<br /><br /><br /><br /><br /> 

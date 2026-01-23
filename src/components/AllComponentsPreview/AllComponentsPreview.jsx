@@ -7,7 +7,6 @@ import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
 import Panel from '../Panel';
-import Telegram from '../Telegram';
 
 import themesData from '../../constants/themes';
 
@@ -64,8 +63,6 @@ function AllVersions({ theme }) {
         end: "09:30",
         status: "default",
       }} />
-
-      <Telegram />
 
       <div style={{ width: "100%" }}></div>
 
