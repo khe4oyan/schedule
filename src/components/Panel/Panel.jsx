@@ -46,7 +46,7 @@ export default function Panel({ tab, setTab }) {
 
   return (
     <div className={classes.panel}>
-      <button onClick={onClickSettings} className={`${classes.button} ${tab == 2 && classes.activeTab}`}>
+      <button onClick={onClickSettings} className={`${classes.button} ${tab === 2 && classes.activeTab}`}>
         <IoSettingsOutline />
         {isSettingsUpdated && <NotificationCircle />}
       </button>
@@ -56,11 +56,11 @@ export default function Panel({ tab, setTab }) {
         {isPracticesUpdated && <NotificationCircle />}
       </button> */}
 
-      <button onClick={onClickLessons} className={`${classes.button} ${tab == 1 && classes.activeTab}`}>
+      <button onClick={onClickLessons} className={`${classes.button} ${tab === 1 && classes.activeTab}`}>
         <BsCalendar4Week size={36}/>
       </button>
 
-      <button onClick={onClickThemes} className={`${classes.button} ${tab == 0 && classes.activeTab}`}>
+      <button onClick={onClickThemes} className={`${classes.button} ${tab === 0 && classes.activeTab}`}>
         <PiCircleHalfTiltFill />
         {isThemeUpdated && <NotificationCircle />}
       </button>
