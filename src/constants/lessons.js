@@ -47,7 +47,7 @@ const lessons = [
   ],
   
   [ // Четверг
-    new SingleLesson(items.math, "5011", tch.harutyunyanE).isLesson().isPractice().time(2),
+    new SingleLesson(items.math, "5011", tch.harutyunyanE).isLesson().isPractice().time(2).setTempRoom("5709(բ)", "2026.01.26", 5),
     new SingleLesson(items.photoshop, "5118 5119", `${tch.rahanyanG} ${tch.norekyanA}`).isLab().time(3),
     new SingleLesson(items.sociology, "51301", tch.grigoryanL).isLesson().isPractice().time(4),
   ],

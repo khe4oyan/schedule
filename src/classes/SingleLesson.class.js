@@ -71,4 +71,21 @@ export default class SingleLesson extends Lesson {
 
     return this;
   }
+
+  setTempRoom(room, started, delayWeeks) {
+    const startedMilliseconds = new Date(started).getTime();
+    const delayMilliseconds = startedMilliseconds + delayWeeks * 7 * 24 * 3600000;
+    const dateNow = new Date().getTime();
+
+    const differenceMillicesonds = delayMilliseconds - dateNow;
+    const weeksLeft = Math.ceil(differenceMillicesonds / 1000 / 60 / 60 / 24 / 7);
+
+    if (weeksLeft <= 1) {
+      this.tempRoom = `${room} վերջին շաբաթ`;
+    } else {
+      this.tempRoom = `${room} ևս ${weeksLeft} շաբաթ`;
+    }
+
+    return this;
+  }
 }

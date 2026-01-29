@@ -27,6 +27,7 @@ export default function Lesson({ data }) {
   const status = data?.status;
   const type = data?.type;
   const group = data?.subGroup;
+  const tempRoom = data?.tempRoom;
 
   const [timer, setTimer] = useState(() => {
     if (status === statuses.CURRENT) {
@@ -89,7 +90,11 @@ export default function Lesson({ data }) {
       </div>
 
       <div className={classes.room}>
-        <p>{room}</p>
+        {
+          tempRoom ? 
+          <p><s>{room}</s> {tempRoom}</p> :
+          <p>{room}</p>
+        }
       </div>
 
       <div className={classes.footer}>
