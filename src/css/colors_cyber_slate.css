@@ -1,0 +1,90 @@
+.colors_cyber_slate {
+  /* font */
+  --font-family: 'Verdana', sans-serif;
+
+  /* primary colors */
+  --primaryColor_1: #1e1e1e; /* Темный графит */
+  --primaryColor_2: #2d2d2d; 
+  --primaryColor_3: #ff4b4b; /* Приглушенный красный */
+  --primaryColor_4: #e0e0e0;
+
+  --bodyBackground: #121212;
+  --bodyBackgroundColor: var(--bodyBackground);
+
+  --bgEffect: none;
+  --notificationBG: #ff4b4b;
+
+  /* settings */
+  --reloadTitleMessageBg: #3d3d3d;
+  --reloadTitleMessageColor: #ff4b4b;
+
+  /* button */
+  --buttonInitBgColor: #2d2d2d;
+  --buttonInitBorderColor: #404040;
+  --buttonDisabledBorderColor: #252525;
+  --buttonDisabledColor: #555555;
+  --buttonDisabledBgColor: #181818;
+
+  /* header */
+  --headerBg: #181818;
+  --headerBorderColor: #333333;
+  --headerBetaBgColor: #ff4b4b;
+  --headerBetaColor: #ffffff;
+
+  /* complete lessons */
+  --completeLessonsBg: #252525;
+  --completeLessonsListBg: #1e1e1e;
+
+  /* message */
+  --messageBg: #2d2d2d;
+  --messageColor: #ff4b4b;
+  --messageBorderColor: #ff4b4b;
+
+  /* weekendd */
+  --weekendBg: linear-gradient(135deg, #1e1e1e, 75%, #3d1a1a);
+  --weekendColor: #ff4b4b;
+  --weekendBorderColor: #802b2b;
+
+  /* before class */
+  --beforeClassBg: linear-gradient(135deg, #1e1e1e, 75%, #3d1a1a);
+  --beforeClassColor: #ff4b4b;
+  --beforeClassBorderColor: #802b2b;
+
+  /* after class */
+  --afterClassBg: linear-gradient(135deg, #1e1e1e, 75%, #2d2d2d);
+  --afterClassColor: #ff4b4b;
+  --afterClassBorderColor: #802b2b;
+
+  /* break */
+  --breakBg: linear-gradient(135deg, #1e1e1e, 75%, #2d2d2d);
+  --breakColor: #e0e0e0;
+  --breakBorderColor: #404040;
+
+  /* lesson */
+  --lessonBorderColor: #333333;
+  --lessonBg: #1e1e1e;
+  --lessonDetailsBorderColor: #404040;
+  --lessonDetailsTimeBorderColor: #ff4b4b;
+  --lessonTimerColor: #ff4b4b;
+  --lessonTimerBG: #ff4b4b1a;
+
+  --lessonLineBgDefault: linear-gradient(to bottom, #404040, #ff4b4b);
+  --lessonLineBgCurrent: #ff4b4b;
+  --lessonLineCurrentShadow: rgba(255, 150, 150, 0.3);
+
+  --lessonSecondAccentColor: #888888;
+
+  /* theme */
+  --themeMenuBg: #0008;
+  --themeIconBorderColor: #ff4b4b;
+  --themeIconBG: linear-gradient(135deg, #1e1e1e 50%, #ff4b4b 51%);
+  --themeSecond: #ffffff;
+
+  /* panel */
+  --activeTabColor: #ff4b4b;
+  --activeTabFilter: none;
+
+  /* double lessons colors */
+  --activeWeekDayColor: #ff4b4b;
+  --inactiveWeekDayColor: #444444;
+}

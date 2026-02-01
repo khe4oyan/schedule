@@ -1,4 +1,5 @@
 const themesData = [
+  { name: "Cyber Slate", theme: "colors_cyber_slate", version: 1, customIcon: true },
   { name: "Martix", theme: "colors_matrix", version: 1, customIcon: true },
   { name: "Gold & Black", theme: "colors_gold_black", version: 1, customIcon: true },
   { name: "Glass", theme: "colors_glass", version: 2, customIcon: true },

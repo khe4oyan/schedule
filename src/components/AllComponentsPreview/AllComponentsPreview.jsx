@@ -12,7 +12,6 @@ import themesData from '../../constants/themes';
 
 // styles
 import classes from './styles.module.css';
-
 export default function AllComponentsPreview() {
   return (
     <div className={classes.root}>
