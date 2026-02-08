@@ -12,7 +12,7 @@ export default function Settings() {
         optionKey="headerShow"
         defaultValue={true}
         isRequiredToReload={true}
-        />
+      />
 
       <SettingsOption 
         optionName="Անջատել դասի գրադիենտը"
@@ -21,7 +21,7 @@ export default function Settings() {
 
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
-        <p className={classes.lastUpdateDate}> {timerFormat("2026-02-01 23:30")} առաջ</p>
+        <p className={classes.lastUpdateDate}> {timerFormat("2026-02-08 13:48")} առաջ</p>
       </div>
     </div>
   )

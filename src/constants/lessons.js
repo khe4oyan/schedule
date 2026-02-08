@@ -35,8 +35,8 @@ const lessons = [
   
   [ // Вторник
     new SingleLesson(items.math, "51106", tch.harutyunyanE).isPractice().time(1),
-    new SingleLesson(items.photoshop, "5118 5121", `${tch.rahanyanG} ${tch.norekyanA}`).isLab().time(2),
-    new SingleLesson(items.sociology, "51301", tch.grigoryanL).isLesson().isPractice().time(3),
+    new SingleLesson(items.photoshop, "5105", `${tch.rahanyanG} ${tch.norekyanA}`).isLab().time(2),
+    new SingleLesson(items.sociology, "51303", tch.grigoryanL).isLesson().isPractice().time(3),
     new SingleLesson(items.control, "51301", tch.markosyan).isLesson().isPractice().time(4),
   ],
   
@@ -55,7 +55,7 @@ const lessons = [
   [ // Пятница
     new SingleLesson(items.permission, "17413", tch.voskanyan).isLesson().time(1),
     new SingleLesson(items.permission, "17413", tch.voskanyan).isPractice().time(2),
-    new SingleLesson(items.photoshop, "5102 5102", `${tch.rahanyanG} ${tch.norekyanA}`).isLab().time(3),
+    new SingleLesson(items.photoshop, "5109", `${tch.rahanyanG} ${tch.norekyanA}`).isLab().time(3),
     new SingleLesson(items.php, "51009", tch.poghoxyan).isLesson().time(4),
   ],
 ];
