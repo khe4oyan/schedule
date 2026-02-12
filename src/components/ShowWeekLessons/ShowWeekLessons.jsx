@@ -16,9 +16,10 @@ import isAcademicTopLessonDay from "../../utils/isAcademicTopLessonDay.js";
 import classes from "./styles.module.css";
 
 export default function ShowWeekLessons() {
-  const [isTopLesson, setIsTopLesson] = React.useState(
-    isAcademicTopLessonDay(),
-  );
+  const [
+    isTopLesson,
+    // setIsTopLesson
+  ] = React.useState(isAcademicTopLessonDay());
 
   const initState = useCallback(() => {
     const dayNum = new Date().getDay() - 1;
@@ -29,6 +30,7 @@ export default function ShowWeekLessons() {
   });
 
   const [dayscheduleNum, setDayscheduleNum] = useState(initState);
+  const [todayInd] = useState(dayscheduleNum);
 
   const days = ["Երկ", "Երեք", "Չորք", "Հինգ", "Ուրբ"];
 
@@ -59,6 +61,7 @@ export default function ShowWeekLessons() {
             className={`${classes.button} ${ind === dayscheduleNum && classes.buttonActive}`}
             onClick={() => setDayscheduleNum(ind)}
           >
+            {todayInd === ind && <div className={classes.todayPoint}></div>}
             {day}
           </button>
         ))}

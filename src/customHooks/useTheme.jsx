@@ -5,7 +5,12 @@ import { useState, useEffect } from "react";
 import themesNames from '../constants/themesNames';
 
 export default function useTheme(defaultTheme) {
-	const [theme, setTheme] = useState(localStorage.getItem("theme") || defaultTheme);
+	const [theme, setTheme] = useState(() => {
+    const storageTheme = localStorage.getItem("theme") || defaultTheme;
+    const isValidThemeInStorage = Object.values(themesNames).includes(storageTheme);
+    
+    return isValidThemeInStorage ? storageTheme : defaultTheme;
+  });
 
   const toggleTheme = () => {
     if (theme === themesNames.light) { 

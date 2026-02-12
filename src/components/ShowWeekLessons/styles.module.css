@@ -25,10 +25,21 @@
 }
 
 .button {
+  position: relative;
   padding: 15px 0;
   border-color: var(--secondary);
 }
 
 .buttonActive {
   border-color: var(--text);
+}
+
+.todayPoint {
+  --padding: 4px;
+  position: absolute;
+  top: var(--padding);
+  right: var(--padding);
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--accent);
 }
