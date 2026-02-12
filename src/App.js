@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header toggleTheme={toggleTheme}/>
+      <Header theme={theme} toggleTheme={toggleTheme}/>
       <ShowWeekLessons />
     </div>
   );

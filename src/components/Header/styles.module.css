@@ -1,7 +1,7 @@
 .root {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "empty title icon";
   align-items: center;
 
   width: 100%;
@@ -15,4 +15,17 @@
   background: var(--primary);
 }
 
-/* .headerText {} */
+.headerText {
+  grid-area: title;
+}
+
+.themeButton {
+  grid-area: icon;
+  padding: 0;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: none;
+}
