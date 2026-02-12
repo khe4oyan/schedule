@@ -2,28 +2,33 @@
   width: 100%;
   max-width: 700px;
   margin: auto;
-  margin-top: 2rem;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-}
-
-.button {
-  padding: 15px 0;
-  margin: 10px 0;
-  border-color: var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
-}
-
-.buttonActive {
-  border-color: var(--primaryColor_4);
+  padding: 15px;
 }
 
 .lessons {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.buttons {
+  position: fixed;
+  background: var(--primary);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  padding: 10px;
+  border-top: 1px solid var(--secondary);
+}
+
+.button {
+  padding: 15px 0;
+  border-color: var(--secondary);
+}
+
+.buttonActive {
+  border-color: var(--text);
 }

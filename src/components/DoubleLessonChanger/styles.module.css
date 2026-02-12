@@ -6,8 +6,7 @@
   height: 45px;
   margin-bottom: 20px;
   /* background: none; */
-  border-color: var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
+  border-color: var(--secondary);
   position: relative;
 }
 
@@ -30,9 +29,9 @@
 .point {
   padding: 5px;
   border-radius: 50%;
-  background-color: var(--inactiveWeekDayColor);
+  background-color: var(--textDim);
 }
 
 .pointActive {
-  background-color: var(--activeWeekDayColor);
+  background-color: var(--accent);
 }

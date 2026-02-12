@@ -1,5 +1,3 @@
-import { statuses } from "../components/Lesson/Lesson";
-
 import Lesson from "./Lesson.class.js";
 
 export default class SingleLesson extends Lesson {
@@ -9,7 +7,6 @@ export default class SingleLesson extends Lesson {
     this.title = title;
     this.room = room;
     this.teacher = teacher;
-    this.status = statuses.DEFAULT;
     this.type = "";
     this.subGroup = -1;
     this.start = "";

@@ -1,7 +1,23 @@
 // libs
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function useTheme() {
-	const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
-  return [theme, setTheme];
+// constants
+import themesNames from '../constants/themesNames';
+
+export default function useTheme(defaultTheme) {
+	const [theme, setTheme] = useState(localStorage.getItem("theme") || defaultTheme);
+
+  const toggleTheme = () => {
+    if (theme === themesNames.light) { 
+      setTheme(themesNames.dark);
+    } else {
+      setTheme(themesNames.light);
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return [theme, toggleTheme];
 }

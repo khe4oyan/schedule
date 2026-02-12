@@ -21,7 +21,7 @@ const tch = {
   harutyunyanE: "Հարությունյան Է.",
   rahanyanG: "Ռահանյան Գ․",
   norekyanA: "Նորեկյան Ա․",
-  ch: "Չ - ?",
+  ch: "Դադոյան",
   voskanyan: "Ոսկանյան Տ․",
 };
 

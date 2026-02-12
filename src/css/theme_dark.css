@@ -1,0 +1,11 @@
+.theme_dark {
+  --background: #f2f2f2;
+
+  --text: #1A1A1A;
+  --textDim: #777777;
+
+  --primary: #ffffff;
+  --secondary: #dddddd;
+
+  --accent: #0059ff;
+}
