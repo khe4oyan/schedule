@@ -13,7 +13,6 @@ import Navigation from './components/Navigation';
 // import Practice from './components/Practice';
 
 // custom hooks
-import useSettingsOption from './customHooks/useSettingsOption';
 import useTheme from './customHooks/useTheme';
 
 // constants
@@ -24,7 +23,6 @@ import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
@@ -56,7 +54,7 @@ function App() {
 
 					<Route path={routes.SETTINGS} element={<SettingsPage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
-					<Route path={routes.THEME} element={<ThemePage />}/>
+					<Route path={routes.THEME} element={<ThemePage newTheme={newTheme}/>}/>
 				</Route>
 			</Routes>
 

@@ -8,13 +8,6 @@ export default function SettingsPage() {
   return (
     <div className={classes.root}>
       <SettingsOption
-        optionName="Ցուցադրել վերնագիրը"
-        optionKey="headerShow"
-        defaultValue={true}
-        isRequiredToReload={true}
-      />
-
-      <SettingsOption
         optionName="Անջատել դասի գրադիենտը"
         optionKey="lessonLineDisabled"
       />
@@ -22,7 +15,7 @@ export default function SettingsPage() {
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
         <p className={classes.lastUpdateDate}>
-          {timerFormat("2026-02-08 13:48")} առաջ
+          {timerFormat("2026-02-15 11:52")} առաջ
         </p>
       </div>
     </div>
