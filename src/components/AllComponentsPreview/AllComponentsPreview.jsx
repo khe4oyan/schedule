@@ -1,3 +1,7 @@
+// libs
+import { BrowserRouter } from 'react-router-dom';
+
+// components
 import BeforeClass from '../BeforeClass';
 import Weekend from '../Weekend';
 import AfterClass from '../AfterClass';
@@ -6,7 +10,7 @@ import Header from '../Header';
 import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
-import Panel from '../Panel';
+import Navigation from '../Navigation';
 
 import themesData from '../../constants/themes';
 
@@ -68,7 +72,9 @@ function AllVersions({ theme }) {
       <ShowWeekLessons />
 
       <div className={classes.panel}>
-        <Panel tab={1}/>
+        <BrowserRouter>
+          <Navigation />
+        </BrowserRouter>
       </div>
     </div>
   );
