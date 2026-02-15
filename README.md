@@ -20,12 +20,7 @@ A modern, highly customizable web application for tracking university schedules.
 
 ## 🎨 Themes
 
-The app supports a variety of visual styles to suit any mood:
-
-- `Matrix`: Inspired by the iconic "Digital Rain" effect - sharp green characters on a deep black background.
-- `Glass`: Modern translucent UI.
-- `Gold/Black`: High-contrast premium look.
-- `Space & Pink`: Unique atmospheric palettes.
+The app supports a variety of visual styles to suit any mood
 
 ## 📖 Architecture Overview
 
