@@ -7,7 +7,7 @@
   margin: auto;
   display: grid;
   z-index: 100;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background: var(--headerBg);
   border-top: 1px solid var(--primaryColor_2);
   backdrop-filter: var(--bgEffect);

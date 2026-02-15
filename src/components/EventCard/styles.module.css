@@ -1,0 +1,31 @@
+.root {
+  padding: 10px;
+  border-radius: 10px;
+
+  border: 1px solid var(--lessonBorderColor);
+  background: var(--lessonBg);
+  backdrop-filter: var(--bgEffect);
+}
+
+.withIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.place,
+.date {
+  opacity: 0.8;
+}
+
+.place {
+  margin-bottom: 4px;
+}
+
+/* .date {} */

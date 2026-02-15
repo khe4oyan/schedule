@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import SchedulePage from './pages/SchedulePage';
 import ThemePage from './pages/ThemePage';
+import EventsPage from './pages/EventsPage';
 
 // components
 import Navigation from './components/Navigation';
@@ -52,6 +53,7 @@ function App() {
 				<Route path={routes.HOME} element={<HomePage />}>
 					<Route index element={<Navigate to={routes.SCHEDULE} />}/>
 
+					<Route path={routes.EVENTS} element={<EventsPage />}/>
 					<Route path={routes.SETTINGS} element={<SettingsPage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
 					<Route path={routes.THEME} element={<ThemePage newTheme={newTheme}/>}/>

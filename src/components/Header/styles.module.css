@@ -1,12 +1,9 @@
 .root {
-  width: calc(100% + 35px);
-  max-height: 64px;
+  width: 100%;
   padding: 13px;
-  background: var(--headerBg);
-  border-bottom: 1px solid var(--headerBorderColor);
-  position: relative;
-  bottom: 20px;
-  right: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -14,56 +11,8 @@
   backdrop-filter: var(--bgEffect);
   z-index: 100;
   overflow: hidden;
+  background: var(--headerBg);
+  border-bottom: 1px solid var(--headerBorderColor);
 }
 
 /* .headerText {} */
-
-.prev {
-  position: relative;
-  transform: translateY(20px);
-}
-
-.prevAnim {
-  animation: prevAnim .5s 2s ease-in forwards;
-}
-
-@keyframes prevAnim {
-  20% {
-    transform: translateY(25px);
-  }
-  50% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 0%;
-    transform: translateY(-30px);
-  }
-}
-
-.new {
-  position: relative;
-  transform: translateY(30px);
-}
-.newAnim {
-  animation: newAnim .5s 2s ease-in forwards;
-}
-
-@keyframes newAnim {
-  0% {
-    opacity: 0%;
-  }
-
-  20%{ 
-    opacity: 0%;
-    transform: translateY(35px);
-  }
-  
-  50% {
-    opacity: 100%;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(-15px);
-  }
-}

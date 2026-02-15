@@ -1,0 +1,11 @@
+.root {}
+
+.headerText {
+  margin-bottom: 1rem;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
