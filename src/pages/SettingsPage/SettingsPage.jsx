@@ -1,30 +1,32 @@
-// copmonents
-import SettingsOption from '../SettingsOption/SettingsOption';
+// components
+import SettingsOption from "../../components/SettingsOption";
 
 // styles
-import classes from './styles.module.css';
+import classes from "./styles.module.css";
 
-export default function Settings() {
+export default function SettingsPage() {
   return (
     <div className={classes.root}>
-      <SettingsOption 
+      <SettingsOption
         optionName="Ցուցադրել վերնագիրը"
         optionKey="headerShow"
         defaultValue={true}
         isRequiredToReload={true}
       />
 
-      <SettingsOption 
+      <SettingsOption
         optionName="Անջատել դասի գրադիենտը"
         optionKey="lessonLineDisabled"
       />
 
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
-        <p className={classes.lastUpdateDate}> {timerFormat("2026-02-08 13:48")} առաջ</p>
+        <p className={classes.lastUpdateDate}>
+          {timerFormat("2026-02-08 13:48")} առաջ
+        </p>
       </div>
     </div>
-  )
+  );
 }
 
 function timerFormat(inputDate) {

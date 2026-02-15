@@ -2,7 +2,7 @@
 import useVersion from '../../customHooks/useVersion';
 
 // components
-import NotificationCircle from '../NotificationCircle';
+import NotificationCircle from '../../components/NotificationCircle';
 
 // constants
 import themesData from '../../constants/themes.js';
@@ -10,7 +10,7 @@ import themesData from '../../constants/themes.js';
 // styles
 import classes from './styles.module.css';
 
-export default function Theme({ newTheme }) {
+export default function ThemePage({ newTheme }) {
   const buttons = themesData;
 
   const onClickTheme = (className) => {

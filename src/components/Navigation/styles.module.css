@@ -1,17 +1,16 @@
 .panel {
   position: fixed;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   right: 0;
-  width: fit-content;
+  width: 100%;
   margin: auto;
   display: grid;
+  z-index: 100;
   grid-template-columns: repeat(3, 1fr);
   background: var(--headerBg);
-  border: 1px solid var(--primaryColor_2);
+  border-top: 1px solid var(--primaryColor_2);
   backdrop-filter: var(--bgEffect);
-  border-radius: 50px;
-  z-index: 100;
 }
 
 .button {
@@ -24,6 +23,7 @@
   font-size: 2.5rem;
   padding: 15px;
   user-select: none;
+  color: var(--primaryColor_4);
   -webkit-user-select: none; /* Safari, Chrome */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE/Edge */

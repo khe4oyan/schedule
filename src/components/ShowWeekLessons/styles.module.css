@@ -6,6 +6,9 @@
 }
 
 .buttons {
+  position: sticky;
+  bottom: 70px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
@@ -23,6 +26,7 @@
 }
 
 .lessons {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;

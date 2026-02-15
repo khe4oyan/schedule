@@ -1,27 +1,27 @@
 // libs
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 // components
-import Lesson from '../Lesson'
-import Weekend from '../Weekend';
-import BeforeClass from '../BeforeClass';
-import AfterClass from '../AfterClass';
-import Break from '../Break';
-import ShowWeekLessons from '../ShowWeekLessons/ShowWeekLessons';
+import Lesson from "../../components/Lesson";
+import Weekend from "../../components/Weekend";
+import BeforeClass from "../../components/BeforeClass";
+import AfterClass from "../../components/AfterClass";
+import Break from "../../components/Break";
+import ShowWeekLessons from "../../components/ShowWeekLessons/ShowWeekLessons";
 
 // utils
-import filterLessons from '../../utils/filterLessons';
-import getDateTime from '../../utils/getDateTime'
+import filterLessons from "../../utils/filterLessons";
+import getDateTime from "../../utils/getDateTime";
 
 // constants
-import lessons from '../../constants/lessons';
-import { statuses as lessonStatuses } from "../Lesson/Lesson"
+import lessons from "../../constants/lessons";
+import { statuses as lessonStatuses } from "../../components/Lesson/Lesson";
 
 // utils
-import isAcademicTopLessonDay from '../../utils/isAcademicTopLessonDay.js'
+import isAcademicTopLessonDay from "../../utils/isAcademicTopLessonDay.js";
 
-// styles 
-import classes from './styles.module.css';
+// styles
+import classes from "./styles.module.css";
 
 const scenarioStatuses = {
   lesson: "LESSON",
@@ -31,13 +31,15 @@ const scenarioStatuses = {
   break: "BREAK",
 };
 
-export default function Lessons() {
+export default function SchedulePage() {
   const [appStatus, setAppStatus] = useState(scenarioStatuses.lesson);
   const [filteredLessons, setFilteredLessons] = useState([]);
   const isTopLesson = isAcademicTopLessonDay();
 
   const calculateDayschedule = (inputRes) => {
-    const result = [...inputRes].filter(item => item.getData(isTopLesson) !== undefined);
+    const result = [...inputRes].filter(
+      (item) => item.getData(isTopLesson) !== undefined,
+    );
     const currentDate = new Date();
     const currentTime = currentDate.getTime();
 
@@ -64,7 +66,7 @@ export default function Lessons() {
         } else {
           // check last lesson
           lesson.status = lessonStatuses.COMPLETED;
-          if (i === (result.length - 1)) {
+          if (i === result.length - 1) {
             setAppStatus(scenarioStatuses.afterClass);
           } else {
             continue;
@@ -74,7 +76,7 @@ export default function Lessons() {
     }
 
     setFilteredLessons(result);
-  }
+  };
 
   const initschedule = (inputLessons) => {
     const result = filterLessons(inputLessons);
@@ -84,7 +86,7 @@ export default function Lessons() {
     } else {
       setAppStatus(scenarioStatuses.weekend);
     }
-  }
+  };
 
   useEffect(() => {
     initschedule(lessons);
@@ -95,13 +97,17 @@ export default function Lessons() {
   }, []);
 
   useEffect(() => {
-    if (appStatus === scenarioStatuses.afterClass || appStatus === scenarioStatuses.weekend) {
+    if (
+      appStatus === scenarioStatuses.afterClass ||
+      appStatus === scenarioStatuses.weekend
+    ) {
       return;
     }
 
     // Считаем, сколько миллисекунд до следующей "круглой" минуты
     const now = new Date();
-    const msUntilNextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+    const msUntilNextMinute =
+      60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
 
     const timeoutId = setTimeout(() => {
       calculateDayschedule(filteredLessons);
@@ -116,26 +122,33 @@ export default function Lessons() {
   return (
     <div className={classes.root}>
       {appStatus === scenarioStatuses.weekend && <Weekend />}
-      {appStatus === scenarioStatuses.beforeClass && <BeforeClass startedTime={filteredLessons[0]?.getData(isTopLesson)?.start} />}
+      {appStatus === scenarioStatuses.beforeClass && (
+        <BeforeClass
+          startedTime={filteredLessons[0]?.getData(isTopLesson)?.start}
+        />
+      )}
       {appStatus === scenarioStatuses.afterClass && <AfterClass />}
-      {appStatus === scenarioStatuses.break && <Break filteredLessons={filteredLessons} />}
+      {appStatus === scenarioStatuses.break && (
+        <Break filteredLessons={filteredLessons} />
+      )}
 
-      {
-        (
-          appStatus === scenarioStatuses.lesson ||
-          appStatus === scenarioStatuses.beforeClass ||
-          appStatus === scenarioStatuses.break
-        ) &&
-        filteredLessons.filter((lessonData) => lessonData.getData(isTopLesson)?.status !== lessonStatuses.COMPLETED && lessonData.getData(isTopLesson))
-          .map((lessonData, ind) =>
+      {(appStatus === scenarioStatuses.lesson ||
+        appStatus === scenarioStatuses.beforeClass ||
+        appStatus === scenarioStatuses.break) &&
+        filteredLessons
+          .filter(
+            (lessonData) =>
+              lessonData.getData(isTopLesson)?.status !==
+                lessonStatuses.COMPLETED && lessonData.getData(isTopLesson),
+          )
+          .map((lessonData, ind) => (
             <Lesson
               key={`${ind} ${JSON.stringify(lessonData)}`}
               data={lessonData.getData(isTopLesson)}
             />
-          )
-      }
+          ))}
 
       <ShowWeekLessons />
     </div>
-  )
+  );
 }

@@ -1,24 +1,29 @@
 // libs
 import { useEffect, useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+// pages
+import HomePage from './pages/HomePage';
+import SettingsPage from './pages/SettingsPage';
+import SchedulePage from './pages/SchedulePage';
+import ThemePage from './pages/ThemePage';
 
 // components
-import Header from './components/Header';
-import Lessons from './components/Lessons/Lessons';
-import Panel from './components/Panel';
-import Theme from './components/Theme';
-import Settings from './components/Settings';
+import Navigation from './components/Navigation';
 // import Practice from './components/Practice';
 
 // custom hooks
 import useSettingsOption from './customHooks/useSettingsOption';
 import useTheme from './customHooks/useTheme';
 
+// constants
+import routes from './constants/routes';
+
 // general styles
 import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
-	const [tab, setTab] = useState(/*parseInt(localStorage.getItem("tab") ??*/ 1);
 	const [isShowHeader] = useSettingsOption("headerShow", true);
 
 	useEffect(() => {
@@ -45,16 +50,17 @@ function App() {
 
 	return (
 		<div>
-			{isShowHeader && <Header />}
+			<Routes>
+				<Route path={routes.HOME} element={<HomePage />}>
+					<Route index element={<Navigate to={routes.SCHEDULE} />}/>
 
-			{tab === 0 && <Theme newTheme={newTheme} />}
-			{tab === 1 && <>
-				<Lessons />
-			</>}
-			{tab === 2 && <Settings />}
-			{/* {tab === 3 && <Practice />} */}
+					<Route path={routes.SETTINGS} element={<SettingsPage />}/>
+					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
+					<Route path={routes.THEME} element={<ThemePage />}/>
+				</Route>
+			</Routes>
 
-			<Panel tab={tab} setTab={setTab} />
+			<Navigation />
 		</div>
 	);
 }

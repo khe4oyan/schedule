@@ -34,14 +34,6 @@ export default function ShowWeekLessons() {
     <div className={classes.root}>
       <h2>Ամբողջական գրաֆիկ</h2>
 
-      <div className={classes.buttons}>
-        {
-          days.map((day, ind) =>
-            <button key={day} className={`${classes.button} ${ind === dayscheduleNum && classes.buttonActive}`} onClick={() => setDayscheduleNum(ind)}>{day}</button>
-          )
-        }
-      </div>
-
       {/* <DoubleLessonChanger
         setIsTopLesson={setIsTopLesson}
         isTopLesson={isTopLesson}
@@ -57,6 +49,14 @@ export default function ShowWeekLessons() {
                   key={`${lesson.title} ${ind}`}
                 /> : <React.Fragment key={ind}></React.Fragment>
             }
+          )
+        }
+      </div>
+
+      <div className={classes.buttons}>
+        {
+          days.map((day, ind) =>
+            <button key={day} className={`${classes.button} ${ind === dayscheduleNum && classes.buttonActive}`} onClick={() => setDayscheduleNum(ind)}>{day}</button>
           )
         }
       </div>
