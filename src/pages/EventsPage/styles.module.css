@@ -1,5 +1,16 @@
 .root {}
 
+.noEvents {
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primaryColor_1);
+  border: 1px solid var(--lessonBorderColor);
+  backdrop-filter: var(--bgEffect);
+}
+
 .headerText {
   margin-bottom: 1rem;
 }
@@ -8,4 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.events + .events {
+  margin-top: 15px;
 }

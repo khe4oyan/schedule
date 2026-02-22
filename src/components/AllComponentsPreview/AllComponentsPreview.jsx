@@ -11,6 +11,7 @@ import Lesson from '../Lesson';
 import ShowWeekLessons from '../ShowWeekLessons';
 import NotificationCircle from '../NotificationCircle';
 import Navigation from '../Navigation';
+import EventCard from '../EventCard';
 
 import themesData from '../../constants/themes';
 
@@ -32,7 +33,11 @@ export default function AllComponentsPreview() {
 function AllVersions({ theme }) { 
   return (
     <div className={`colors_default ${theme} ${classes.version}`}>
+      <Header />
+
       <h2 className={classes.themeText}>{theme}</h2>
+      <EventCard data={{title: "Title", date: "2030-02-20 10:00", place: "Place street"}}/>
+      <EventCard data={{title: "Title prev", date: "2010-02-20 10:00", place: "Place street"}}/>
 
       <div className={classes.buttons}>
         <button>Button</button>
@@ -47,7 +52,6 @@ function AllVersions({ theme }) {
       <AfterClass />
       <Break filteredLessons={[{ status: "default", start: "20:00" }]} />
       <div style={{ marginTop: "15px", width: "100%" }}></div>
-      <Header />
 
       <Lesson data={{
         title: "Title",

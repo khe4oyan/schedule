@@ -13,10 +13,11 @@ export default function EventCard({ data }) {
     title, 
     place, 
     date,
+    isPrev,
   } = data;
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} ${isPrev && classes.prevEvent}`}>
       <p className={classes.title}>{title}</p>
 
       <div className={`${classes.place} ${classes.withIcon}`}>
