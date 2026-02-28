@@ -18,7 +18,7 @@ import routes from "../../constants/routes";
 import classes from './styles.module.css';
 
 export default function Navigation() {
-  const [isEventsUpdated, updateEvents] = useVersion("events", 1);
+  const [isEventsUpdated, updateEvents] = useVersion("events", 2);
   const [isThemeUpdated, updateTheme] = useVersion("theme", 5);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", 1);
   const { pathname } = useLocation();
