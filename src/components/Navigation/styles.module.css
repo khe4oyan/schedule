@@ -1,16 +1,20 @@
-.panel {
+.root {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  margin: auto;
-  display: grid;
   z-index: 100;
-  grid-template-columns: repeat(4, 1fr);
   background: var(--headerBg);
   border-top: 1px solid var(--primaryColor_2);
   backdrop-filter: var(--bgEffect);
+}
+
+.panel {
+  max-width: 700px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .button {

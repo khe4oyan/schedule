@@ -1,4 +1,7 @@
-.root {}
+.root {
+  max-width: 700px;
+  margin: auto;
+}
 
 .noEvents {
   height: 50px;

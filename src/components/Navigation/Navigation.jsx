@@ -24,25 +24,27 @@ export default function Navigation() {
   const { pathname } = useLocation();
   
   return (
-    <div className={classes.panel}>
-      <Link to={routes.EVENTS} onClick={updateEvents} className={`${classes.button} ${pathname === routes.EVENTS && classes.activeTab}`}>
-        <BsCalendar4Event />
-        {isEventsUpdated && <NotificationCircle />}
-      </Link>
-      
-      <Link to={routes.SETTINGS} onClick={updateSettings} className={`${classes.button} ${pathname === routes.SETTINGS && classes.activeTab}`}>
-        <IoSettingsOutline />
-        {isSettingsUpdated && <NotificationCircle />}
-      </Link>
+    <div className={classes.root}>
+      <div className={classes.panel}>
+        <Link to={routes.EVENTS} onClick={updateEvents} className={`${classes.button} ${pathname === routes.EVENTS && classes.activeTab}`}>
+          <BsCalendar4Event />
+          {isEventsUpdated && <NotificationCircle />}
+        </Link>
+        
+        <Link to={routes.SETTINGS} onClick={updateSettings} className={`${classes.button} ${pathname === routes.SETTINGS && classes.activeTab}`}>
+          <IoSettingsOutline />
+          {isSettingsUpdated && <NotificationCircle />}
+        </Link>
 
-      <Link to={routes.SCHEDULE} className={`${classes.button} ${pathname === routes.SCHEDULE && classes.activeTab}`}>
-        <BsCalendar4Week size={36}/>
-      </Link>
+        <Link to={routes.SCHEDULE} className={`${classes.button} ${pathname === routes.SCHEDULE && classes.activeTab}`}>
+          <BsCalendar4Week size={36}/>
+        </Link>
 
-      <Link to={routes.THEME} onClick={updateTheme} className={`${classes.button} ${pathname === routes.THEME && classes.activeTab}`}>
-        <PiCircleHalfTiltFill />
-        {isThemeUpdated && <NotificationCircle />}
-      </Link>
+        <Link to={routes.THEME} onClick={updateTheme} className={`${classes.button} ${pathname === routes.THEME && classes.activeTab}`}>
+          <PiCircleHalfTiltFill />
+          {isThemeUpdated && <NotificationCircle />}
+        </Link>
+      </div>
     </div>
   )
 }
