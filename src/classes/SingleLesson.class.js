@@ -80,10 +80,12 @@ export default class SingleLesson extends Lesson {
     const differenceMillicesonds = delayMilliseconds - dateNow;
     const weeksLeft = Math.ceil(differenceMillicesonds / 1000 / 60 / 60 / 24 / 7);
 
-    if (weeksLeft <= 1) {
-      this.tempRoom = `${room} վերջին շաբաթ`;
-    } else {
+    if (weeksLeft > 1) {
       this.tempRoom = `${room} ևս ${weeksLeft} շաբաթ`;
+    } else {
+      if (weeksLeft === 1) {
+        this.tempRoom = `${room} վերջին շաբաթ`;
+      }
     }
 
     return this;
