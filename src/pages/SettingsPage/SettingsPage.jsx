@@ -18,6 +18,10 @@ export default function SettingsPage() {
           {timerFormat("2026-03-09 19:57")} առաջ
         </p>
       </div>
+
+      <div className={classes.versionContainer}>
+        <p>v.1.9.8.</p>
+      </div>
     </div>
   );
 }
