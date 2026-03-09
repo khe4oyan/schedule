@@ -5,7 +5,7 @@
   --primaryColor_3: gold;
   --primaryColor_4: white;
 
-  --bodyBackground: url("../../public/black_gold.png") center center / cover no-repeat;
+  --bodyBackground: url("../assets/img/background/black_gold.png") center center / cover no-repeat;
   --bodyBackgroundColor: #1A1A1A;
 
   --bgEffect: blur(13px);
