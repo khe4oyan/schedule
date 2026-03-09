@@ -32,7 +32,7 @@ export default function ShowWeekLessons() {
 
   return (
     <div className={classes.root}>
-      <h2>Ամբողջական գրաֆիկ</h2>
+      <h2 className={classes.headerText}>Ամբողջական գրաֆիկ</h2>
 
       {/* <DoubleLessonChanger
         setIsTopLesson={setIsTopLesson}

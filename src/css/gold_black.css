@@ -6,7 +6,7 @@
   --primaryColor_4: white;
 
   --bodyBackground: url("../assets/img/background/black_gold.png") center center / cover no-repeat;
-  --bodyBackgroundColor: #1A1A1A;
+  --bodyBackgroundColor: #000000;
 
   --bgEffect: blur(13px);
   --notificationBG: red;

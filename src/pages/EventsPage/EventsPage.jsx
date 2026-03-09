@@ -21,7 +21,7 @@ export default function EventsPage() {
 function EventsList({ headerText, evetsList }) {
   return (
     <div className={classes.events}>
-      {headerText && <h3>{headerText}</h3>}
+      {headerText && <h3 className={classes.sectionHeaderText}>{headerText}</h3>}
 
       {evetsList.length === 0 ? (
         <div className={classes.noEvents}>
