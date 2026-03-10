@@ -39,7 +39,7 @@ export default function SettingsPage() {
       </div>
 
       <div className={classes.versionContainer}>
-        <p>v.1.10.0</p>
+        <p>v.1.10.1</p>
       </div>
     </div>
   );

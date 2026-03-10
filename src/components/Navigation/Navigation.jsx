@@ -20,7 +20,6 @@ import classes from './styles.module.css';
 
 export default function Navigation() {
   const [isEventsUpdated, updateEvents] = useVersion("events", VERSIONS.EVENTS);
-  const [isThemeUpdated] = useVersion("theme", VERSIONS.THEME);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", VERSIONS.SETTINGS);
   const { pathname } = useLocation();
   
@@ -42,7 +41,7 @@ export default function Navigation() {
         
         <Link to={routes.SETTINGS} onClick={updateSettings} className={`${classes.button} ${pathname === routes.SETTINGS && classes.activeTab}`}>
           <IoSettingsOutline />
-          {(isSettingsUpdated || isThemeUpdated ) && <NotificationCircle />}
+          {isSettingsUpdated && <NotificationCircle />}
         </Link>
       </div>
     </div>
