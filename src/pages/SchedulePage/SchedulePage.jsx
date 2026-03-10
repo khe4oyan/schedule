@@ -7,7 +7,6 @@ import Weekend from "../../components/Weekend";
 import BeforeClass from "../../components/BeforeClass";
 import AfterClass from "../../components/AfterClass";
 import Break from "../../components/Break";
-import ShowWeekLessons from "../../components/ShowWeekLessons/ShowWeekLessons";
 
 // utils
 import filterLessons from "../../utils/filterLessons";
@@ -147,8 +146,6 @@ export default function SchedulePage() {
               data={lessonData.getData(isTopLesson)}
             />
           ))}
-
-      <ShowWeekLessons />
     </div>
   );
 }

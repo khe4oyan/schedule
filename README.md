@@ -6,7 +6,7 @@ A modern, highly customizable web application for tracking university schedules.
 
 - **Smart Filtering**: Automatically displays the current, next, or remaining lessons based on the time of day.
 - **Dynamic Lesson Types**: Distinct logic for single lessons, double lessons, and practice sessions via specialized JavaScript classes.
-- **Heavy Customization**: Multiple UI themes including `Glassmorphism`, `Matrix`, `Dark`, and `Gold/Black`.
+- **Heavy Customization**: Multiple UI themes including
 - **Time Tracking**: Built-in timers to show how much time is left before or during a class.
 - **Weekend & Break Awareness**: Specialized components to handle non-academic time gracefully.
 

@@ -1,10 +1,24 @@
+// libs
+import { Link } from "react-router-dom";
+import { PiCircleHalfTiltFill } from "react-icons/pi";
+
 // components
 import SettingsOption from "../../components/SettingsOption";
+import NotificationCircle from "../../components/NotificationCircle";
+
+// hooks
+import useVersion from "../../customHooks/useVersion";
+
+// constants
+import routes from "../../constants/routes";
+import VERSIONS from "../../constants/versions";
 
 // styles
 import classes from "./styles.module.css";
 
 export default function SettingsPage() {
+  const [isShowThemeUpdate, updateThemeVersion] = useVersion("theme", VERSIONS.THEME);
+
   return (
     <div className={classes.root}>
       <SettingsOption
@@ -12,15 +26,20 @@ export default function SettingsPage() {
         optionKey="lessonLineDisabled"
       />
 
+      <Link to={routes.THEME} onClick={updateThemeVersion} className={classes.themeLink}>
+        <PiCircleHalfTiltFill />
+        {isShowThemeUpdate && <NotificationCircle />}
+      </Link>
+
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
         <p className={classes.lastUpdateDate}>
-          {timerFormat("2026-03-09 19:57")} առաջ
+          {timerFormat("2026-03-10 09:40")} առաջ
         </p>
       </div>
 
       <div className={classes.versionContainer}>
-        <p>v.1.9.8.1</p>
+        <p>v.1.10.0</p>
       </div>
     </div>
   );
