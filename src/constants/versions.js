@@ -1,5 +1,5 @@
 const VERSIONS = {
-  EVENTS: 2,
+  EVENTS: 3,
   THEME: 6,
   SETTINGS: 2,
 };

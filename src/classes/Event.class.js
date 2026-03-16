@@ -4,10 +4,16 @@ export default class Event {
     this.place = place;
     this.date = date;
     this.isPrev = false;
+    this.isExam = false;
   }
 
   setIsPrev() {
     this.isPrev = true;
+    return this;
+  }
+
+  setIsExam() {
+    this.isExam = true;
     return this;
   }
 }

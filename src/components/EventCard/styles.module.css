@@ -7,6 +7,21 @@
   backdrop-filter: var(--bgEffect);
 }
 
+.exam {
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: red;
+  color: white;
+}
+
+.examPrev {
+  background-color: initial;
+  color: var(--primaryColor_4);
+  border: 1px solid;
+}
+
 .withIcon {
   display: flex;
   align-items: center;
