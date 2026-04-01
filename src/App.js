@@ -19,12 +19,14 @@ import useTheme from './customHooks/useTheme';
 
 // constants
 import routes from './constants/routes';
+import NAV_MODES from './constants/navigationModes';
 
 // general styles
 import './app.css'
 
 function App() {
 	const [theme, setTheme] = useTheme();
+	const appMode = NAV_MODES.PRACTICE;
 
 	useEffect(() => {
 		document.body.classList.add('colors_default');
@@ -52,7 +54,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path={routes.HOME} element={<HomePage />}>
-					<Route index element={<Navigate to={routes.SCHEDULE} />}/>
+					<Route index element={<Navigate to={appMode === NAV_MODES.SCHEDULE ? routes.SCHEDULE : routes.PRACTICE} />}/>
 
 					<Route path={routes.PRACTICE} element={<PracticePage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
@@ -63,7 +65,7 @@ function App() {
 				</Route>
 			</Routes>
 
-			<Navigation />
+			<Navigation mode={appMode} />
 		</div>
 	);
 }
