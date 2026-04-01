@@ -13,7 +13,6 @@ import ScheduleWeekPage from './pages/ScheduleWeekPage';
 
 // components
 import Navigation from './components/Navigation';
-// import Practice from './components/Practice';
 
 // custom hooks
 import useTheme from './customHooks/useTheme';
