@@ -1,8 +1,8 @@
 export default class Practice {
-  constructor(b, f, r, teacher, start, end) {
-    this.b = b;
-    this.f = f;
-    this.r = r;
+  constructor(building, floor, room, teacher, start, end) {
+    this.b = building;
+    this.f = floor;
+    this.r = room;
     this.teacher = teacher;
     this.start = start;
     this.end = end;
