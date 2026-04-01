@@ -25,6 +25,8 @@ for (let i = 0; i < allEvents.length; ++i) {
   }
 }
 
+prevEvents.reverse();
+
 const events = { featureEvents, prevEvents };
 
 export default events;
