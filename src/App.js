@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 // pages
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
+import PracticePage from './pages/PracticePage';
 import SchedulePage from './pages/SchedulePage';
 import ThemePage from './pages/ThemePage';
 import EventsPage from './pages/EventsPage';
@@ -54,6 +55,7 @@ function App() {
 				<Route path={routes.HOME} element={<HomePage />}>
 					<Route index element={<Navigate to={routes.SCHEDULE} />}/>
 
+					<Route path={routes.PRACTICE} element={<PracticePage />}/>
 					<Route path={routes.SCHEDULE} element={<SchedulePage />}/>
 					<Route path={routes.SCHEDULE_WEEK} element={<ScheduleWeekPage />}/>
 					<Route path={routes.EVENTS} element={<EventsPage />}/>
