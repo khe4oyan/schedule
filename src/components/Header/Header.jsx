@@ -4,7 +4,8 @@ import classes from './styles.module.css';
 export default function Header() {
   return (
     <header className={classes.root}>
-      <h1 className={classes.headerText}>Դասացուցակ</h1>
+      {/* <h1 className={classes.headerText}>Դասացուցակ</h1> */}
+      <h1 className={classes.headerText}>Պրակտիկա</h1>
     </header>
   )
 }
