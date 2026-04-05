@@ -34,7 +34,7 @@ export default function SettingsPage() {
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
         <p className={classes.lastUpdateDate}>
-          {timerFormat("2026-04-01 19:17")} առաջ
+          {timerFormat("2026-04-05 16:45")} առաջ
         </p>
       </div>
     </div>
