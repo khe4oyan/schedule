@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function useSettingsOption(optionName, defaultValue = false) {
   const nameFormat = `${optionName}_setting`;
 
-  const [option, setOption] = useState(JSON.parse(localStorage.getItem(nameFormat)) ?? defaultValue);
+  const [option, setOption] = useState(Boolean(JSON.parse(localStorage.getItem(nameFormat)) ?? defaultValue));
 
   const toggleOption = () => {
     setOption((prev) => {

@@ -1,13 +1,10 @@
 // libs
 import React from 'react';
 import { useCallback, useState } from 'react';
-import { FaRegBuilding } from "react-icons/fa";
-import { MdOutlineSensorDoor } from "react-icons/md";
-import { TbElevator } from "react-icons/tb";
-import { FaRegClock } from "react-icons/fa";
 
 // components
 import Weekend from '../Weekend';
+import Practice from '../Practice'
 
 // constants
 import practice from '../../constants/practice.js';
@@ -58,32 +55,6 @@ export default function ShowWeekPractices() {
                 <React.Fragment key={ind}></React.Fragment>
             )
         }
-      </div>
-    </div>
-  )
-}
-
-function Practice({ data }) {
-  const {
-    teacher,
-    b, 
-    f, 
-    r,
-    start,
-    end,
-  } = data;
-
-  return (
-    <div className={classes.practice}>
-      <p className={classes.teacherName}>{teacher}</p>
-      <div className={classes.time}>
-        <p className={classes.time_p}><FaRegClock />{start}</p>-
-        <p className={classes.time_p}><FaRegClock />{end}</p>
-      </div>
-      <div className={classes.room}>
-        <p className={classes.icon}><FaRegBuilding />{b}</p>
-        <p className={classes.icon}><TbElevator />{f}</p>
-        <p className={classes.icon}><MdOutlineSensorDoor />{r}</p>
       </div>
     </div>
   )

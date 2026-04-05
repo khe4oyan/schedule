@@ -26,6 +26,12 @@ export default function SettingsPage() {
         optionKey="lessonLineDisabled"
       />
 
+      <SettingsOption
+        optionName="Լսարանի թվերը անջատ ցույց տալ"
+        optionKey="mergeLessonNumbers"
+        defaultValue={true}
+      />
+
       <Link to={routes.THEME} onClick={updateThemeVersion} className={classes.themeLink}>
         <PiCircleHalfTiltFill />
         {isShowThemeUpdate && <NotificationCircle />}
