@@ -12,25 +12,30 @@ import useVersion from "../../customHooks/useVersion";
 // constants
 import routes from "../../constants/routes";
 import VERSIONS from "../../constants/versions";
+import SETTINGS from "../../constants/settings";
 
 // styles
 import classes from "./styles.module.css";
 
 export default function SettingsPage() {
   const [isShowThemeUpdate, updateThemeVersion] = useVersion("theme", VERSIONS.THEME);
+  const {
+    lastUpdateAt,
+    optionsValues,
+    optionsKeys
+  } = SETTINGS;
 
   return (
     <div className={classes.root}>
-      <SettingsOption
-        optionName="Անջատել դասի գրադիենտը"
-        optionKey="lessonLineDisabled"
-      />
-
-      <SettingsOption
-        optionName="Լսարանի թվերը անջատ ցույց տալ"
-        optionKey="mergeLessonNumbers"
-        defaultValue={true}
-      />
+      {
+        optionsKeys.map(optionKey =>
+          <SettingsOption
+            optionData={optionsValues[optionKey]}
+            optionKey={optionKey}
+            key={optionKey}
+          />
+        )
+      }
 
       <Link to={routes.THEME} onClick={updateThemeVersion} className={classes.themeLink}>
         <PiCircleHalfTiltFill />
@@ -40,7 +45,7 @@ export default function SettingsPage() {
       <div className={classes.lastUpdateDateContainer}>
         <p className={classes.lastUpdateDate}>Թարմացվել է</p>
         <p className={classes.lastUpdateDate}>
-          {timerFormat("2026-04-06 16:19")} առաջ
+          {timerFormat(lastUpdateAt)} առաջ
         </p>
       </div>
     </div>

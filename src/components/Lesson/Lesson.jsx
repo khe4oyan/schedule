@@ -10,6 +10,9 @@ import getDateTime from '../../utils/getDateTime'
 // custom hooks
 import useSettingsOption from '../../customHooks/useSettingsOption';
 
+// constants
+import { optionsValues } from '../../constants/settings'; 
+
 // styles
 import classes from './styles.module.css';
 
@@ -42,7 +45,7 @@ export default function Lesson({ data }) {
   });
 
   const interval = useRef(null);
-  const [isDisabledGradientLine] = useSettingsOption("lessonLineDisabled");
+  const [isDisabledGradientLine] = useSettingsOption(optionsValues.lessonLineDisabled);
 
   useEffect(() => {
     if (timer === null) { return; }

@@ -9,12 +9,11 @@ import useSettingsOption from '../../customHooks/useSettingsOption';
 import classes from './styles.module.css';
 
 export default function SettingsOption({ 
-  optionName, 
-  optionKey, 
-  defaultValue = false, 
+  optionData, 
   isRequiredToReload = false 
 }) {
-  const [isDisabledLine, toggleDisabledLine] = useSettingsOption(optionKey, defaultValue);
+  const { name } = optionData;
+  const [isDisabledLine, toggleDisabledLine] = useSettingsOption(optionData);
   const [isClicked, setIsClicked] = useState(false);
 
   const onClick = () => {
@@ -24,7 +23,7 @@ export default function SettingsOption({
 
   return (
     <button onClick={onClick} className={classes.root}>
-      <p className={classes.optionName}>{optionName}</p>
+      <p className={classes.optionName}>{name}</p>
 
       {
         isDisabledLine ?

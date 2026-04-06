@@ -5,9 +5,11 @@ import { TbElevator } from "react-icons/tb";
 import { FaRegClock } from "react-icons/fa";
 import { MdPlace } from "react-icons/md";
 
-
 // components
 import useSettingsOption from '../../customHooks/useSettingsOption';
+
+// constants
+import { optionsValues } from '../../constants/settings';
 
 // styles
 import classes from './styles.module.css';
@@ -23,7 +25,7 @@ export default function Practice({ data }) {
     end,
   } = data;
 
-  const [isNotMergeLessonNumbers] = useSettingsOption("mergeLessonNumbers");
+  const [isNotMergeLessonNumbers] = useSettingsOption(optionsValues.notMergeLessonNumbers);
 
   return (
     <div className={classes.root}>
