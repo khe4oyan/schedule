@@ -23,8 +23,7 @@ export default function Practice({ data }) {
     end,
   } = data;
 
-  const [isMergeLessonNumbers] = useSettingsOption("mergeLessonNumbers");
-  console.log(isMergeLessonNumbers);
+  const [isNotMergeLessonNumbers] = useSettingsOption("mergeLessonNumbers");
 
   return (
     <div className={classes.root}>
@@ -35,13 +34,13 @@ export default function Practice({ data }) {
       </div>
       <div className={classes.room}>
         {
-          isMergeLessonNumbers ? 
-          <p className={classes.icon}><MdPlace />{fullRoom}</p> :
+          isNotMergeLessonNumbers ? 
           <>
             <p className={classes.icon}><FaRegBuilding />{b}</p>
             <p className={classes.icon}><TbElevator />{f}</p>
             <p className={classes.icon}><MdOutlineSensorDoor />{r}</p>
-          </>
+          </>:
+          <p className={classes.icon}><MdPlace />{fullRoom}</p>
         }
       </div>
     </div>
