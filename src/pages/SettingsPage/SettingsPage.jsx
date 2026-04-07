@@ -5,6 +5,7 @@ import { PiCircleHalfTiltFill } from "react-icons/pi";
 // components
 import SettingsOption from "../../components/SettingsOption";
 import NotificationCircle from "../../components/NotificationCircle";
+import Storage from '../../components/Storage';
 
 // hooks
 import useVersion from "../../customHooks/useVersion";
@@ -48,6 +49,8 @@ export default function SettingsPage() {
           {timerFormat(lastUpdateAt)} առաջ
         </p>
       </div>
+
+      <Storage />
     </div>
   );
 }
