@@ -1,8 +1,8 @@
 .colors_gold_black {
   /* primary colors */
   --primaryColor_1: rgba(0, 0, 0, 0.5);
-  --primaryColor_2: gold;
-  --primaryColor_3: gold;
+  --primaryColor_2: #867515;
+  --primaryColor_3: #ffd700;
   --primaryColor_4: white;
 
   --bodyBackground: url("../assets/img/background/black_gold.png") center center / cover no-repeat;
@@ -12,12 +12,12 @@
   --notificationBG: red;
 
   /* settings */
-  --reloadTitleMessageBg: linear-gradient(to right, rgb(14, 14, 14), rgb(37, 37, 37));
+  --reloadTitleMessageBg: linear-gradient(to right, #0e0e0e, #252525);
   --reloadTitleMessageColor: gold;
 
   /* button */
   --buttonInitBgColor: var(--primaryColor_1);
-  --buttonInitBorderColor: gold;
+  --buttonInitBorderColor: var(--primaryColor_2);
 
   --buttonDisabledBorderColor: #bebebe;
   --buttonDisabledColor: #8a8a8a;
@@ -35,7 +35,7 @@
   /* message */
   --messageBg: linear-gradient(135deg, var(--primaryColor_1) 40%, 70%, rgb(248, 230, 131), rgb(250, 240, 186), rgb(248, 230, 131));
   --messageColor: white;
-  --messageBorderColor: gold;
+  --messageBorderColor: var(--primaryColor_2);
 
   /* weekend */
   --weekendBg: var(--messageBg);
