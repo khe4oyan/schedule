@@ -13,6 +13,7 @@ import NotificationCircle from "../NotificationCircle";
 import Navigation from "../Navigation";
 import EventCard from "../EventCard";
 import Practice from "../Practice";
+import SettingsOption from '../SettingsOption'
 
 import themesData from "../../constants/themes";
 
@@ -55,6 +56,8 @@ function AllVersions({ theme }) {
       <AfterClass />
       <Break filteredLessons={[{ status: "default", start: "20:00" }]} />
       <div style={{ marginTop: "15px", width: "100%" }}></div>
+
+      <SettingsOption optionData={{name: "Some option"}}/>
 
       <Practice
         data={{
