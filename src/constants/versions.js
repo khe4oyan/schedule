@@ -1,6 +1,6 @@
 const VERSIONS = {
   EVENTS: 3,
-  THEME: 6,
+  THEME: 7,
   SETTINGS: 3,
 };
 

@@ -5,10 +5,10 @@
 }
 
 .headerText {
-  backdrop-filter: var(--bgEffect);
   text-align: center;
   border-radius: 5px;
   padding: 10px 0;
+  backdrop-filter: var(--bg-effect);
 }
 
 .buttons {
@@ -23,12 +23,12 @@
 .button {
   padding: 15px 0;
   margin: 10px 0;
-  border-color: var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
+  border-color: var(--border);
+  backdrop-filter: var(--bg-effect);
 }
 
 .buttonActive {
-  border-color: var(--primaryColor_4);
+  border-color: var(--accent);
 }
 
 .lessons {

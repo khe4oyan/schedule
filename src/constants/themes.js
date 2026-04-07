@@ -1,10 +1,10 @@
 const themesData = [
-  { name: "Testet", theme: "colors_testet", version: 1, customIcon: true },
+  { name: "Testet", theme: "colors_testet", version: 2, customIcon: true },
   { name: "Cyber Slate", theme: "colors_cyber_slate", version: 1, customIcon: true },
   { name: "Gold & Black", theme: "colors_gold_black", version: 1, customIcon: true },
   { name: "Glass", theme: "colors_glass", version: 2, customIcon: true },
   { name: "Space", theme: "colors_space", version: 1 },
-  { name: "Light", theme: "colors_default", version: 0 },
+  { name: "Light", theme: "colors_default", version: 1 },
 ];
 
 export default themesData;

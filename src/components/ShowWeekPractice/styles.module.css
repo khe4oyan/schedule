@@ -14,12 +14,12 @@
 .button {
   padding: 15px 0;
   margin: 10px 0;
-  border-color: var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
+  border-color: var(--border);
+  backdrop-filter: var(--bg-effect);
 }
 
 .buttonActive {
-  border-color: var(--primaryColor_4);
+  border-color: var(--accent);
 }
 
 .practices {
@@ -33,8 +33,7 @@
   text-align: center;
   padding: 15px 10px;
   border-radius: 10px;
-  border: 1px solid var(--primaryColor_4);
-  border-color: var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
-  background-color: var(--primaryColor_1);
+  border: 1px solid var(--border);
+  backdrop-filter: var(--bg-effect);
+  background-color: var(--bg-contrast);
 }

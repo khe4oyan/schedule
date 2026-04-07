@@ -4,11 +4,11 @@
 }
 
 .headerText {
-  border: 1px solid var(--lessonBorderColor);
-  backdrop-filter: var(--bgEffect);
   margin-bottom: 1rem;
   text-align: center;
   border-radius: 5px;
   padding: 15px 0;
-  background-color: var(--primaryColor_1);
+  border: 1px solid var(--border);
+  backdrop-filter: var(--bg-effect);
+  background-color: var(--bg-contrast);
 }

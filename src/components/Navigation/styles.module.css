@@ -5,9 +5,9 @@
   right: 0;
   width: 100%;
   z-index: 100;
-  background: var(--headerBg);
-  border-top: 1px solid var(--primaryColor_2);
-  backdrop-filter: var(--bgEffect);
+  background: var(--bg-contrast);
+  border-top: 1px solid var(--border);
+  backdrop-filter: var(--bg-effect);
 }
 
 .panel {
@@ -34,6 +34,6 @@
 }
 
 .activeTab {
-  color: var(--activeTabColor);
-  filter: var(--activeTabFilter);
+  color: var(--accent);
+  filter: var(--bg-filter);
 }

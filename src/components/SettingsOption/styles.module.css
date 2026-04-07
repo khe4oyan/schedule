@@ -3,29 +3,24 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  backdrop-filter: var(--bgEffect);
   grid-template-areas: 
-    "name toggle"
-    "title title";
+  "name toggle"
+  "title title";
   padding: 10px;
+  backdrop-filter: var(--bg-effect);
 }
 
 .optionName {
   font-size: 1.1rem;
   grid-area: name;
   text-align: left;
+  color: var(--text);
 }
 
 .icon {
   grid-area: toggle;
 }
 
-.reloadTitle {
-  font-size: 1rem;
-  grid-area: title;
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  background: var(--reloadTitleMessageBg);
-  color: var(--reloadTitleMessageColor);
+.icon_on {
+  color: var(--accent);
 }

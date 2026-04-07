@@ -8,10 +8,11 @@
   flex-direction: column;
   height: 150px;
   gap: 10px;
-  background: var(--breakBg);
-  border: 1px solid var(--breakBorderColor);
-  color: var(--breakColor);
-  backdrop-filter: var(--bgEffect);
+  
+  backdrop-filter: var(--bg-effect);
+  background: var(--message-bg);
+  color: var(--message-color);
+  border: 2px solid var(--message-border-color);
 }
 
 .title {

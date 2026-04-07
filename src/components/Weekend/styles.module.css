@@ -1,11 +1,8 @@
 .root {
-  backdrop-filter: var(--bgEffect);
+  backdrop-filter: var(--bg-effect);
 }
 
 .message {
-  background: var(--weekendBg);
-  color: var(--weekendColor);
-  border: 2px solid var(--weekendBorderColor);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -14,5 +11,8 @@
   font-weight: bold;
   font-size: 1.3rem;
   height: 40vh;
+  color: var(--message-color);
+  background: var(--message-bg);
+  border: 2px solid var(--message-border-color);
 }
 

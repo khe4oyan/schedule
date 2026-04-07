@@ -9,10 +9,10 @@
   height: 200px;
   gap: 20px;
 
-  background: var(--beforeClassBg);
-  backdrop-filter: var(--bgEffect);
-  color: var(--beforeClassColor);
-  border: 2px solid var(--beforeClassBorderColor);
+  backdrop-filter: var(--bg-effect);
+  background: var(--message-bg);
+  color: var(--message-color);
+  border: 2px solid var(--message-border-color);
 }
 
 .title {

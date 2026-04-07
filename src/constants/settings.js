@@ -1,4 +1,4 @@
-export const lastUpdateAt = "2026-04-06 17:04";
+export const lastUpdateAt = "2026-04-07 22:20";
 
 export const optionsValues = {
   lessonLineDisabled: {
@@ -21,6 +21,5 @@ const SETTINGS = {
   optionsValues,
   optionsKeys,
 };
-
 
 export default SETTINGS;

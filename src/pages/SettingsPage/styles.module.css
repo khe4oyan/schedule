@@ -10,15 +10,15 @@
 .themeLink {
   position: relative;
   font-size: 2rem;
-  color: var(--primaryColor_4);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid var(--primaryColor_2);
-  background: var(--primaryColor_1);
-  backdrop-filter: var(--bgEffect);
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
 }
 
 .lastUpdateDateContainer {
@@ -27,10 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: var(--primaryColor_1);
   border-radius: 10px;
-  backdrop-filter: var(--bgEffect);
   padding: 10px;
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
 }
 
 .versionContainer {
@@ -38,8 +38,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: var(--primaryColor_1);
   border-radius: 10px;
-  backdrop-filter: var(--bgEffect);
   padding: 10px;
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
 }

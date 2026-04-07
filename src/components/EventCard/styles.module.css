@@ -2,9 +2,9 @@
   padding: 10px;
   border-radius: 10px;
 
-  border: 1px solid var(--lessonBorderColor);
-  background: var(--lessonBg);
-  backdrop-filter: var(--bgEffect);
+  border: 1px solid var(--border);
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
 }
 
 .exam {
@@ -12,14 +12,14 @@
   padding: 5px 15px;
   border-radius: 5px;
   margin-bottom: 5px;
-  background-color: red;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--text-negative);
 }
 
 .examPrev {
   background-color: initial;
-  color: var(--primaryColor_4);
-  border: 1px solid;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
 }
 
 .withIcon {
@@ -36,7 +36,7 @@
 
 .place,
 .date {
-  opacity: 0.8;
+  color: var(--text-dim);
 }
 
 .place {

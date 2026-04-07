@@ -14,6 +14,7 @@ import Navigation from "../Navigation";
 import EventCard from "../EventCard";
 import Practice from "../Practice";
 import SettingsOption from '../SettingsOption'
+import PracticePage from "../../pages/PracticePage";
 
 import themesData from "../../constants/themes";
 
@@ -59,6 +60,7 @@ function AllVersions({ theme }) {
 
       <SettingsOption optionData={{name: "Some option"}}/>
 
+      <PracticePage />
       <Practice
         data={{
           teacher: "Galoyan S",
@@ -96,6 +98,17 @@ function AllVersions({ theme }) {
         }}
       />
 
+      <Lesson
+        data={{
+          title: "Title",
+          room: 40404,
+          teacher: "Galoyan S",
+          start: "09:00",
+          end: "09:30",
+          status: "default",
+        }}
+      />
+      
       <Lesson
         data={{
           title: "Title",

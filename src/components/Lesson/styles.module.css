@@ -7,19 +7,18 @@
   gap: 5px;
   padding: 1rem 1.7rem 1rem 1rem;
   border-radius: 10px;
-  border: 1px solid var(--lessonBorderColor);
-  background: var(--lessonBg);
   position: relative;
   width: max-content;
   min-width: 250px;
   width: 100%;
-  backdrop-filter: var(--bgEffect);
+  border: 1px solid var(--border);
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
 }
 
 .rootCurrent {
   .line {
-    background: var(--lessonLineBgCurrent);
-    box-shadow: 0px 0 25px 7px var(--lessonLineCurrentShadow);
+    background: var(--primary-gradient);
   }
 }
 
@@ -35,21 +34,22 @@
 .teacherBox {
   margin-bottom: 8px;
 }
-.teacher {
-  color: var(--lessonSecondAccentColor);
+
+.teacher,
+.room {
+  color: var(--text-dim);
 }
 
-.room {
-  color: var(--lessonSecondAccentColor);
-}
+.teacher {}
+.room {}
 
 .footer {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px solid var(--lessonBorderColor);
   border-radius: 0;
+  border-top: 1px solid var(--border);
 }
 
 .timeBox {
@@ -65,8 +65,8 @@
   gap: 5px;
   padding: 5px;
   border-radius: 5px;
-  color: var(--lessonTimerColor);
-  background: var(--lessonTimerBG);
+  color: var(--lesson-timer-color);
+  background: var(--lesson-timer-bg);
 }
 
 .line {
@@ -76,5 +76,5 @@
   right: 0px;
   top: 0;
   border-radius: 0px 100px 100px 0px;
-  background: var(--lessonLineBgDefault);
+  background: var(--primary-secondary-gradient);
 }
