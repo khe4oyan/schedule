@@ -1,49 +1,52 @@
 // libs
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
 // components
-import BeforeClass from '../BeforeClass';
-import Weekend from '../Weekend';
-import AfterClass from '../AfterClass';
-import Break from '../Break';
-import Header from '../Header';
-import Lesson from '../Lesson';
-import ShowWeekLessons from '../ShowWeekLessons';
-import NotificationCircle from '../NotificationCircle';
-import Navigation from '../Navigation';
-import EventCard from '../EventCard';
+import BeforeClass from "../BeforeClass";
+import Weekend from "../Weekend";
+import AfterClass from "../AfterClass";
+import Break from "../Break";
+import Header from "../Header";
+import Lesson from "../Lesson";
+import ShowWeekLessons from "../ShowWeekLessons";
+import NotificationCircle from "../NotificationCircle";
+import Navigation from "../Navigation";
+import EventCard from "../EventCard";
+import Practice from "../Practice";
 
-import themesData from '../../constants/themes';
+import themesData from "../../constants/themes";
 
 // styles
-import classes from './styles.module.css';
+import classes from "./styles.module.css";
 export default function AllComponentsPreview() {
   return (
     <div className={classes.root}>
-      {themesData.map(theme => 
-        <AllVersions 
-          theme={theme.theme} 
-          key={theme.theme} 
-        />
-      )}
+      {themesData.map((theme) => (
+        <AllVersions theme={theme.theme} key={theme.theme} />
+      ))}
     </div>
-  )
+  );
 }
 
-function AllVersions({ theme }) { 
+function AllVersions({ theme }) {
   return (
     <div className={`colors_default ${theme} ${classes.version}`}>
       <Header />
 
       <h2 className={classes.themeText}>{theme}</h2>
-      <EventCard data={{title: "Title", date: "2030-02-20 10:00", place: "Place street"}}/>
-      <EventCard data={{title: "Title prev", date: "2010-02-20 10:00", place: "Place street"}}/>
 
       <div className={classes.buttons}>
         <button>Button</button>
         <button disabled>Button disabled</button>
       </div>
-      <div style={{ position: "relative", padding: "10px", border: "1px solid var(--primaryColor_4)", backgroundColor: "var(--primaryColor_1)" }}>
+      <div
+        style={{
+          position: "relative",
+          padding: "10px",
+          border: "1px solid var(--primaryColor_4)",
+          backgroundColor: "var(--primaryColor_1)",
+        }}
+      >
         update section
         <NotificationCircle />
       </div>
@@ -53,23 +56,53 @@ function AllVersions({ theme }) {
       <Break filteredLessons={[{ status: "default", start: "20:00" }]} />
       <div style={{ marginTop: "15px", width: "100%" }}></div>
 
-      <Lesson data={{
-        title: "Title",
-        room: 40404,
-        teacher: "Galoyan S",
-        start: "06:00",
-        end: "23:00",
-        status: "current",
-      }} />
+      <Practice
+        data={{
+          teacher: "Galoyan S",
+          b: "5",
+          f: "10",
+          r: "9",
+          fullRoom: "51009",
+          start: "09:30",
+          end: "11:10",
+        }}
+      />
 
-      <Lesson data={{
-        title: "Title",
-        room: 40404,
-        teacher: "Galoyan S",
-        start: "09:00",
-        end: "09:30",
-        status: "default",
-      }} />
+      <EventCard
+        data={{
+          title: "Title",
+          date: "2030-02-20 10:00",
+          place: "Place street",
+        }}
+      />
+      <EventCard
+        data={{
+          title: "Title prev",
+          date: "2010-02-20 10:00",
+          place: "Place street",
+        }}
+      />
+      <Lesson
+        data={{
+          title: "Title",
+          room: 40404,
+          teacher: "Galoyan S",
+          start: "06:00",
+          end: "23:00",
+          status: "current",
+        }}
+      />
+
+      <Lesson
+        data={{
+          title: "Title",
+          room: 40404,
+          teacher: "Galoyan S",
+          start: "09:00",
+          end: "09:30",
+          status: "default",
+        }}
+      />
 
       <div style={{ width: "100%" }}></div>
 
