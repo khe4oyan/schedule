@@ -1,10 +1,10 @@
 .colors_glass {
    /* semantic layer */
   --bg: #042516;
-  --bg-contrast: #0000003b;
+  --bg-contrast: #00000018;
 
   --text: #f5f5f5;
-  --text-dim: #c0c0c0;
+  --text-dim: #f1f1f1;
   --text-negative: #fafafa;
 
   --primary: #d3d3d3;
