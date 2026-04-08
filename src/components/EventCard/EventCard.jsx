@@ -19,7 +19,6 @@ export default function EventCard({ data }) {
 
   return (
     <div className={`${classes.root} ${isPrev && classes.prevEvent}`}>
-      {isExam && <p className={`${classes.exam} ${isPrev && classes.examPrev}`}>Քննություն</p>}
       <p className={classes.title}>{title}</p>
 
       <div className={`${classes.place} ${classes.withIcon}`}>
@@ -31,6 +30,8 @@ export default function EventCard({ data }) {
         <MdToday />
         <p>{dateFormat(date)}</p>
       </div>
+
+      {isExam && <p className={`${classes.exam} ${isPrev && classes.examPrev}`}>Քննություն</p>}
     </div>
   )
 }
