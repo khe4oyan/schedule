@@ -20,7 +20,7 @@ body {
   color: var(--text);
   background-color: var(--bg);
   background-image: var(--bg-image);
-  background-size: contain;
+  background-size:  var(--bg-image-size);
   background-position: center;
 }
 

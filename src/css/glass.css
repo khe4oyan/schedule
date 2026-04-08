@@ -45,4 +45,5 @@
   /* visual background */
   --bg-image: url("../assets/img/background/3d_balls.png");
   --bg-effect: blur(15px);
+  --bg-image-size: cover;
 }

@@ -45,4 +45,5 @@
   /* visual background */
   --bg-image: url("../assets/img/background/testet.jpg");
   --bg-effect: blur(15px);
+  --bg-image-size: contain;
 }
