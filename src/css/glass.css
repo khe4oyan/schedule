@@ -43,7 +43,7 @@
   --notification-bg: #ff0000;
 
   /* visual background */
-  --bg-image: url("../assets/img/background/3d_balls.png");
+  --bg-image: url("../assets/img/background/spheres_aqua.png");
   --bg-effect: blur(15px);
   --bg-image-size: cover;
 }
