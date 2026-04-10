@@ -10,8 +10,6 @@ import classes from "./styles.module.css";
 export default function EventsPage() {
   return (
     <div className={classes.root}>
-      <h2 className={classes.headerText}>Միջոցառումներ</h2>
-
       <EventsList headerText="Ակնկալվող " evetsList={events.featureEvents} />
       <EventsList headerText="Ավարտված " evetsList={events.prevEvents} />
     </div>
