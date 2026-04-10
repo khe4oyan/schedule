@@ -3,24 +3,25 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  grid-template-areas: 
-  "name toggle"
-  "title title";
-  padding: 10px;
+  padding: 0;
+  overflow: hidden;
   backdrop-filter: var(--bg-effect);
 }
 
 .optionName {
+  padding: 20px 10px;
   font-size: 1.1rem;
-  grid-area: name;
   text-align: left;
   color: var(--text);
 }
 
-.icon {
-  grid-area: toggle;
+.toggleLine {
+  background-color: var(--text-dim);
+  width: 10px;
+  height: 100%;
+  transition: .5s;
 }
 
-.icon_on {
-  color: var(--accent);
+.toggleLineActive {
+  background: var(--accent);
 }

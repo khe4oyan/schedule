@@ -39,7 +39,8 @@ export default function SettingsPage() {
       }
 
       <Link to={routes.THEME} onClick={updateThemeVersion} className={classes.themeLink}>
-        <PiCircleHalfTiltFill />
+        <span>Թեմաներ</span>
+        <PiCircleHalfTiltFill size="2rem"/>
         {isShowThemeUpdate && <NotificationCircle />}
       </Link>
 
