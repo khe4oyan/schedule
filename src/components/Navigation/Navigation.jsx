@@ -17,18 +17,18 @@ import NotificationCircle from '../NotificationCircle';
 // constants
 import routes from "../../constants/routes";
 import VERSIONS from "../../constants/versions";
-import NAV_MODES from '../../constants/navigationModes';
+import appModes from '../../constants/appModes';
 
 // styles
 import classes from './styles.module.css';
 
-export default function Navigation({ mode = NAV_MODES.SCHEDULE }) {
+export default function Navigation({ mode = appModes.SCHEDULE }) {
   const [isEventsUpdated, updateEvents] = useVersion("events", VERSIONS.EVENTS);
   const [isSettingsUpdated, updateSettings] = useVersion("settings", VERSIONS.SETTINGS);
   const { pathname } = useLocation();
   
-  const isScheduleMode = mode === NAV_MODES.SCHEDULE;
-  const isPracticeMode = mode === NAV_MODES.PRACTICE;
+  const isScheduleMode = mode === appModes.SCHEDULE;
+  const isPracticeMode = mode === appModes.PRACTICE;
 
   const panelGridColumns = isScheduleMode ? 4 : isPracticeMode && 3;
 

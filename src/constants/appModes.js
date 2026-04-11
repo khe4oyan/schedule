@@ -1,6 +1,6 @@
-const NAV_MODES = {
+const appModes = {
   SCHEDULE: "schedule",
   PRACTICE: "practice",
 };
 
-export default NAV_MODES;
+export default appModes;
