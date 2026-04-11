@@ -17,12 +17,26 @@ export default function Storage() {
     }
   };
 
+  const storageKeys = Object.keys(localStorage);
+
   return (
     <div className={classes.root}>
-      <p>Ներկա պահին կա {storageLength} տվյալ</p>
-      <p>Կարող ես ջնջել տվյալները, որ ավելորդ բան չմնա</p>
+      <p className={classes.amount}>Ընդհանուր կա {storageLength} տվյալ</p>
+
+      <div className={classes.values}>
+        {
+          storageKeys.length > 0 &&
+          storageKeys.map(key => 
+            <div key={key} className={classes.keyContainer}>
+              <p className={classes.key} >{key}</p>
+              <p className={classes.value}>{localStorage.getItem(key)}</p>
+            </div>
+          )
+        }
+      </div>
+
       <button onClick={onClearStorage} className={classes.deleteButton}>
-        <RiDeleteBin6Line /> Ջնջել
+        <RiDeleteBin6Line /> Ջնջել ամբողջը
       </button>
     </div>
   );
