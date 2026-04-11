@@ -1,3 +1,8 @@
+// libs
+// import { FaToggleOff, FaToggleOn } from "react-icons/fa6";
+import { FaToggleOn } from "react-icons/fa";
+
+
 // custom hooks
 import useSettingsOption from '../../customHooks/useSettingsOption';
 
@@ -11,7 +16,11 @@ export default function SettingsOption({ optionData }) {
   return (
     <button onClick={toggleDisabledLine} className={classes.root}>
       <p className={classes.optionName}>{name}</p>
-      <div className={`${classes.toggleLine} ${isActiveLine && classes.toggleLineActive}`}></div>
+      {
+        isActiveLine ?
+        <FaToggleOn size={50} className={classes.toggleActive}/>:
+        <FaToggleOn size={50} className={classes.toggle}/>
+      }
     </button>
   )
 }

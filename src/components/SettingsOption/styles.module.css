@@ -4,24 +4,20 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   padding: 0;
-  overflow: hidden;
+  padding: 20px 10px;
   backdrop-filter: var(--bg-effect);
 }
 
 .optionName {
-  padding: 20px 10px;
   font-size: 1.1rem;
   text-align: left;
   color: var(--text);
 }
 
-.toggleLine {
-  background-color: var(--text-dim);
-  width: 10px;
-  height: 100%;
-  transition: .5s;
+.toggle {
+  rotate: 180deg;
 }
 
-.toggleLineActive {
-  background: var(--accent);
+.toggleActive {
+  color: var(--accent);
 }

@@ -33,7 +33,7 @@ export default function AllComponentsPreview() {
 function AllVersions({ theme }) {
   return (
     <div className={`colors_default ${theme} ${classes.version}`}>
-      <Header />
+      {/* <Header /> */}
 
       <h2 className={classes.themeText}>{theme}</h2>
 
