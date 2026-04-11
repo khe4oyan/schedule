@@ -1,0 +1,23 @@
+.root {}
+
+.lastUpdateDateContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
+}
+
+.versionContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
+}

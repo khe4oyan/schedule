@@ -10,6 +10,8 @@ import SchedulePage from './pages/SchedulePage';
 import ThemePage from './pages/ThemePage';
 import EventsPage from './pages/EventsPage';
 import ScheduleWeekPage from './pages/ScheduleWeekPage';
+import StoragePage from './pages/StoragePage';
+import InfoPage from './pages/InfoPage';
 
 // components
 import Navigation from './components/Navigation';
@@ -62,6 +64,8 @@ function App() {
 					<Route path={routes.EVENTS} element={<EventsPage />}/>
 					<Route path={routes.SETTINGS} element={<SettingsPage />}/>
 					<Route path={routes.THEME} element={<ThemePage newTheme={newTheme}/>}/>
+					<Route path={routes.STORAGE} element={<StoragePage />}/>
+					<Route path={routes.INFO} element={<InfoPage />}/>
 				</Route>
 			</Routes>
 

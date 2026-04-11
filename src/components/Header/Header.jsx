@@ -17,11 +17,13 @@ export default function Header() {
     [routes.SCHEDULE_WEEK]: "Դասացուցակ",
     [routes.SETTINGS]: "Կարգավորումներ",
     [routes.THEME]: "Թեմաներ",
+    [routes.STORAGE]: "Տվյալներ",
+    [routes.INFO]: "Ինֆո",
   };
 
   return (
     <header className={classes.root}>
-      <h1 className={classes.headerText}>{routeLabels[pathname]}</h1>
+      <h1 className={classes.headerText}>{routeLabels[pathname] ?? "(none)"}</h1>
     </header>
   )
 }
