@@ -17,7 +17,7 @@
 
   --primary-secondary-gradient: linear-gradient(to bottom, var(--primary), var(--secondary));
 
-  --accent: #6effb6;
+  --accent: #63c6ff;
   
   --error: #f06b6b;
   --success: #9ef06b;
