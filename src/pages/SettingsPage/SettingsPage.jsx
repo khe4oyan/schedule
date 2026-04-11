@@ -45,7 +45,7 @@ export default function SettingsPage() {
       </Link>
 
       <Link to={routes.STORAGE} className={classes.themeLink}>
-        <span>Տվյալների պահեստ</span>
+        <span>Տվյալներ</span>
         <GrStorage size="2.3rem"/>
       </Link>
 
