@@ -1,6 +1,4 @@
-export const lastUpdateAt = "2026-04-07 23:15";
-
-export const optionsValues = {
+const optionsValues = {
   lessonLineDisabled: {
     name: "Անջատել դասի գրադիենտը",
     defaultValue: false,
@@ -14,10 +12,9 @@ export const optionsValues = {
   },
 };
 
-export const optionsKeys = Object.keys(optionsValues);
+const optionsKeys = Object.keys(optionsValues);
 
 const SETTINGS = {
-  lastUpdateAt,
   optionsValues,
   optionsKeys,
 };

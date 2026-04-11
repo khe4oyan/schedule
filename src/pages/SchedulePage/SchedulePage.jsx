@@ -14,7 +14,7 @@ import getDateTime from "../../utils/getDateTime";
 
 // constants
 import lessons from "../../constants/lessons";
-import { statuses as lessonStatuses } from "../../components/Lesson/Lesson";
+import lessonStatuses from '../../constants/lessonStatuses'
 
 // utils
 import isAcademicTopLessonDay from "../../utils/isAcademicTopLessonDay.js";

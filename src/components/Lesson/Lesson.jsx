@@ -11,15 +11,11 @@ import getDateTime from '../../utils/getDateTime'
 import useSettingsOption from '../../customHooks/useSettingsOption';
 
 // constants
-import { optionsValues } from '../../constants/settings'; 
+import settings from '../../constants/settings'; 
+import lessonStatuses from '../../constants/lessonStatuses';
 
 // styles
 import classes from './styles.module.css';
-
-export const statuses = {
-  DEFAULT: "default",
-  CURRENT: "current",
-};
 
 export default function Lesson({ data }) {
   const title = data?.title;
@@ -33,7 +29,7 @@ export default function Lesson({ data }) {
   const tempRoom = data?.tempRoom;
 
   const [timer, setTimer] = useState(() => {
-    if (status === statuses.CURRENT) {
+    if (status === lessonStatuses.CURRENT) {
       const currentDate = new Date();
       const currentTime = currentDate.getTime();
       const endTime = getDateTime(end);
@@ -43,6 +39,8 @@ export default function Lesson({ data }) {
       return null;
     }
   });
+
+  const { optionsValues } = settings;
 
   const interval = useRef(null);
   const [isDisabledGradientLine] = useSettingsOption(optionsValues.lessonLineDisabled);
@@ -83,7 +81,7 @@ export default function Lesson({ data }) {
   }, [timer]);
 
   return (
-    <div className={`${classes.root} ${status === statuses.CURRENT && classes.rootCurrent} ${status === statuses.COMPLETED && classes.rootCompleted}`}>
+    <div className={`${classes.root} ${status === lessonStatuses.CURRENT && classes.rootCurrent} ${status === lessonStatuses.COMPLETED && classes.rootCompleted}`}>
       <div className={classes.titleBox}>
         <p className={classes.title}>{title} {type && type } {group > 0 && group }</p>
       </div>
@@ -106,7 +104,7 @@ export default function Lesson({ data }) {
           <p className={classes.time}>{start} - {end}</p>
         </div>
         {
-          status === statuses.CURRENT &&
+          status === lessonStatuses.CURRENT &&
           <p className={classes.timer}>
             <IoTimerOutline size={17} /> {timerFormat(timer)}
           </p>

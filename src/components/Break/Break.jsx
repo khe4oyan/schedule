@@ -6,7 +6,7 @@ import getDateTime from '../../utils/getDateTime';
 import timerFormat from '../../utils/timerFormat';
 
 // constants
-import { statuses } from '../Lesson/Lesson';
+import lessonStatuses from '../../constants/lessonStatuses';
 
 // styles
 import classes from './styles.module.css';
@@ -16,7 +16,7 @@ export default function Break({ filteredLessons }) {
 
   useEffect(() => {
     for (let i = 0; i < filteredLessons.length; ++i) {
-      if (filteredLessons[i].status === statuses.DEFAULT) {
+      if (filteredLessons[i].status === lessonStatuses.DEFAULT) {
         const startTime = getDateTime(filteredLessons[i].start);
         const currentTime = new Date().getTime();
 

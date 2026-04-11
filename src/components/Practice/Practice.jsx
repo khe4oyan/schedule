@@ -9,7 +9,7 @@ import { MdPlace } from "react-icons/md";
 import useSettingsOption from '../../customHooks/useSettingsOption';
 
 // constants
-import { optionsValues } from '../../constants/settings';
+import settings from '../../constants/settings';
 
 // styles
 import classes from './styles.module.css';
@@ -24,6 +24,8 @@ export default function Practice({ data }) {
     start,
     end,
   } = data;
+
+  const { optionsValues } = settings;
 
   const [isNotMergeLessonNumbers] = useSettingsOption(optionsValues.notMergeLessonNumbers);
 
