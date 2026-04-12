@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "update-date": "node scripts/updateDate.js && git add src/constants/updates.js && git commit -m \"[chore] update version\" && git push",
+    "predeploy": "npm run update-date && npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
