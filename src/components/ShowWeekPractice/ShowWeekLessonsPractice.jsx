@@ -1,6 +1,6 @@
 // libs
 import React from 'react';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 // components
 import Weekend from '../Weekend';
@@ -13,17 +13,18 @@ import practice from '../../constants/practice.js';
 import classes from './styles.module.css';
 
 export default function ShowWeekPractices() {
-  const initState = useCallback(() => {
-    const dayNum = new Date().getDay() - 1;
+  const [dayscheduleNum, setDayscheduleNum] = useState(() => {
+    const currentDate = new Date();
+    const dayNum = currentDate.getDay() - 1;
 
-    if (dayNum < 0 || dayNum > 4) return dayNum;
+    if (dayNum < 0 || dayNum > 4) return null;
 
     return dayNum;
   });
 
-  const [dayscheduleNum, setDayscheduleNum] = useState(initState);
-
   const days = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրբ"];
+
+  const isWeekend = dayscheduleNum === null;
 
   return (
     <div className={classes.root}>
@@ -36,10 +37,7 @@ export default function ShowWeekPractices() {
       </div>
 
       <div className={classes.practices}>
-        {
-          dayscheduleNum > 4 && 
-          <Weekend />
-        }
+        { isWeekend && <Weekend /> }
         
         {
           practice[dayscheduleNum]?.length === 0 ?
