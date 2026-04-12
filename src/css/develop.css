@@ -1,0 +1,48 @@
+.colors_develop {
+  --bg: #000000;
+  --bg-contrast: repeating-linear-gradient(45deg, #000 0px, #000 20px, #ffa500 20px, #ffa500 40px);
+
+  --text: #ffffff;
+  --text-dim: #777777;
+  --text-negative: #fafafa;
+
+  --primary: #ffa500;
+  --primary-shade: black;
+  --primary-gradient: linear-gradient(to bottom, var(--primary), var(--primary-shade));
+
+  --secondary: black;
+  --secondary-shade: #ffa500;
+  --secondary-gradient: linear-gradient(to bottom, var(--secondary), var(--secondary-shade));
+
+  --primary-secondary-gradient: linear-gradient(to bottom, var(--primary), var(--secondary));
+
+  --accent: #0059ff;
+  
+  --error: #f06b6b;
+  --success: #9ef06b;
+
+  /* button */
+  --button-bg: var(--bg-contrast);
+  --button-bg-disabled: #000000;
+  
+  /* surfaces */
+  --surface: #00000080;
+  --border: #ffa500;
+
+  /* message */
+  --message-color: #073107;
+  --message-border-color: #61c469;
+  --message-bg: linear-gradient(135deg, var(--bg-contrast), 75%, #61c469);
+
+  /* lesson */
+  --lesson-timer-color: #1a1a1a;
+  --lesson-timer-bg: #0000000d;
+
+  /* notification */
+  --notification-bg: #ff0000;
+
+  /* visual background */
+  --bg-image: none;
+  --bg-effect: blur(8px);
+  --bg-image-size: none;
+}

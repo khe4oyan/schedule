@@ -1,0 +1,92 @@
+.button {
+  position: relative;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--border);
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+}
+
+.develop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  color: var(--text);
+  backdrop-filter: var(--bg-effect);
+}
+
+.developText {
+  font-size: 1rem;
+}
+
+.buttonHeaderText {
+  font-size: 1.5rem;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px 20px;
+  position: relative;
+  z-index: 2;
+  color: var(--text);
+  background-color: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
+}
+
+.themePreviewCard {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  background: var(--bg-contrast);
+  backdrop-filter: var(--bg-effect);
+  border: 1px solid var(--border);
+}
+
+.box {
+  border-radius: 4px;
+  text-align: left;
+  font-size: 1.4em;
+  color: var(--text);
+}
+
+.box_1 {
+  width: 85%;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.box_2 {
+  margin-top: 10px;
+}
+
+.containerBox {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+/* .box_3 {} */
+.box_4 {
+  padding-right: 10px;
+}
+
+.line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: var(--primary-secondary-gradient);
+}
