@@ -14,7 +14,7 @@ import getDateTime from "../../utils/getDateTime";
 
 // constants
 import lessons from "../../constants/lessons";
-import lessonStatuses from '../../constants/lessonStatuses'
+import lessonStatuses from "../../constants/lessonStatuses";
 
 // utils
 import isAcademicTopLessonDay from "../../utils/isAcademicTopLessonDay.js";
@@ -103,7 +103,6 @@ export default function SchedulePage() {
       return;
     }
 
-    // Считаем, сколько миллисекунд до следующей "круглой" минуты
     const now = new Date();
     const msUntilNextMinute =
       60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
@@ -112,28 +111,28 @@ export default function SchedulePage() {
       calculateDayschedule(filteredLessons);
     }, msUntilNextMinute);
 
-    // Чистим оба таймера при размонтировании
     return () => {
       clearTimeout(timeoutId);
     };
   }, [filteredLessons]);
 
+  const isWeekend = appStatus === scenarioStatuses.weekend;
+  const isBeforeClass = appStatus === scenarioStatuses.beforeClass;
+  const isAfterClass = appStatus === scenarioStatuses.afterClass;
+  const isBreak = appStatus === scenarioStatuses.break;
+  const isLesson = appStatus === scenarioStatuses.lesson || isBeforeClass || isBreak;
+
   return (
     <div className={classes.root}>
-      {appStatus === scenarioStatuses.weekend && <Weekend />}
-      {appStatus === scenarioStatuses.beforeClass && (
+      {isWeekend && <Weekend />}
+      {isBeforeClass && (
         <BeforeClass
           startedTime={filteredLessons[0]?.getData(isTopLesson)?.start}
         />
       )}
-      {appStatus === scenarioStatuses.afterClass && <AfterClass />}
-      {appStatus === scenarioStatuses.break && (
-        <Break filteredLessons={filteredLessons} />
-      )}
-
-      {(appStatus === scenarioStatuses.lesson ||
-        appStatus === scenarioStatuses.beforeClass ||
-        appStatus === scenarioStatuses.break) &&
+      {isAfterClass && <AfterClass />}
+      {isBreak && <Break filteredLessons={filteredLessons} />}
+      {isLesson &&
         filteredLessons
           .filter(
             (lessonData) =>
