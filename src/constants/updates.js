@@ -1,4 +1,4 @@
-const lastUpdateAt = "2026-04-11 14:23";
+const lastUpdateAt = "2026-04-12T06:52:37.600Z"
 
 const updates = {
   lastUpdateAt,
