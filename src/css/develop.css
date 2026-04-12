@@ -1,17 +1,17 @@
 .colors_develop {
   --bg: #000000;
-  --bg-contrast: repeating-linear-gradient(45deg, #000 0px, #000 20px, #ffa500 20px, #ffa500 40px);
+  --bg-contrast: repeating-linear-gradient(45deg, #000 0px, #000 20px, orange 20px, orange 40px);
 
   --text: #ffffff;
   --text-dim: #777777;
   --text-negative: #fafafa;
 
-  --primary: #ffa500;
+  --primary: orange;
   --primary-shade: black;
   --primary-gradient: linear-gradient(to bottom, var(--primary), var(--primary-shade));
 
   --secondary: black;
-  --secondary-shade: #ffa500;
+  --secondary-shade: orange;
   --secondary-gradient: linear-gradient(to bottom, var(--secondary), var(--secondary-shade));
 
   --primary-secondary-gradient: linear-gradient(to bottom, var(--primary), var(--secondary));
@@ -27,7 +27,7 @@
   
   /* surfaces */
   --surface: #00000080;
-  --border: #ffa500;
+  --border: orange;
 
   /* message */
   --message-color: #073107;
